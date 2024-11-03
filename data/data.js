@@ -206,5 +206,156 @@ const jsonData = {
         },
       ],
     },
+    {
+      id: 3,
+      question:
+        "Definire la norma della convergenza uniforme in $BC(A)$. Provare che con questa norma la convergenza puntuale di una successione equivale alla convergenza uniforme.",
+      answer_parts: [
+        {
+          options: [
+            {
+              text: "Sia $BC(A)$ l'insieme delle funzioni $f: A \\rightarrow \\mathbb{R}$ continue e limitate,",
+              is_correct: true,
+            },
+            {
+              text: "Sia $BC(A)$ l'insieme delle funzioni $f: A \\rightarrow \\mathbb{R}$ continue e illimitate,",
+              is_correct: false,
+            },
+            {
+              text: "Sia $BC(A)$ l'insieme delle funzioni $f: A \\rightarrow \\mathbb{R}$ discontinue e limitate,",
+              is_correct: false,
+            },
+          ],
+        },
+        {
+          options: [
+            {
+              text: "Definiamo $\\|f\\|_{BC(A)} = \\sup \\{ |f(a)| : a \\in A \\}$ con $f \\in BC(A)$",
+              is_correct: true,
+            },
+            {
+              text: "Definiamo $\\|f\\|_{BC(A)} = \\inf \\{ |f(a)| : a \\in A \\}$ con $f \\in BC(A)$",
+              is_correct: false,
+            },
+            {
+              text: "Definiamo $\\|f\\|_{BC(A)} = \\int_A |f(a)| \\mathrm{d}a$ con $f \\in BC(A)$",
+              is_correct: false,
+            },
+          ],
+        },
+        {
+          options: [
+            {
+              text: "Sia ora $\\{f_k\\}$ una successione nello spazio normato $BC(A)$, sia $f \\in BC(A)$, allora $f_k$ converge uniformemente a $f$ se e solo se $\\lim_{k \\rightarrow \\infty} f_k = f$ in $BC(A)$.",
+              is_correct: true,
+            },
+            {
+              text: "Sia ora $\\{f_k\\}$ una successione nello spazio $BC(A)$, sia $f \\in BC(A)$, allora $f_k$ converge puntualmente a $f$ se e solo se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = 0$.",
+              is_correct: false,
+            },
+            {
+              text: "Sia ora $\\{f_k\\}$ una successione nello spazio normato $BC(A)$, allora $f_k$ converge uniformemente a $f$ se e solo se $\\lim_{k \\rightarrow \\infty} f_k(a) = f(a)$ per qualche $a \\in A$.",
+              is_correct: false,
+            },
+          ],
+        },
+        {
+          options: [
+            {
+              text: "$(\\Rightarrow)$ $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k > k(\\varepsilon)$ e $\\forall a \\in A$, $|f_k(a) - f(a)| < \\varepsilon$",
+              is_correct: true,
+            },
+            {
+              text: "$(\\Rightarrow)$ $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k > k(\\varepsilon)$ e $\\exists a \\in A$, $|f_k(a) - f(a)| < \\varepsilon$",
+              is_correct: false,
+            },
+            {
+              text: "$(\\Rightarrow)$ $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k < k(\\varepsilon)$ e $\\forall a \\in A$, $|f_k(a) - f(a)| < \\varepsilon$",
+              is_correct: false,
+            },
+          ],
+        },
+        {
+          options: [
+            {
+              text: "$\\implies \\|f_k - f\\|_{BC(A)} = \\sup \\{ |f_k(a) - f(a)| : a \\in A \\} < \\varepsilon$",
+              is_correct: true,
+            },
+            {
+              text: "$\\implies \\|f_k - f\\|_{BC(A)} = \\inf \\{ |f_k(a) - f(a)| : a \\in A \\} < \\varepsilon$",
+              is_correct: false,
+            },
+            {
+              text: "$\\implies \\|f_k - f\\|_{BC(A)} = \\sup \\{ |f_k(a) + f(a)| : a \\in A \\} < \\varepsilon$",
+              is_correct: false,
+            },
+          ],
+        },
+        {
+          options: [
+            {
+              text: "$\\implies \\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = 0$",
+              is_correct: true,
+            },
+            {
+              text: "$\\implies \\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = \\varepsilon$",
+              is_correct: false,
+            },
+            {
+              text: "$\\implies \\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = \\infty$",
+              is_correct: false,
+            },
+          ],
+        },
+        {
+          options: [
+            {
+              text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = 0$, allora $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k > k(\\varepsilon)$, $\\|f_k - f\\|_{BC(A)} < \\varepsilon$",
+              is_correct: true,
+            },
+            {
+              text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = \\infty$, allora $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\|f_k - f\\|_{BC(A)} > \\varepsilon$",
+              is_correct: false,
+            },
+            {
+              text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = 0$, allora $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k < k(\\varepsilon)$, $\\|f_k - f\\|_{BC(A)} < \\varepsilon$",
+              is_correct: false,
+            },
+          ],
+        },
+        {
+          options: [
+            {
+              text: "$\\implies \\sup \\{ |f_k(a) - f(a)| : a \\in A \\} < \\varepsilon$",
+              is_correct: true,
+            },
+            {
+              text: "$\\implies \\inf \\{ |f_k(a) - f(a)| : a \\in A \\} < \\varepsilon$",
+              is_correct: false,
+            },
+            {
+              text: "$\\implies \\sup \\{ |f_k(a) - f(a)| : a \\in A \\} = \\varepsilon$",
+              is_correct: false,
+            },
+          ],
+        },
+        {
+          options: [
+            {
+              text: "$\\implies \\forall a \\in A, \\ |f_k(a) - f(a)| < \\varepsilon$",
+              is_correct: true,
+            },
+            {
+              text: "$\\implies \\exists a \\in A, \\ |f_k(a) - f(a)| < \\varepsilon$",
+              is_correct: false,
+            },
+            {
+              text: "$\\implies \\forall a \\in A, \\ |f_k(a) - f(a)| > \\varepsilon$",
+              is_correct: false,
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
