@@ -85,16 +85,27 @@ function selectOption(button, isCorrect) {
     }
   }
 
-  // Mostra il pulsante per la prossima parte
-  const nextButton = document.getElementById("next-button");
-  nextButton.style.display = "block";
-  nextButton.onclick = () => {
-    // Aggiunge comunque la risposta corretta alla risposta composta se l'utente ha sbagliato
-    if (!isCorrect && correctOption) {
-      addToCurrentAnswer(correctOption.text);
-    }
-    nextPart();
-  };
+  if (config.autoAdvance) {
+    // Avanza automaticamente alla prossima parte dopo un breve intervallo
+    setTimeout(() => {
+      // Aggiunge comunque la risposta corretta alla risposta composta se l'utente ha sbagliato
+      if (!isCorrect && correctOption) {
+        addToCurrentAnswer(correctOption.text);
+      }
+      nextPart();
+    }, 500); // Intervallo di 1 secondo (1000 ms) prima di avanzare
+  } else {
+    // Mostra il pulsante per la prossima parte
+    const nextButton = document.getElementById("next-button");
+    nextButton.style.display = "block";
+    nextButton.onclick = () => {
+      // Aggiunge comunque la risposta corretta alla risposta composta se l'utente ha sbagliato
+      if (!isCorrect && correctOption) {
+        addToCurrentAnswer(correctOption.text);
+      }
+      nextPart();
+    };
+  }
 }
 
 function addToCurrentAnswer(text) {
