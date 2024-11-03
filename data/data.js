@@ -1,6 +1,7 @@
 const jsonData = {
   theorems: [
     {
+      id: 1,
       question:
         "Definizione di spazio normato. Dare un esempio e dimostrare che effettivamente lo è.",
       answer_parts: [
@@ -55,7 +56,7 @@ const jsonData = {
         {
           options: [
             {
-              text: "$\\| x + y \\| \\leq \\| x \\| + \\| y \\|$ (Disuguaglianza triangolare)",
+              text: "$\\| x + y \\| \\leq \\| x \\| + \\| y \\|$",
               is_correct: true,
             },
             {
@@ -103,15 +104,15 @@ const jsonData = {
         {
           options: [
             {
-              text: "$\\| \\lambda x \\| = |\\lambda| \\| x \\|$ poiché $\\sqrt{(\\lambda x_1)^2 + \\dots + (\\lambda x_n)^2} = |\\lambda| \\sqrt{x_1^2 + \\dots + x_n^2}$",
+              text: "$|| \\lambda \\cdot x || = \\sqrt{\\lambda^2 \\cdot x_1^2 + \\dots + \\lambda^2 \\cdot x_n^2} = \\sqrt{\\lambda^2 \\cdot (x_1^2 + \\dots + x_n^2)} = |\\lambda| \\cdot \\sqrt{x_1^2 + \\dots + x_n^2} = |\\lambda| \\cdot || x ||$",
               is_correct: true,
             },
             {
-              text: "$\\| \\lambda x \\| = \\lambda \\| x \\|$ poiché $\\lambda$ è uno scalare",
+              text: "$|| \\lambda \\cdot x || = \\lambda^2 \\cdot || x ||$",
               is_correct: false,
             },
             {
-              text: "$\\| \\lambda x \\| = \\| x \\|$ poiché la norma è indipendente da $\\lambda$",
+              text: "$|| \\lambda \\cdot x || = \\lambda \\cdot || x ||$",
               is_correct: false,
             },
           ],
@@ -119,15 +120,15 @@ const jsonData = {
         {
           options: [
             {
-              text: "$\\| x + y \\| \\leq \\| x \\| + \\| y \\|$ poiché $(\\| x + y \\|)^2 = \\| x \\|^2 + 2 x \\cdot y + \\| y \\|^2 \\leq (\\| x \\| + \\| y \\|)^2$",
+              text: "$|| x + y ||^2 = (x_1 + y_1)^2 + \\dots + (x_n + y_n)^2 = x_1^2 + \\dots + x_n^2 + y_1^2 + \\dots + y_n^2 + 2 x_1 y_1 + \\dots + 2 x_n y_n = || x ||^2 + 2 x \\cdot y + || y ||^2 \\leq || x ||^2 + 2 \\cdot || x || \\cdot || y || + || y ||^2 = (|| x || + || y ||)^2$",
               is_correct: true,
             },
             {
-              text: "$\\| x + y \\| = \\| x \\| + \\| y \\|$ sempre vero in $\\mathbb{R}^n$",
+              text: "$|| x + y || = || x || + || y || - 2 || x || \\cdot || y ||$",
               is_correct: false,
             },
             {
-              text: "$\\| x + y \\| \\geq \\| x \\| - \\| y \\|$ $\\forall x, y \\in \\mathbb{R}^n$",
+              text: "$|| x + y ||^2 = || x ||^2 + || y ||^2$",
               is_correct: false,
             },
           ],
@@ -136,7 +137,7 @@ const jsonData = {
     },
     {
       id: 2,
-      title:
+      question:
         "Mostrare come si può definire una norma su uno spazio con prodotto interno. Dare un esempio.",
       answer_parts: [
         {

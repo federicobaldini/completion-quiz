@@ -1,5 +1,3 @@
-// main.js
-
 let data = jsonData.theorems;
 let currentTheoremIndex = 0;
 let currentPartIndex = 0;
@@ -34,9 +32,7 @@ function showCurrentPart() {
   // Titolo della domanda
   const questionTitle = document.createElement("div");
   questionTitle.className = "question-title";
-  questionTitle.innerHTML = `<strong>${theorem.question}</strong><br>Parte ${
-    currentPartIndex + 1
-  }`;
+  questionTitle.innerHTML = `<strong>${theorem.question}</strong>`;
   questionArea.appendChild(questionTitle);
 
   // Lista delle opzioni mescolate
@@ -66,18 +62,19 @@ function selectOption(button, isCorrect) {
   const buttons = document.querySelectorAll(".option-button");
   buttons.forEach((btn) => (btn.disabled = true));
 
+  // Trova la risposta corretta
+  const correctOption = data[currentTheoremIndex].answer_parts[
+    currentPartIndex
+  ].options.find((opt) => opt.is_correct);
+
   // Evidenzia la risposta scelta
   if (isCorrect) {
     button.classList.add("correct");
     addToCurrentAnswer(button.innerHTML); // Aggiungi la parte corretta alla risposta composta
   } else {
     button.classList.add("incorrect");
-    // Trova la risposta corretta
-    const correctOption = data[currentTheoremIndex].answer_parts[
-      currentPartIndex
-    ].options.find((opt) => opt.is_correct);
 
-    // Se la risposta corretta è trovata, evidenziala
+    // Se la risposta corretta è trovata, evidenziala in verde
     if (correctOption) {
       const correctButton = Array.from(buttons).find(
         (btn) => btn.innerHTML === correctOption.text
@@ -92,6 +89,10 @@ function selectOption(button, isCorrect) {
   const nextButton = document.getElementById("next-button");
   nextButton.style.display = "block";
   nextButton.onclick = () => {
+    // Aggiunge comunque la risposta corretta alla risposta composta se l'utente ha sbagliato
+    if (!isCorrect && correctOption) {
+      addToCurrentAnswer(correctOption.text);
+    }
     nextPart();
   };
 }
@@ -102,9 +103,8 @@ function addToCurrentAnswer(text) {
   partDiv.innerHTML = text;
   currentAnswerDiv.appendChild(partDiv);
 
-  MathJax.typesetPromise().catch((err) =>
-    console.error("Errore di MathJax:", err)
-  );
+  // Aggiorna MathJax per la nuova formula
+  MathJax.typesetPromise();
 }
 
 function nextPart() {
@@ -128,6 +128,3 @@ function nextPart() {
     }
   }
 }
-
-// Avvia il quiz all'apertura della pagina
-document.addEventListener("DOMContentLoaded", startQuiz);
