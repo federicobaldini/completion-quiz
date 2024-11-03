@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
-    <title>Ripasso Teoremi di Analisi 2</title>
+    <title>ripasso analisi 2</title>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/container.css" />
     <link rel="stylesheet" href="styles/navigator.css" />
@@ -20,20 +20,26 @@
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
-    <div id="theorem-navigator">
-      <label for="theorem-id">Vai al teorema ID:</label>
-      <input type="number" id="theorem-id" min="1" placeholder="Inserisci ID" />
-      <button id="go-button">Vai</button>
+    <form id="theorem-navigator">
+      <label for="theorem-number">Vai al teorema numero:</label>
+      <input
+        type="number"
+        id="theorem-number"
+        min="1"
+        placeholder="Inserisci il numero del teorema"
+      />
+      <button id="go-button" type="submit">Vai</button>
+    </form>
+    <div class="title-container">
+      <h1>Ripasso di Analisi 2</h1>
     </div>
-
     <div class="container">
-      <h1>Ripasso Teoremi di Analisi 2</h1>
       <div id="question-area"></div>
       <div id="answer-progress">
-        <h3>Risposta composta finora:</h3>
+        <h3>Risposta:</h3>
         <div id="current-answer"></div>
       </div>
-      <button id="next-button" style="display: none">Prossima Parte</button>
+      <button id="next-button" style="display: none">Avanti</button>
     </div>
     <script src="data/data.js"></script>
     <script src="src/config.js"></script>

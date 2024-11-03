@@ -1,3 +1,3 @@
 const config = {
-  autoAdvance: true, // Imposta su true per avanzare automaticamente
+  autoAdvance: false, // Imposta su true per avanzare automaticamente
 };

@@ -13,7 +13,15 @@
 }
 
 /* Titolo principale */
+.title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
+  margin: 40px 0 0 0;
   text-align: center;
   color: #ffffff;
   font-size: 1.8em;

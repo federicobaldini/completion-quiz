@@ -1,9 +1,7 @@
-function goToTheorem(theoremId) {
-  const theoremIndex = data.findIndex((theorem) => theorem.id === theoremId);
-
-  if (theoremIndex !== -1) {
+function goToTheorem(theoremNumber) {
+  if (theoremNumber <= data.length) {
     // Imposta l'indice corrente e resetta la parte
-    currentTheoremIndex = theoremIndex;
+    currentTheoremIndex = theoremNumber - 1;
     currentPartIndex = 0;
 
     // Svuota la risposta composta e mostra il nuovo teorema
