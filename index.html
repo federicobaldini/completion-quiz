@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/container.css" />
     <link rel="stylesheet" href="styles/navigator.css" />
+    <link rel="stylesheet" href="styles/score.css" />
+    <link rel="stylesheet" href="styles/theme.css" />
     <script>
       window.MathJax = {
         tex: {
@@ -20,6 +22,15 @@
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
+    <div id="theme-toggle">
+      <input type="checkbox" id="toggle-checkbox" />
+      <label for="toggle-checkbox" id="toggle-label">
+        <span id="toggle-ball"></span>
+      </label>
+    </div>
+    <div id="score-counter" class="score-normal">
+      <span id="score-value">0</span>
+    </div>
     <form id="theorem-navigator">
       <label for="theorem-number">Vai al teorema numero:</label>
       <input
@@ -34,6 +45,7 @@
       <h1>Ripasso di Analisi 2</h1>
     </div>
     <div class="container">
+      <h3>Domanda:</h3>
       <div id="question-area"></div>
       <div id="answer-progress">
         <h3>Risposta:</h3>
@@ -46,5 +58,7 @@
     <script src="src/main.js"></script>
     <script src="src/container.js"></script>
     <script src="src/navigator.js"></script>
+    <script src="src/score.js"></script>
+    <script src="src/theme.js"></script>
   </body>
 </html>

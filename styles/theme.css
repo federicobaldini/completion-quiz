@@ -1,0 +1,71 @@
+/* Stile per il contenitore del toggle */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+/* Nascondi il checkbox originale */
+#toggle-checkbox {
+  display: none;
+}
+
+/* Stile per l'etichetta che funge da toggle */
+#toggle-label {
+  width: 50px;
+  height: 26px;
+  background-color: #3b3b3b;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+/* La pallina del toggle */
+#toggle-ball {
+  width: 22px;
+  height: 22px;
+  background-color: #1e1e1e; /* Colore scuro di default */
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Stato attivo del toggle (tema chiaro selezionato) */
+#toggle-checkbox:checked + #toggle-label {
+  background-color: #ffd54f; /* Colore chiaro per lo sfondo del toggle */
+}
+
+#toggle-checkbox:checked + #toggle-label #toggle-ball {
+  transform: translateX(24px);
+  background-color: #fff; /* Pallina diventa bianca nel tema chiaro */
+}
+
+/* Aggiungi un'icona per il sole e la luna */
+#toggle-label::before {
+  content: "🌙";
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  font-size: 14px;
+  transition: opacity 0.3s, left 0.3s;
+  z-index: 1;
+}
+
+#toggle-checkbox:checked + #toggle-label::before {
+  content: "☀️";
+  top: 4px;
+  left: 30px;
+}
+
+/* Opzionale: Nascondi l'icona non attiva cambiando l'opacità */
+#toggle-checkbox:not(:checked) + #toggle-label::before {
+  opacity: 1;
+}
+
+#toggle-checkbox:checked + #toggle-label::before {
+  opacity: 1;
+}

@@ -251,7 +251,7 @@ const jsonData = {
               is_correct: false,
             },
             {
-              text: "$(\\Rightarrow)$ $\\forall \\varepsilon > 0$, $\\exists \\, k(\\varepsilon) \\in \\mathbb{N} \\; | \\; \\forall \\, k > k(\\varepsilon)$ e $\\exists \\, a \\in A$ tale che $|f_k(a) - f(a)| > \\varepsilon$",
+              text: "$(\\Rightarrow)$ $\\forall \\varepsilon > 0$, $\\exists \\, k(\\varepsilon) \\in \\mathbb{N} \\; | \\; \\forall \\, k > k(\\varepsilon)$ e $\\exists \\, a \\in A$ | $|f_k(a) - f(a)| > \\varepsilon$",
               is_correct: false,
             },
           ],
@@ -425,15 +425,15 @@ const jsonData = {
         {
           options: [
             {
-              text: "Esempio: dato l'insieme $\\mathbb{R}$ e la metrica $d: \\mathbb{R} \\times \\mathbb{R} \\rightarrow [0, +\\infty)$ tale che $d(x, y) = \\begin{cases} 0 & \\text{se } x = y \\\\ 1 & \\text{se } x \\neq y \\end{cases}$",
+              text: "Esempio: dato l'insieme $\\mathbb{R}$ e la metrica $d: \\mathbb{R} \\times \\mathbb{R} \\rightarrow [0, +\\infty)$ | $d(x, y) = \\begin{cases} 0 & \\text{se } x = y \\\\ 1 & \\text{se } x \\neq y \\end{cases}$",
               is_correct: true,
             },
             {
-              text: "Esempio: dato l'insieme $\\mathbb{R}$ e la metrica $d: \\mathbb{R} \\times \\mathbb{R} \\rightarrow [0, +\\infty)$ tale che $d(x, y) = |x - y|$",
+              text: "Esempio: dato l'insieme $\\mathbb{R}$ e la metrica $d: \\mathbb{R} \\times \\mathbb{R} \\rightarrow [0, +\\infty)$ | $d(x, y) = |x - y|$",
               is_correct: false,
             },
             {
-              text: "Esempio: dato l'insieme $\\mathbb{R}$ e la funzione $d: \\mathbb{R} \\rightarrow [0, +\\infty)$ tale che $d(x) = x^2$",
+              text: "Esempio: dato l'insieme $\\mathbb{R}$ e la funzione $d: \\mathbb{R} \\rightarrow [0, +\\infty)$ | $d(x) = x^2$",
               is_correct: false,
             },
           ],
@@ -489,21 +489,22 @@ const jsonData = {
       ],
     },
     {
+      id: 5,
       question:
         "Dare la definizione di interno di un sottoinsieme e di sottoinsieme aperto in uno spazio metrico. Dimostrare che l'intersezione di due aperti è un aperto.",
       answer_parts: [
         {
           options: [
             {
-              text: "Sia $(X, d)$ uno spazio metrico, sia $A \\subseteq X$ e $x \\in A$, diremo che $x \\in A^\\circ$ se esiste una palla aperta $B(x, r)$ con $r > 0$ tale che $B(x, r) \\subseteq A$.",
+              text: "Sia $(X, d)$ uno spazio metrico, sia $A \\subseteq X$ e $x \\in A$, diremo che $x \\in \\mathring{A}$ se $\\exists$ una palla aperta $B(x, r)$ con $r > 0$ | $B(x, r) \\subseteq A$.",
               is_correct: true,
             },
             {
-              text: "Sia $(X, d)$ uno spazio metrico, sia $A \\subseteq X$ e $x \\in A$, diremo che $x \\in A^\\circ$ se esiste una palla aperta $B(x, r)$ con $r > 0$ tale che $A \\subseteq B(x, r)$.",
+              text: "Sia $(X, d)$ uno spazio metrico, sia $A \\subseteq X$, diremo che $x \\in \\mathring{A}$ se $\\exists$ una palla chiusa $B[x, r]$ con $r > 0$ | $B[x, r] \\subseteq A$.",
               is_correct: false,
             },
             {
-              text: "Sia $(X, d)$ uno spazio metrico, sia $A \\subseteq X$ e $x \\in A$, diremo che $x \\in A^\\circ$ se per ogni palla aperta $B(x, r)$ con $r > 0$ si ha $B(x, r) \\subseteq A$.",
+              text: "Sia $(X, d)$ uno spazio metrico, sia $A \\subseteq X$ e $x \\in X$, diremo che $x \\in \\mathring{A}$ se $\\exists$ una palla aperta $B(x, r)$ con $r < 0$ | $B(x, r) \\subseteq A$.",
               is_correct: false,
             },
           ],
@@ -511,15 +512,15 @@ const jsonData = {
         {
           options: [
             {
-              text: "Diremo inoltre che $A$ è aperto se $A = A^\\circ$.",
+              text: "Diremo inoltre che $A$ è aperto se $A = \\mathring{A}$.",
               is_correct: true,
             },
             {
-              text: "Diremo inoltre che $A$ è aperto se $A \\subseteq A^\\circ$.",
+              text: "Diremo inoltre che $A$ è aperto se $A \\subseteq \\overline{A}$, dove $\\overline{A}$ è la chiusura di $A$.",
               is_correct: false,
             },
             {
-              text: "Diremo inoltre che $A$ è aperto se $A^\\circ \\subseteq A$.",
+              text: "Diremo inoltre che $A$ è aperto se $\\partial A = \\emptyset$, dove $\\partial A$ è il bordo di $A$.",
               is_correct: false,
             },
           ],
@@ -531,7 +532,7 @@ const jsonData = {
               is_correct: true,
             },
             {
-              text: "Dati $A$, $B$ aperti $\\implies C = A \\cup B$ è aperto.",
+              text: "Dati $A$, $B$ aperti $\\implies C = A \\cup B$ è chiuso.",
               is_correct: false,
             },
             {
@@ -543,15 +544,15 @@ const jsonData = {
         {
           options: [
             {
-              text: "Se $x \\in C$, allora esistono $r_1, r_2 > 0$ tali che $x \\in B(x, r_1) \\subseteq A$ e $x \\in B(x, r_2) \\subseteq B$.",
+              text: "Se $x \\in C$, allora $\\exists r_1, r_2 > 0$ | $x \\in B(x, r_1) \\subseteq A$ e $x \\in B(x, r_2) \\subseteq B$.",
               is_correct: true,
             },
             {
-              text: "Se $x \\in C$, allora per ogni $r_1, r_2 > 0$ si ha $x \\in B(x, r_1) \\subseteq A$ e $x \\in B(x, r_2) \\subseteq B$.",
+              text: "Se $x \\in C$, allora per ogni $r > 0$ si ha $B(x, r) \\subseteq A \\cap B$.",
               is_correct: false,
             },
             {
-              text: "Se $x \\in C$, allora esistono $r_1, r_2 < 0$ tali che $x \\in B(x, r_1) \\subseteq A$ e $x \\in B(x, r_2) \\subseteq B$.",
+              text: "Se $x \\in C$, allora $\\exists r_1, r_2 > 0$ | $B(x, r_1) \\subseteq X \\setminus A$ e $B(x, r_2) \\subseteq X \\setminus B$.",
               is_correct: false,
             },
           ],
@@ -563,11 +564,11 @@ const jsonData = {
               is_correct: true,
             },
             {
-              text: "Prendendo $r = \\max(r_1, r_2)$ $\\implies B(x, r) \\subseteq B(x, r_1) \\cup B(x, r_2)$.",
+              text: "Prendendo $r = r_1 + r_2$ $\\implies B(x, r) = B(x, r_1) \\cup B(x, r_2)$.",
               is_correct: false,
             },
             {
-              text: "Prendendo $r = r_1 + r_2$ $\\implies B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2)$.",
+              text: "Prendendo $r = \\max(r_1, r_2)$ $\\implies B(x, r) \\subseteq B(x, r_1) \\setminus B(x, r_2)$.",
               is_correct: false,
             },
           ],
@@ -575,15 +576,15 @@ const jsonData = {
         {
           options: [
             {
-              text: "Poiché $B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2) \\subseteq A \\cap B = C$.",
+              text: "Poiché $B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2) \\subseteq A \\cap B = C$, segue che $C$ è aperto.",
               is_correct: true,
             },
             {
-              text: "Poiché $B(x, r) \\supseteq B(x, r_1) \\cup B(x, r_2) \\supseteq A \\cup B = C$.",
+              text: "Poiché $B(x, r) \\supseteq B(x, r_1) \\cup B(x, r_2) \\supseteq A \\cup B = C$, segue che $C$ è chiuso.",
               is_correct: false,
             },
             {
-              text: "Poiché $B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2) \\subseteq A \\cup B = C$.",
+              text: "Poiché $B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2) \\subseteq A \\cup B = C$, segue che $C$ è aperto.",
               is_correct: false,
             },
           ],

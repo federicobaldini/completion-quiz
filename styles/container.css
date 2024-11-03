@@ -3,7 +3,7 @@
   margin: 20px;
   padding: 20px;
   width: calc(100% - 80px);
-  background-color: #2b2b2b;
+  background-color: var(--container-bg);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: left;
@@ -23,7 +23,7 @@
 h1 {
   margin: 40px 0 0 0;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 1.8em;
   margin-bottom: 20px;
 }
@@ -42,7 +42,7 @@ h1 {
 /* Titolo della domanda */
 .question-title {
   font-size: 1.2em;
-  color: #b0b0b0;
+  color: var(--text-secondary);
 }
 
 /* Stile delle opzioni */
@@ -60,9 +60,9 @@ h1 {
   width: 100%;
   padding: 15px;
   font-size: 1em;
-  color: #e0e0e0;
-  background-color: #3b3b3b;
-  border: 2px solid #3b3b3b;
+  color: var(--text-primary);
+  background-color: var(--button-bg);
+  border: 2px solid var(--button-border);
   border-radius: 6px;
   cursor: pointer;
   text-align: left;
@@ -70,19 +70,19 @@ h1 {
 }
 
 .option-button:hover {
-  background-color: #565656;
-  border-color: #565656;
+  background-color: var(--button-hover-bg);
+  border-color: var(--button-hover-border);
 }
 
 /* Effetti di hover per risposte corrette e sbagliate */
 .option-button.correct:hover {
-  background-color: #45a049; /* Verde più chiaro per hover */
-  border-color: #45a049;
+  background-color: #66bb6a; /* Verde chiaro per hover */
+  border-color: #66bb6a;
 }
 
 .option-button.incorrect:hover {
-  background-color: #d32f2f; /* Rosso più chiaro per hover */
-  border-color: #d32f2f;
+  background-color: #ef5350; /* Rosso chiaro per hover */
+  border-color: #ef5350;
 }
 
 /* Stile per le risposte corrette e sbagliate dopo la selezione */
@@ -93,8 +93,8 @@ h1 {
 }
 
 .incorrect {
-  background-color: #f44336;
-  border-color: #f44336;
+  background-color: #e53935;
+  border-color: #e53935;
   color: #ffffff;
 }
 
@@ -105,7 +105,7 @@ h1 {
   padding: 12px;
   font-size: 1em;
   color: #ffffff;
-  background-color: #4caf50;
+  background-color: #2196f3;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -113,7 +113,7 @@ h1 {
 }
 
 #next-button:hover {
-  background-color: #388e3c;
+  background-color: #42a5f5;
 }
 
 /* Stile dell'area di risposta composta */
@@ -121,14 +121,19 @@ h1 {
   margin: 0;
 }
 
+.container h3,
 #answer-progress h3 {
+  margin: 0;
   font-size: 1.1em;
-  color: #a0a0a0;
+  color: var(--text-secondary);
+}
+
+#answer-progress h3 {
   margin: 0 0 20px 0;
 }
 
 #current-answer {
   font-size: 1em;
   line-height: 1.6;
-  color: #d0d0d0;
+  color: var(--text-primary);
 }

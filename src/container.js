@@ -67,13 +67,14 @@ function selectOption(button, isCorrect) {
     currentPartIndex
   ].options.find((opt) => opt.is_correct);
 
-  // Evidenzia la risposta scelta
+  // Evidenzia la risposta scelta e aggiorna il punteggio
   if (isCorrect) {
     button.classList.add("correct");
     addToCurrentAnswer(button.innerHTML); // Aggiungi la parte corretta alla risposta composta
+    updateScore(true); // Aggiorna il punteggio per una risposta corretta
   } else {
     button.classList.add("incorrect");
-
+    updateScore(false); // Azzeriamo lo streak e non aggiungiamo punti
     // Se la risposta corretta è trovata, evidenziala in verde
     if (correctOption) {
       const correctButton = Array.from(buttons).find(
@@ -93,7 +94,7 @@ function selectOption(button, isCorrect) {
         addToCurrentAnswer(correctOption.text);
       }
       nextPart();
-    }, 500); // Intervallo di 1 secondo (1000 ms) prima di avanzare
+    }, 500); // Intervallo di 0.5 secondi prima di avanzare
   } else {
     // Mostra il pulsante per la prossima parte
     const nextButton = document.getElementById("next-button");
