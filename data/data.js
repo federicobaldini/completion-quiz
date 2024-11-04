@@ -836,5 +836,309 @@ const jsonData = {
         ],
       ],
     },
+    {
+      question:
+        "Dare la definizione di frontiera di A, sottoinsieme di uno spazio metrico e presentare, illustrandolo, un esempio.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio topologico,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$A \\subseteq X$ e $x \\in X$",
+                is_correct: true,
+              },
+              {
+                text: "$A \\supseteq X$ e $x \\in A$",
+                is_correct: false,
+              },
+              {
+                text: "$A \\subset X$ e $x \\in A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Diremo allora che $x \\in \\text{fr}(A)$ se per ogni palla $B(x, r)$ con $r > 0$, contiene sia elementi appartenenti ad $A$ sia elementi non appartenenti ad $A$",
+                is_correct: true,
+              },
+              {
+                text: "Diremo allora che $x \\in \\text{fr}(A)$ se esiste una palla $B(x, r)$ con $r > 0$, tale che $B(x, r) \\subseteq A$",
+                is_correct: false,
+              },
+              {
+                text: "Diremo allora che $x \\in \\text{fr}(A)$ se per ogni palla $B(x, r)$ con $r > 0$, $B(x, r)$ contiene solo elementi di $A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Esempio: preso l'insieme $\\mathbb{R}$ con la metrica $d(x, y) = |x - y|$",
+                is_correct: true,
+              },
+              {
+                text: "Esempio: preso l'insieme $\\mathbb{R}^2$ con la metrica $d(x, y) = ||x - y||$",
+                is_correct: false,
+              },
+              {
+                text: "Esempio: preso l'insieme $\\mathbb{C}$ con la metrica $d(x, y) = |x - y|$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "ed il sottoinsieme $A = \\{ x \\in \\mathbb{R} \\mid 0 \\leq x \\leq 1 \\}$",
+                is_correct: true,
+              },
+              {
+                text: "ed il sottoinsieme $A = \\{ x \\in \\mathbb{R} \\mid x < 1 \\}$",
+                is_correct: false,
+              },
+              {
+                text: "ed il sottoinsieme $A = \\{ x \\in \\mathbb{R} \\mid x > 0 \\}$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "preso $y = 1$ esso appartiene a $\\text{fr}(A)$",
+                is_correct: true,
+              },
+              {
+                text: "preso $y = 0$ esso appartiene a $\\text{fr}(A)$",
+                is_correct: false,
+              },
+              {
+                text: "preso $y = 0.5$ esso appartiene a $\\text{fr}(A)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Infatti $B(1, r) = \\{ x \\in \\mathbb{R} \\mid |x - 1| < r \\} \\rightarrow (1 - r, 1 + r)$",
+                is_correct: true,
+              },
+              {
+                text: "Infatti $B(1, r) = \\{ x \\in \\mathbb{R} \\mid |x - 1| \\leq r \\} \\rightarrow [1 - r, 1 + r]$",
+                is_correct: false,
+              },
+              {
+                text: "Infatti $B(1, r) = \\{ x \\in \\mathbb{R} \\mid |x - 1| > r \\} \\rightarrow (1 + r, +\\infty)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Se prendo $z = 1 + \\dfrac{r}{2}$ allora $z \\in B(1, r)$ ma $z \\notin A$",
+                is_correct: true,
+              },
+              {
+                text: "Se prendo $z = 1 + r$ allora $z \\in B(1, r)$ ma $z \\notin A$",
+                is_correct: false,
+              },
+              {
+                text: "Se prendo $z = 1 - \\dfrac{r}{2}$ allora $z \\in B(1, r)$ ma $z \\notin A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Se prendo $z = 1 - \\dfrac{r}{2}$ allora $z \\in B(1, r)$ e $z \\in A$",
+                is_correct: true,
+              },
+              {
+                text: "Se prendo $z = 1 + \\dfrac{r}{2}$ allora $z \\in B(1, r)$ e $z \\in A$",
+                is_correct: false,
+              },
+              {
+                text: "Se prendo $z = 1 - \\dfrac{r}{2}$ allora $z \\notin B(1, r)$ e $z \\in A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      question:
+        "Dimostrare che se A 'sottoinsieme di' X, con X spazio metrico, A è aperto se e solo se A 'intersecato' fr(A) = 'insieme vuoto'.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "$(\\Rightarrow)$ Dato $A$ aperto ed $x \\in A$ $\\implies x \\in A^\\circ$",
+                is_correct: true,
+              },
+              {
+                text: "$(\\Rightarrow)$ Dato $A$ chiuso ed $x \\in A$ $\\implies x \\in A^\\circ$",
+                is_correct: false,
+              },
+              {
+                text: "$(\\Rightarrow)$ Dato $A$ aperto ed $x \\in X$ $\\implies x \\in A^\\circ$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "quindi $\\forall\\, r > 0, B(x, r) \\subseteq A$",
+                is_correct: false,
+              },
+              {
+                text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\supseteq A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\implies x \\notin \\text{fr}(A)$",
+                is_correct: true,
+              },
+              {
+                text: "$\\implies x \\in \\text{fr}(A)$",
+                is_correct: false,
+              },
+              {
+                text: "$\\implies x \\in A \\cap \\text{fr}(A)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\implies A \\cap \\text{fr}(A) = \\emptyset$",
+                is_correct: true,
+              },
+              {
+                text: "$\\implies A \\cup \\text{fr}(A) = \\emptyset$",
+                is_correct: false,
+              },
+              {
+                text: "$\\implies A \\cap \\text{fr}(A) \\neq \\emptyset$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(\\Leftarrow)$ Se $A \\cap \\text{fr}(A) = \\emptyset$",
+                is_correct: true,
+              },
+              {
+                text: "$(\\Leftarrow)$ Se $A \\cup \\text{fr}(A) = \\emptyset$",
+                is_correct: false,
+              },
+              {
+                text: "$(\\Leftarrow)$ Se $A \\cap \\text{fr}(A) \\neq \\emptyset$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "dato $x \\in A$",
+                is_correct: true,
+              },
+              {
+                text: "dato $x \\in X$",
+                is_correct: false,
+              },
+              {
+                text: "dato $x \\notin A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$x \\notin \\text{fr}(A)$",
+                is_correct: true,
+              },
+              {
+                text: "$x \\in \\text{fr}(A)$",
+                is_correct: false,
+              },
+              {
+                text: "$x \\in A \\cap \\text{fr}(A)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "quindi $\\forall\\, r > 0, B(x, r) \\subseteq A$",
+                is_correct: false,
+              },
+              {
+                text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\supseteq A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
   ],
 };
