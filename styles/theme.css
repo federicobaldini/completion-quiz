@@ -44,23 +44,6 @@
   background-color: #fff; /* Pallina diventa bianca nel tema chiaro */
 }
 
-/* Aggiungi un'icona per il sole e la luna */
-#toggle-label::before {
-  content: "🌙";
-  position: absolute;
-  left: 5px;
-  top: 2px;
-  font-size: 12px;
-  transition: opacity 0.3s, left 0.3s;
-  z-index: 1;
-}
-
-#toggle-checkbox:checked + #toggle-label::before {
-  content: "☀️";
-  top: 2px;
-  left: 30px;
-}
-
 /* Opzionale: Nascondi l'icona non attiva cambiando l'opacità */
 #toggle-checkbox:not(:checked) + #toggle-label::before {
   opacity: 1;
