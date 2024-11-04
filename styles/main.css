@@ -10,6 +10,8 @@
   --button-hover-border: #565656;
   --input-bg: #3b3b3b;
   --input-border: #555555;
+  --highlight-border: #888888;
+  --highlight-background: #3b3b3b;
 }
 
 /* Stile di base per corpo e tema scuro */

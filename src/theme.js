@@ -24,6 +24,10 @@ function enableLightTheme() {
   );
   document.documentElement.style.setProperty("--input-bg", "#FFFFFF");
   document.documentElement.style.setProperty("--input-border", "#CCCCCC");
+  document.documentElement.style.setProperty(
+    "--highlight-background",
+    "#E0E0E0"
+  );
 }
 
 // Funzione per abilitare il tema scuro
@@ -41,6 +45,10 @@ function enableDarkTheme() {
   );
   document.documentElement.style.setProperty("--input-bg", "#3B3B3B");
   document.documentElement.style.setProperty("--input-border", "#555555");
+  document.documentElement.style.setProperty(
+    "--highlight-background",
+    "#3B3B3B"
+  );
 }
 
 // Imposta il tema iniziale basato sulla preferenza del sistema

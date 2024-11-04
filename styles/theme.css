@@ -1,6 +1,6 @@
 /* Stile per il contenitore del toggle */
 #theme-toggle {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
 }
@@ -49,15 +49,15 @@
   content: "🌙";
   position: absolute;
   left: 5px;
-  top: 4px;
-  font-size: 14px;
+  top: 2px;
+  font-size: 12px;
   transition: opacity 0.3s, left 0.3s;
   z-index: 1;
 }
 
 #toggle-checkbox:checked + #toggle-label::before {
   content: "☀️";
-  top: 4px;
+  top: 2px;
   left: 30px;
 }
 

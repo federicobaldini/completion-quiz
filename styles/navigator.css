@@ -1,8 +1,8 @@
 /* Posizionamento del navigatore */
 #theorem-navigator {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 248px);
   display: flex;
   align-items: center;
   gap: 10px;

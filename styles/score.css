@@ -1,8 +1,8 @@
 /* Contatore di punteggio */
 #score-counter {
-  position: fixed;
-  top: 10px;
-  right: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   font-size: 1.2em;
   font-weight: bold;
   padding: 10px 15px;
