@@ -1,6 +1,6 @@
 let score = 0; // Punteggio totale
 let correctStreak = 0; // Conta le risposte corrette consecutive
-const streakThreshold = 3; // Soglia per iniziare lo streak
+const streakThreshold = 100; // Soglia per iniziare lo streak
 const normalPoints = 100; // Punti per una risposta corretta
 const streakPoints = 200; // Punti per una risposta corretta durante lo streak
 

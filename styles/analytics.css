@@ -1,0 +1,20 @@
+/* Pulsante di download accanto al contatore di punteggio */
+#download-button {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* Posizionato di fianco al contatore di punteggio */
+  padding: 8px 12px;
+  font-size: 1em;
+  background-color: #2196f3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#download-button:hover {
+  background-color: #42a5f5;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}

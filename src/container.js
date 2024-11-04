@@ -5,7 +5,8 @@ let currentTheoremIndex = 0;
 let currentPartIndex = 0;
 let currentBlockIndex = 0;
 let userSelections = [];
-let lastPartIndexInAnswer = -1; // Traccia l'ultimo part aggiunto alla risposta
+let lastPartIndexInAnswer = -1;
+let answerLog = [];
 
 // Inizializza il quiz
 function startQuiz() {
@@ -35,7 +36,7 @@ function showCurrentBlock() {
     !theorem.answer_parts[currentPartIndex]
   ) {
     console.error("Part o blocco non trovato.");
-    return; // Uscita se i dati sono incompleti
+    return;
   }
 
   const partBlocks = theorem.answer_parts[currentPartIndex];
@@ -43,7 +44,7 @@ function showCurrentBlock() {
 
   if (!block) {
     console.error("Blocco non trovato.");
-    return; // Uscita se il blocco corrente è mancante
+    return;
   }
 
   const questionArea = document.getElementById("question-area");
@@ -66,11 +67,12 @@ function showCurrentBlock() {
   const optionsList = document.createElement("ul");
   optionsList.className = "options";
 
-  shuffledOptions.forEach((option) => {
+  shuffledOptions.forEach((option, index) => {
     const optionItem = document.createElement("li");
     const optionButton = document.createElement("button");
     optionButton.className = "option-button";
     optionButton.innerHTML = option.text;
+    optionButton.setAttribute("data-option-index", index); // Imposta l'indice dell'opzione
     optionButton.addEventListener("click", () =>
       selectOption(optionButton, option.is_correct, block)
     );
@@ -81,16 +83,13 @@ function showCurrentBlock() {
   blockDiv.appendChild(optionsList);
   questionArea.appendChild(blockDiv);
 
-  // Nascondi il pulsante "Avanti" finché non viene selezionata un'opzione
   const nextButton = document.getElementById("next-button");
   nextButton.style.display = "none";
 
-  // Aggiorna MathJax per le nuove formule
   MathJax.typesetPromise();
 }
 
 function selectOption(button, isCorrect, block) {
-  // Disabilita tutti i pulsanti nel blocco corrente
   const blockDiv = button.closest(".block");
   const buttons = blockDiv.querySelectorAll(".option-button");
   buttons.forEach((btn) => (btn.disabled = true));
@@ -98,18 +97,22 @@ function selectOption(button, isCorrect, block) {
   // Trova la risposta corretta
   const correctOption = block.options.find((opt) => opt.is_correct);
 
+  // Usa il testo selezionato come answerText e il testo della risposta corretta come correctAnswer
+  const selectedAnswerText = button.textContent.trim();
+  const correctAnswerText = correctOption ? correctOption.text : null;
+
   // Evidenzia la risposta scelta
   if (isCorrect) {
     button.classList.add("correct");
-    userSelections.push({ correct: true, text: button.innerHTML });
+    userSelections.push({ correct: true, text: selectedAnswerText });
   } else {
     button.classList.add("incorrect");
-    userSelections.push({ correct: false, text: button.innerHTML });
+    userSelections.push({ correct: false, text: selectedAnswerText });
 
     // Evidenzia la risposta corretta
     if (correctOption) {
       const correctButton = Array.from(buttons).find(
-        (btn) => btn.innerHTML === correctOption.text
+        (btn) => btn.textContent.trim() === correctOption.text.trim()
       );
       if (correctButton) {
         correctButton.classList.add("correct");
@@ -117,37 +120,40 @@ function selectOption(button, isCorrect, block) {
     }
   }
 
-  // Aggiunge la risposta corretta alla risposta composta
+  // Salva il dettaglio della risposta nel log, inclusa la risposta corretta
+  answerLog.push({
+    questionIndex: currentTheoremIndex,
+    partIndex: currentPartIndex,
+    blockIndex: currentBlockIndex,
+    answerText: selectedAnswerText, // Testo della risposta selezionata
+    isCorrect: isCorrect,
+    correctAnswer: correctAnswerText, // Testo della risposta corretta
+  });
+
   if (correctOption) {
     addToCurrentAnswer(correctOption.text, currentPartIndex);
   }
 
-  // Controlla se è l'ultimo blocco dell'ultimo part
   const theorem = data[currentTheoremIndex];
   const isLastBlock =
     currentPartIndex === theorem.answer_parts.length - 1 &&
     currentBlockIndex === theorem.answer_parts[currentPartIndex].length - 1;
 
   if (isLastBlock) {
-    // Evidenzia il blocco della risposta attuale per indicare che è completa
     addHighlightToCurrentAnswer();
-
-    // Mostra il pulsante "Avanti" per passare al prossimo teorema
     const nextButton = document.getElementById("next-button");
     nextButton.style.display = "block";
     nextButton.innerHTML = "Prossima domanda";
     nextButton.onclick = () => {
       removeHighlightToCurrentAnswer();
-      nextPart(); // Avanza al prossimo teorema
+      nextPart();
     };
   } else {
     if (config.autoAdvance) {
-      // Avanza automaticamente al blocco successivo dopo un breve intervallo
       setTimeout(() => {
         nextBlock();
-      }, 500); // Intervallo di 0.5 secondi prima di avanzare
+      }, 500);
     } else {
-      // Mostra il pulsante "Avanti" per passare al blocco successivo
       const nextButton = document.getElementById("next-button");
       nextButton.style.display = "block";
       nextButton.innerHTML = "Avanti";

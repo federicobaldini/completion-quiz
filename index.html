@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/navigator.css" />
     <link rel="stylesheet" href="styles/score.css" />
     <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/analytics.css" />
     <script>
       window.MathJax = {
         tex: {
@@ -28,6 +29,7 @@
         <span id="toggle-ball"></span>
       </label>
     </div>
+    <button id="download-button" onclick="downloadAnswersAsJSON()">💾</button>
     <div id="score-counter" class="score-normal">
       <span id="score-value">0</span>
     </div>
@@ -62,5 +64,6 @@
     <script src="src/navigator.js"></script>
     <script src="src/score.js"></script>
     <script src="src/theme.js"></script>
+    <script src="src/analytics.js"></script>
   </body>
 </html>
