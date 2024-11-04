@@ -1,27 +1,31 @@
 function goToTheorem() {
-  const theoremNumberInput = document.getElementById("theorem-number").value;
-  const theoremIndex = parseInt(theoremNumberInput, 10) - 1;
+  const theoremNumberInput = document.getElementById("theorem-id").value;
+  const theoremId = parseInt(theoremNumberInput, 10);
 
-  if (!isNaN(theoremIndex) && theoremIndex >= 0 && theoremIndex < data.length) {
-    // Aggiorna l'indice corrente del teorema e della parte
-    currentTheoremIndex = theoremIndex;
-    currentPartIndex = 0;
-    currentBlockIndex = 0;
-    userSelections = [];
-    lastPartIndexInAnswer = -1;
+  if (!isNaN(theoremId)) {
+    // Trova l'indice del teorema con l'ID corrispondente
+    const theoremIndex = data.findIndex((theorem) => theorem.id === theoremId);
 
-    // Reset della risposta corrente visualizzata
-    document.getElementById("current-answer").innerHTML = "";
-    document
-      .getElementById("current-answer")
-      .classList.remove("highlighted-answer");
+    if (theoremIndex !== -1) {
+      // Aggiorna l'indice corrente del teorema e della parte
+      currentTheoremIndex = theoremIndex;
+      currentPartIndex = 0;
+      currentBlockIndex = 0;
+      userSelections = [];
+      lastPartIndexInAnswer = -1;
 
-    // Mostra il teorema richiesto
-    showCurrentBlock();
+      // Reset della risposta corrente visualizzata
+      document.getElementById("current-answer").innerHTML = "";
+      document
+        .getElementById("current-answer")
+        .classList.remove("highlighted-answer");
+
+      // Mostra il teorema richiesto
+      showCurrentBlock();
+    } else {
+      alert("Teorema non trovato. Inserisci un ID di teorema valido.");
+    }
   } else {
-    alert(
-      "Numero di teorema non valido. Inserisci un numero compreso tra 1 e " +
-        data.length
-    );
+    alert("Per favore inserisci un numero ID di teorema valido.");
   }
 }

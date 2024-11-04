@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       const theoremNumber = parseInt(
-        document.getElementById("theorem-number").value,
+        document.getElementById("theorem-id").value,
         10
       );
       goToTheorem(theoremNumber);

@@ -241,9 +241,8 @@ function nextPart() {
       showCurrentBlock();
       document.getElementById("next-button").style.display = "none";
     } else {
-      const questionArea = document.getElementById("question-area");
-      questionArea.innerHTML = "<h2>Hai completato tutte le domande!</h2>";
-      document.getElementById("next-button").style.display = "none";
+      // Quando tutte le domande sono completate, ricomincia il quiz dall'inizio
+      startQuiz();
     }
   }
 }

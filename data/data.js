@@ -1,6 +1,7 @@
 const jsonData = {
   theorems: [
     {
+      id: 1,
       question:
         "Definizione di spazio normato. Dare un esempio e dimostrare che effettivamente lo è.",
       answer_parts: [
@@ -199,6 +200,7 @@ const jsonData = {
       ],
     },
     {
+      id: 2,
       question:
         "Mostrare come si può definire una norma su uno spazio con prodotto interno. Dare un esempio.",
       answer_parts: [
@@ -275,6 +277,7 @@ const jsonData = {
       ],
     },
     {
+      id: 3,
       question:
         "Definire la norma della convergenza uniforme in $BC(A)$. Provare che con questa norma la convergenza puntuale di una successione equivale alla convergenza uniforme.",
       answer_parts: [
@@ -350,15 +353,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "allora $f_k$ converge uniformemente a $f$",
+                text: "allora $f_k$ <strong>converge uniformemente</strong> a $f$",
                 is_correct: true,
               },
               {
-                text: "allora $f_k$ converge puntualmente a $f$",
+                text: "allora $f_k$ <strong>converge puntualmente</strong> a $f$",
                 is_correct: false,
               },
               {
-                text: "allora $f_k$ converge debolmente a $f$",
+                text: "allora $f_k$ <strong>converge debolmente</strong> a $f$",
                 is_correct: false,
               },
             ],
@@ -491,6 +494,7 @@ const jsonData = {
       ],
     },
     {
+      id: 4,
       question:
         "Dare la definizione di spazio metrico e presentare, illustrandolo, un esempio.",
       answer_parts: [
@@ -602,15 +606,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Si definisce spazio metrico la coppia $(X, d)$",
+                text: "Si definisce <strong>spazio metrico</strong> la coppia $(X, d)$",
                 is_correct: true,
               },
               {
-                text: "Si definisce spazio metrico la tripla $(X, d, y)$",
+                text: "Si definisce <strong>spazio metrico</strong> la tripla $(X, d, y)$",
                 is_correct: false,
               },
               {
-                text: "Si definisce spazio metrico la funzione $d$ su $X$",
+                text: "Si definisce <strong>spazio metrico</strong> la funzione $d$ su $X$",
                 is_correct: false,
               },
             ],
@@ -691,6 +695,7 @@ const jsonData = {
       ],
     },
     {
+      id: 5,
       question:
         "Dare la definizione di interno di un sottoinsieme e di sottoinsieme aperto in uno spazio metrico. Dimostrare che l'intersezione di due aperti è un aperto.",
       answer_parts: [
@@ -766,15 +771,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Dati $A$, $B$ aperti $\\implies C = A \\cap B$ è aperto.",
+                text: "Dati $A$, $B$ aperti $\\implies C = A \\cap B$ è <strong>aperto</strong>.",
                 is_correct: true,
               },
               {
-                text: "Dati $A$, $B$ aperti $\\implies C = A \\cup B$ è chiuso.",
+                text: "Dati $A$, $B$ aperti $\\implies C = A \\cup B$ è <strong>chiuso</strong>.",
                 is_correct: false,
               },
               {
-                text: "Dati $A$, $B$ aperti $\\implies C = A \\setminus B$ è aperto.",
+                text: "Dati $A$, $B$ aperti $\\implies C = A \\setminus B$ è <strong>aperto</strong>.",
                 is_correct: false,
               },
             ],
@@ -837,6 +842,7 @@ const jsonData = {
       ],
     },
     {
+      id: 6,
       question:
         "Dare la definizione di frontiera di A, sottoinsieme di uno spazio metrico e presentare, illustrandolo, un esempio.",
       answer_parts: [
@@ -860,15 +866,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$A \\subseteq X$ e $x \\in X$",
+                text: "$A \\subseteq X$ e $x \\in X$,",
                 is_correct: true,
               },
               {
-                text: "$A \\supseteq X$ e $x \\in A$",
+                text: "$A \\supseteq X$ e $x \\in A$,",
                 is_correct: false,
               },
               {
-                text: "$A \\subset X$ e $x \\in A$",
+                text: "$A \\subset X$ e $x \\in A$,",
                 is_correct: false,
               },
             ],
@@ -876,15 +882,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Diremo allora che $x \\in \\text{fr}(A)$ se per ogni palla $B(x, r)$ con $r > 0$, contiene sia elementi appartenenti ad $A$ sia elementi non appartenenti ad $A$",
+                text: "diremo allora che $x \\in \\text{fr}(A)$ se per ogni palla $B(x, r)$ con $r > 0$, contiene sia elementi appartenenti ad $A$ sia elementi non appartenenti ad $A$",
                 is_correct: true,
               },
               {
-                text: "Diremo allora che $x \\in \\text{fr}(A)$ se esiste una palla $B(x, r)$ con $r > 0$, tale che $B(x, r) \\subseteq A$",
+                text: "diremo allora che $x \\in \\text{fr}(A)$ se esiste una palla $B(x, r)$ con $r > 0$, tale che $B(x, r) \\subseteq A$",
                 is_correct: false,
               },
               {
-                text: "Diremo allora che $x \\in \\text{fr}(A)$ se per ogni palla $B(x, r)$ con $r > 0$, $B(x, r)$ contiene solo elementi di $A$",
+                text: "diremo allora che $x \\in \\text{fr}(A)$ se per ogni palla $B(x, r)$ con $r > 0$, $B(x, r)$ contiene solo elementi di $A$",
                 is_correct: false,
               },
             ],
@@ -997,22 +1003,23 @@ const jsonData = {
       ],
     },
     {
+      id: 7,
       question:
-        "Dimostrare che se A 'sottoinsieme di' X, con X spazio metrico, A è aperto se e solo se A 'intersecato' fr(A) = 'insieme vuoto'.",
+        "Dimostrare che se $A \\subseteq X$, con $X$ spazio metrico, $A$ è aperto se e solo se $A \\cap \\text{fr}(A) = \\emptyset$.",
       answer_parts: [
         [
           {
             options: [
               {
-                text: "$(\\Rightarrow)$ Dato $A$ aperto ed $x \\in A$ $\\implies x \\in A^\\circ$",
+                text: "$(\\Rightarrow)$ Dato $A$ aperto ed $x \\in A$ $\\implies x \\in \\mathring{A}$",
                 is_correct: true,
               },
               {
-                text: "$(\\Rightarrow)$ Dato $A$ chiuso ed $x \\in A$ $\\implies x \\in A^\\circ$",
+                text: "$(\\Rightarrow)$ Dato $A$ chiuso ed $x \\in A$ $\\implies x \\in \\mathring{A}$",
                 is_correct: false,
               },
               {
-                text: "$(\\Rightarrow)$ Dato $A$ aperto ed $x \\in X$ $\\implies x \\in A^\\circ$",
+                text: "$(\\Rightarrow)$ Dato $A$ aperto ed $x \\in X$ $\\implies x \\in \\mathring{A}$",
                 is_correct: false,
               },
             ],
@@ -1083,8 +1090,6 @@ const jsonData = {
               },
             ],
           },
-        ],
-        [
           {
             options: [
               {
@@ -1101,8 +1106,6 @@ const jsonData = {
               },
             ],
           },
-        ],
-        [
           {
             options: [
               {
@@ -1119,8 +1122,6 @@ const jsonData = {
               },
             ],
           },
-        ],
-        [
           {
             options: [
               {
@@ -1133,6 +1134,771 @@ const jsonData = {
               },
               {
                 text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\supseteq A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 8,
+      question:
+        "Sia $A \\subseteq X$ uno spazio metrico. Scrivere cosa significa che $A$ è chiuso. Dimostrare che $A$ è chiuso se e solo se $X \\setminus A$ è aperto.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato ed $A \\subseteq X$",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\supset X$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $A$ è <strong>chiuso</strong> se $\\text{fr}(A) \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $A$ è <strong>chiuso</strong> se $\\text{fr}(A) = A$",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $A$ è <strong>chiuso</strong> se $\\text{fr}(A) \\subset X$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$A$ chiuso $\\Leftrightarrow X \\setminus A$ aperto",
+                is_correct: true,
+              },
+              {
+                text: "$A$ chiuso $\\Rightarrow X \\setminus A$ aperto",
+                is_correct: false,
+              },
+              {
+                text: "$A$ chiuso $\\Leftrightarrow X \\cap A$ aperto",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(\\Rightarrow)$ Se $A$ chiuso allora $\\text{fr}(A) \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "$(\\Rightarrow)$ Se $A$ aperto allora $\\text{fr}(A) \\subseteq A$",
+                is_correct: false,
+              },
+              {
+                text: "$(\\Rightarrow)$ Se $A$ chiuso allora $\\text{fr}(A) = A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\setminus A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti",
+                is_correct: true,
+              },
+              {
+                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\cap A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti",
+                is_correct: false,
+              },
+              {
+                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\cup A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$(X \\setminus A) \\cap \\text{fr}(X \\setminus A) = \\emptyset$",
+                is_correct: true,
+              },
+              {
+                text: "$(X \\setminus A) \\cup \\text{fr}(X \\setminus A) = \\emptyset$",
+                is_correct: false,
+              },
+              {
+                text: "$(X \\setminus A) \\cap \\text{fr}(A) = \\emptyset$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow (X \\setminus A)$ aperto",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow (X \\cap A)$ aperto",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow (X \\setminus A) \\neq \\emptyset$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(\\Leftarrow)$ Se $(X \\setminus A)$ aperto, allora $(X \\setminus A) \\cap \\text{fr}(X \\setminus A) = \\emptyset$",
+                is_correct: true,
+              },
+              {
+                text: "$(\\Leftarrow)$ Se $(X \\setminus A)$ chiuso, allora $(X \\setminus A) \\cap \\text{fr}(X \\setminus A) = \\emptyset$",
+                is_correct: false,
+              },
+              {
+                text: "$(\\Leftarrow)$ Se $(X \\setminus A)$ aperto, allora $(X \\cap A) \\cap \\text{fr}(X \\setminus A) = \\emptyset$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "poiché $\\text{fr}(X \\setminus A) = \\text{fr}(A)$ deve essere $\\text{fr}(A) \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "poiché $\\text{fr}(X \\setminus A) = \\text{fr}(A)$ deve essere $\\text{fr}(A) = A$",
+                is_correct: false,
+              },
+              {
+                text: "poiché $\\text{fr}(X \\setminus A) \\neq \\text{fr}(A)$ deve essere $\\text{fr}(A) \\subseteq A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "in quanto $(X \\setminus A) \\cap A = \\emptyset$",
+                is_correct: true,
+              },
+              {
+                text: "in quanto $(X \\setminus A) \\cap A = X$",
+                is_correct: false,
+              },
+              {
+                text: "in quanto $(X \\cap A) \\cap A = \\emptyset$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "e $(X \\setminus A) \\cup A = X$",
+                is_correct: true,
+              },
+              {
+                text: "e $(X \\setminus A) \\cap A = X$",
+                is_correct: false,
+              },
+              {
+                text: "e $(X \\cap A) \\cup A = X$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "e $\\text{fr}(A) \\subseteq X$",
+                is_correct: true,
+              },
+              {
+                text: "e $\\text{fr}(A) \\supseteq X$",
+                is_correct: false,
+              },
+              {
+                text: "e $\\text{fr}(A) = X$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow A$ chiuso",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow A$ aperto",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow A \\neq \\emptyset$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 9,
+      question:
+        "Dare la definizione di chiusura $\\overline{A}$ di $A$, con $A \\subseteq X$ spazio metrico. Dimostrare che $x_0 \\in \\overline{A}$ se esiste una successione a valori in $A$ convergente ad $x_0$.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato ed $A \\subseteq X$",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\supset X$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "chiameremo <strong>chiusura</strong> di $A$ l'insieme $\\overline{A} = A \\cup \\text{fr}(A)$",
+                is_correct: true,
+              },
+              {
+                text: "chiameremo <strong>chiusura</strong> di $A$ l'insieme $\\overline{A} = A \\cap \\text{fr}(A)$",
+                is_correct: false,
+              },
+              {
+                text: "chiameremo <strong>chiusura</strong> di $A$ l'insieme $\\overline{A} = \\text{fr}(A)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$x_0 \\in \\overline{A} \\Leftrightarrow \\exists$ una successione $\\{a_n\\}$ a valori in $A$ convergente ad $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "$x_0 \\in \\overline{A} \\Rightarrow \\exists$ una successione $\\{a_n\\}$ a valori in $A$ divergente ad $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "$x_0 \\in A \\Rightarrow \\exists$ una successione $\\{a_n\\}$ a valori in $A$ convergente ad $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(\\Rightarrow)$ Sia $x_0 \\in \\overline{A}$, allora $x_0 \\in A$ oppure $x_0 \\in \\text{fr}(A)$",
+                is_correct: true,
+              },
+              {
+                text: "$(\\Rightarrow)$ Sia $x_0 \\in A$, allora $x_0 \\in \\overline{A}$ oppure $x_0 \\in \\text{fr}(A)$",
+                is_correct: false,
+              },
+              {
+                text: "$(\\Rightarrow)$ Sia $x_0 \\in \\text{fr}(A)$, allora $x_0 \\in \\overline{A}$ oppure $x_0 \\in A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Se $x_0 \\in A$ prendiamo $\\{a_n\\} = x_0$ per ogni $n \\in \\mathbb{N}$",
+                is_correct: true,
+              },
+              {
+                text: "Se $x_0 \\in A$ prendiamo $\\{a_n\\} = x_0$ per ogni $n > 0$",
+                is_correct: false,
+              },
+              {
+                text: "Se $x_0 \\in \\text{fr}(A)$ prendiamo $\\{a_n\\} = x_0$ per ogni $n \\in \\mathbb{N}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Se $x_0 \\in \\text{fr}(A)$ $\\exists \\{a_n\\} \\in A \\cap B(x_0, 1/n)$",
+                is_correct: true,
+              },
+              {
+                text: "Se $x_0 \\in \\text{fr}(A)$ $\\exists \\{a_n\\} \\in A \\cup B(x_0, 1/n)$",
+                is_correct: false,
+              },
+              {
+                text: "Se $x_0 \\in A$ $\\exists \\{a_n\\} \\in A \\cap B(x_0, 1/n)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "quindi $d(a_n, x_0) < 1/n \\rightarrow_{n \\rightarrow +\\infty} 0$",
+                is_correct: true,
+              },
+              {
+                text: "quindi $d(a_n, x_0) < 1/n \\rightarrow_{n \\rightarrow +\\infty} \\infty$",
+                is_correct: false,
+              },
+              {
+                text: "quindi $d(a_n, x_0) \\geq 1/n \\rightarrow_{n \\rightarrow +\\infty} 0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(\\Leftarrow)$ Se $x_0 \\in A \\Rightarrow x_0 \\in \\overline{A}$",
+                is_correct: true,
+              },
+              {
+                text: "$(\\Leftarrow)$ Se $x_0 \\in \\text{fr}(A) \\Rightarrow x_0 \\in \\overline{A}$",
+                is_correct: false,
+              },
+              {
+                text: "$(\\Leftarrow)$ Se $x_0 \\in A \\Rightarrow x_0 \\in \\text{fr}(A)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "se $x_0 \\notin A$, sia $r > 0$ allora $B(x_0, r)$ ha almeno un elemento non appartenente ad $A$.",
+                is_correct: true,
+              },
+              {
+                text: "se $x_0 \\in A$, sia $r > 0$ allora $B(x_0, r)$ ha almeno un elemento non appartenente ad $A$.",
+                is_correct: false,
+              },
+              {
+                text: "se $x_0 \\notin A$, sia $r > 0$ allora $B(x_0, r)$ ha solo elementi appartenenti ad $A$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Scelgo $n \\in \\mathbb{N}$ $| d(a_n, x_0) < r$",
+                is_correct: true,
+              },
+              {
+                text: "Scelgo $n \\in \\mathbb{N}$ $| d(a_n, x_0) > r$",
+                is_correct: false,
+              },
+              {
+                text: "Scelgo $n \\in \\mathbb{R}$ $| d(a_n, x_0) < r$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "con $a_n \\in A \\cap B(x_0, r)$",
+                is_correct: true,
+              },
+              {
+                text: "con $a_n \\in A \\cup B(x_0, r)$",
+                is_correct: false,
+              },
+              {
+                text: "con $a_n \\notin A \\cap B(x_0, r)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "quindi $x_0 \\in \\text{fr}(A) \\subseteq \\overline{A}$",
+                is_correct: true,
+              },
+              {
+                text: "quindi $x_0 \\in A \\subseteq \\overline{A}$",
+                is_correct: false,
+              },
+              {
+                text: "quindi $x_0 \\in X \\subseteq \\overline{A}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 9,
+      question:
+        "Dare la definizione di limite di una successione in uno spazio metrico. Dimostrare che se il limite esiste allora è unico.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Sia $\\{x_n\\}$ una successione nello spazio metrico $(X, d)$ ed $l \\in X$,",
+                is_correct: true,
+              },
+              {
+                text: "Sia $\\{x_n\\}$ una successione nello spazio metrico $(X, d)$ ed $l \\in \\mathbb{R}$,",
+                is_correct: false,
+              },
+              {
+                text: "Sia $\\{x_n\\}$ una successione nello spazio normato $(X, d)$ ed $l \\in X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $\\{x_n\\}$ ha limite $l$ (converge ad $l$)",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $\\{x_n\\}$ ha limite $l$ (diverge ad $l$)",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $\\{x_n\\}$ ha limite $l$ (tende ad $l$)",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "se $\\forall \\epsilon > 0 \\exists n(\\epsilon) \\in \\mathbb{N}$ tale che $\\forall n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                is_correct: true,
+              },
+              {
+                text: "se $\\exists \\epsilon > 0 \\forall n(\\epsilon) \\in \\mathbb{N}$ tale che $\\forall n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                is_correct: false,
+              },
+              {
+                text: "se $\\forall \\epsilon > 0 \\exists n(\\epsilon) \\in X$ tale che $\\forall n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$d(x_n, l) < \\epsilon$",
+                is_correct: true,
+              },
+              {
+                text: "$d(x_n, l) \\leq \\epsilon$",
+                is_correct: false,
+              },
+              {
+                text: "$d(x_n, l) > \\epsilon$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Se $\\{a_n\\} \\to a$ e $\\{a_n\\} \\to b$",
+                is_correct: true,
+              },
+              {
+                text: "Se $\\{a_n\\} \\to a$ e $\\{a_n\\} \\to c$",
+                is_correct: false,
+              },
+              {
+                text: "Se $\\{a_n\\} \\to b$ e $\\{a_n\\} \\to a$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\Rightarrow d(a, b) \\leq d(a, a_n) + d(a_n, b) < \\epsilon/2 + \\epsilon/2 = \\epsilon$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow d(a, b) \\geq d(a, a_n) + d(a_n, b) = \\epsilon$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow d(a, b) \\leq d(a, a_n) + d(a_n, b) = \\epsilon/2$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\Rightarrow d(a, b) \\leq \\epsilon$ $\\forall \\epsilon > 0$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow d(a, b) \\geq \\epsilon$ $\\forall \\epsilon > 0$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow d(a, b) \\leq \\epsilon/2$ $\\forall \\epsilon > 0$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow d(a, b) = 0 \\Rightarrow a = b$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow d(a, b) \\neq 0 \\Rightarrow a \\neq b$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow d(a, b) = \\epsilon \\Rightarrow a = b$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 10,
+      question:
+        "Sia $A \\subseteq X$ uno spazio metrico. Dare la definizione di punto di accumulazione di $A$. Dare un esempio di punto di accumulazione appartenente ad $A$ ed uno di punto non appartenente ad $A$.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\supset X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\forall r > 0$, $A \\cap B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\exists r > 0$ | $A \\cap B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\forall r > 0$, $A \\cup B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Indichiamo con $D(A)$ l'insieme dei punti di accumulazione di $A$",
+                is_correct: true,
+              },
+              {
+                text: "Indichiamo con $D(A)$ l'insieme dei punti interni di $A$",
+                is_correct: false,
+              },
+              {
+                text: "Indichiamo con $D(A)$ l'insieme dei punti di frontiera di $A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Esempio: se $A$ aperto, $x_0 \\in \\text{fr}(A)$, $x_0 \\in D(A)$, $x_0 \\notin A$",
+                is_correct: true,
+              },
+              {
+                text: "Esempio: se $A$ chiuso, $x_0 \\in \\text{fr}(A)$, $x_0 \\in D(A)$, $x_0 \\notin A$",
+                is_correct: false,
+              },
+              {
+                text: "Esempio: se $A$ aperto, $x_0 \\in \\text{fr}(A)$, $x_0 \\in D(A)$, $x_0 \\in A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Esempio: se $A$ chiuso, $x_0 \\in \\text{fr}(A)$, $x_0 \\in D(A)$, $x_0 \\in A$",
+                is_correct: true,
+              },
+              {
+                text: "Esempio: se $A$ aperto, $x_0 \\in \\text{fr}(A)$, $x_0 \\in D(A)$, $x_0 \\notin A$",
+                is_correct: false,
+              },
+              {
+                text: "Esempio: se $A$ chiuso, $x_0 \\in \\text{fr}(A)$, $x_0 \\notin D(A)$, $x_0 \\in A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 12,
+      question:
+        "Sia $f: A \\to \\mathbb{R}^n$, con $A \\subseteq X$ spazio metrico. Illustrare il legame tra il limite della funzione per $a \\to x_0$ e il limite delle componenti. Dove deve stare $x_0$?",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio topologico ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in D(A)$,",
+                is_correct: true,
+              },
+              {
+                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in A$,",
+                is_correct: false,
+              },
+              {
+                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f(x) = \\{f_1(x), \\dots, f_n(x)\\}$",
+                is_correct: true,
+              },
+              {
+                text: "$f(x) = \\{f(x_1), \\dots, f(x_n)\\}$",
+                is_correct: false,
+              },
+              {
+                text: "$f(x) = f_1(x) + \\dots + f_n(x)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "sia poi $l \\in \\mathbb{R}^n$ allora",
+                is_correct: true,
+              },
+              {
+                text: "sia poi $l \\in \\mathbb{R}$ allora",
+                is_correct: false,
+              },
+              {
+                text: "sia poi $l \\in A$ allora",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall i \\in \\{1, \\dots, n\\}$",
+                is_correct: true,
+              },
+              {
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Rightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall i \\in \\{1, \\dots, n\\}$",
+                is_correct: false,
+              },
+              {
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l$ $\\forall i \\in \\{1, \\dots, n\\}$",
                 is_correct: false,
               },
             ],
