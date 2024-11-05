@@ -3600,5 +3600,96 @@ const jsonData = {
         ],
       ],
     },
+    {
+      id: 25,
+      question:
+        "Enunciare il teorema delle contrazioni specificando il significato di ogni termine che compare in esso.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Sia $(X, d)$ uno spazio metrico completo,",
+                is_correct: true,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio metrico compatto,",
+                is_correct: false,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio metrico limitato,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f: X \\to X$ una <strong>contrazione</strong>, cioè tale che $\\exists \\, L \\in [0, 1)$ per cui",
+                is_correct: true,
+              },
+              {
+                text: "$f: X \\to X$ una <strong>contrazione</strong>, cioè tale che $\\forall \\, L \\in [0, 1)$ per cui",
+                is_correct: false,
+              },
+              {
+                text: "$f: X \\to X$ una <strong>contrazione</strong>, cioè tale che $\\exists \\, L \\in (1, \\infty)$ per cui",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$d(f(x), f(y)) \\leq L \\cdot d(x, y)$ $\\forall \\, (x, y) \\in X \\times X$",
+                is_correct: true,
+              },
+              {
+                text: "$d(f(x), f(y)) \\geq L \\cdot d(x, y)$ $\\forall \\, (x, y) \\in X \\times X$",
+                is_correct: false,
+              },
+              {
+                text: "$d(f(x), f(y)) = L \\cdot d(x, y)$ $\\forall \\, (x, y) \\in X \\times X$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\Rightarrow \\exists ! \\, l \\in X \\mid f(l) = l$.",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow \\exists ! \\,l \\in X \\mid f(l) \\neq l$.",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow \\exists ! \\, l \\in X \\mid f(l) = 0$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$l$ si dice <strong>punto fisso</strong> per $f$",
+                is_correct: true,
+              },
+              {
+                text: "$l$ si dice <strong>punto limite</strong> per $f$",
+                is_correct: false,
+              },
+              {
+                text: "$l$ si dice <strong>punto di accumulazione</strong> per $f$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
   ],
 };
