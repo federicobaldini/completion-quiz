@@ -2669,5 +2669,554 @@ const jsonData = {
         ],
       ],
     },
+    {
+      id: 20,
+      question:
+        "Dare la definizione di funzione uniformemente continua nell'ambito degli spazi metrici ed in quest'ambito enunciare una versione del teorema di Heine-Cantor.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi metrici ed $A \\subseteq X$, $f: A \\to Y$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi normati ed $A \\subseteq X$, $f: A \\to Y$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi topologici ed $A \\subseteq X$, $f: A \\to Y$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $f$ è <strong>uniformemente continua</strong> se $\\forall \\epsilon > 0 \\, \\exists \\, \\delta(\\epsilon) > 0 \\mid \\forall a_0, a_1 \\in A$, se $d_X(a_0, a_1) < \\delta(\\epsilon)$,",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $f$ è <strong>uniformemente continua</strong> se $\\exists \\epsilon > 0 \\, \\forall \\delta(\\epsilon) > 0 \\mid \\forall a_0, a_1 \\in A$, se $d_X(a_0, a_1) < \\delta(\\epsilon)$,",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $f$ è <strong>uniformemente continua</strong> se $\\forall \\epsilon > 0 \\, \\exists \\, \\delta(\\epsilon) > 0 \\mid \\forall a_0, a_1 \\in A$, se $d_X(a_0, a_1) > \\delta(\\epsilon)$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "allora $d_Y(f(a_0), f(a_1)) < \\epsilon$",
+                is_correct: true,
+              },
+              {
+                text: "allora $d_Y(f(a_0), f(a_1)) \\leq \\epsilon$",
+                is_correct: false,
+              },
+              {
+                text: "allora $d_X(f(a_0), f(a_1)) < \\epsilon$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi metrici ed $A \\subseteq X$ compatto,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi normati ed $A \\subseteq X$ compatto,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi metrici ed $A \\subseteq X$ chiuso,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f: A \\to Y$ continua",
+                is_correct: true,
+              },
+              {
+                text: "$f: A \\to X$ continua",
+                is_correct: false,
+              },
+              {
+                text: "$f: A \\to Y$ limitata",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow f$ uniformemente continua",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow f$ non uniformemente continua",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow f$ limitata",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 21,
+      question:
+        "Illustrare le nozioni di sottoinsieme convesso di uno spazio vettoriale e di sottoinsieme connesso per archi in uno spazio metrico. Illustrare qualche connessione tra esse.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Sia $(X, ||\\cdot||)$ uno spazio normato ed $x, y \\in X$",
+                is_correct: true,
+              },
+              {
+                text: "Sia $(X, ||\\cdot||)$ uno spazio metrico ed $x, y \\in X$",
+                is_correct: false,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio normato ed $x, y \\in X$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "poniamo $[x, y] = \\{x + t(y - x) \\mid t \\in [0, 1]\\}$",
+                is_correct: true,
+              },
+              {
+                text: "poniamo $[x, y] = \\{x + t(y + x) \\mid t \\in [0, 1]\\}$",
+                is_correct: false,
+              },
+              {
+                text: "poniamo $[x, y] = \\{x - t(y - x) \\mid t \\in [0, 1]\\}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Sia $A \\subseteq X$, diremo allora che $A$ è <strong>convesso</strong> se $\\forall x, y \\in A$ segue che $[x, y] \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "Sia $A \\subseteq X$, diremo allora che $A$ è <strong>convesso</strong> se $\\exists x, y \\in A$ tale che $[x, y] \\subseteq A$",
+                is_correct: false,
+              },
+              {
+                text: "Sia $A \\subseteq X$, diremo allora che $A$ è <strong>convesso</strong> se $\\forall x, y \\in A$ segue che $[x, y] = A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Sia $(X, d)$ uno spazio metrico ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio normato ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Sia $(X, ||\\cdot||)$ uno spazio metrico ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $A$ è <strong>connesso per archi</strong> se comunque si prendano $x, y \\in A$,",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $A$ è <strong>connesso per archi</strong> se $\\exists x, y \\in A$ tali che $x$ e $y$ siano collegati da un cammino in $A$",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $A$ è <strong>connesso per archi</strong> se $\\forall x, y \\in A$, esiste un segmento che collega $x$ a $y$ in $A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "esistono $a, b \\in \\mathbb{R}$ con $a \\leq b$",
+                is_correct: true,
+              },
+              {
+                text: "esistono $a, b \\in \\mathbb{N}$ con $a < b$",
+                is_correct: false,
+              },
+              {
+                text: "esistono $a, b \\in \\mathbb{R}$ con $a < b$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "e $f: [a, b] \\to X$ continua, tale che",
+                is_correct: true,
+              },
+              {
+                text: "e $f: [a, b] \\to Y$ continua, tale che",
+                is_correct: false,
+              },
+              {
+                text: "e $f: (a, b) \\to X$ continua, tale che",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(I)$ $f(a) = x$, $f(b) = y$",
+                is_correct: true,
+              },
+              {
+                text: "$(I)$ $f(a) = y$, $f(b) = x$",
+                is_correct: false,
+              },
+              {
+                text: "$(I)$ $f(a) = x$, $f(b) \\neq y$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(II)$ $f([a, b]) \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "$(II)$ $f([a, b]) = A$",
+                is_correct: false,
+              },
+              {
+                text: "$(II)$ $f([a, b]) \\supset A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Sia $(X, ||\\cdot||)$ uno spazio normato ed $A \\subseteq X$ convesso",
+                is_correct: true,
+              },
+              {
+                text: "Sia $(X, ||\\cdot||)$ uno spazio metrico ed $A \\subseteq X$ convesso",
+                is_correct: false,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio normato ed $A \\subseteq X$ convesso",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow A$ connesso per archi",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow A$ non connesso per archi",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow A$ connesso",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Se $A \\subseteq \\mathbb{R}$, $A$ convesso $\\Leftrightarrow A$ connesso per archi",
+                is_correct: true,
+              },
+              {
+                text: "Se $A \\subseteq \\mathbb{R}$, $A$ convesso $\\Rightarrow A$ connesso per archi",
+                is_correct: false,
+              },
+              {
+                text: "Se $A \\subseteq \\mathbb{R}$, $A$ connesso per archi $\\Rightarrow A$ convesso",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 22,
+      question:
+        "Illustrare ed eventualmente dimostrare qualche versione del teorema di Bolzano negli spazi metrici.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi metrici ed $A \\subseteq X$ connesso per archi,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi normati ed $A \\subseteq X$ connesso per archi,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi topologici ed $A \\subseteq X$ connesso per archi,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f: A \\to Y$ continua, allora",
+                is_correct: true,
+              },
+              {
+                text: "$f: A \\to Y$ limitata, allora",
+                is_correct: false,
+              },
+              {
+                text: "$f: A \\to X$ continua, allora",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(I)$ $f(A)$ è connesso per archi in $Y$",
+                is_correct: true,
+              },
+              {
+                text: "$(I)$ $f(A)$ è aperto in $Y$",
+                is_correct: false,
+              },
+              {
+                text: "$(I)$ $f(A)$ è compatto in $Y$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(II)$ se $Y = \\mathbb{R}$, $f(A)$ è un intervallo",
+                is_correct: true,
+              },
+              {
+                text: "$(II)$ se $Y = \\mathbb{R}$, $f(A)$ è limitato",
+                is_correct: false,
+              },
+              {
+                text: "$(II)$ se $Y = \\mathbb{R}$, $f(A)$ è aperto",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Dimostrazione $(I)$: siano $v, \\omega \\in f(A)$,",
+                is_correct: true,
+              },
+              {
+                text: "Dimostrazione $(I)$: siano $v, \\omega \\notin f(A)$,",
+                is_correct: false,
+              },
+              {
+                text: "Dimostrazione $(I)$: siano $v, \\omega \\in A$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "sia $v = f(x)$ e $\\omega = f(y)$ con $x, y \\in A$,",
+                is_correct: true,
+              },
+              {
+                text: "sia $v = f(y)$ e $\\omega = f(x)$ con $x, y \\in A$,",
+                is_correct: false,
+              },
+              {
+                text: "sia $v = x$ e $\\omega = y$ con $x, y \\in A$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "poiché $A$ connesso per archi $\\exists \\, a, b \\in \\mathbb{R}$ con $a \\leq b$",
+                is_correct: true,
+              },
+              {
+                text: "poiché $A$ connesso per archi $\\forall \\, a, b \\in \\mathbb{R}$ con $a \\leq b$",
+                is_correct: false,
+              },
+              {
+                text: "poiché $A$ connesso per archi $\\exists \\, a, b \\in \\mathbb{N}$ con $a \\leq b$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "e $\\varphi: [a, b] \\to X$ continua con $\\varphi(a) = x$, $\\varphi(b) = y$, $\\varphi([a, b]) \\subseteq A$.",
+                is_correct: true,
+              },
+              {
+                text: "e $\\varphi: [a, b] \\to X$ continua con $\\varphi(a) = y$, $\\varphi(b) = x$, $\\varphi([a, b]) \\subseteq A$.",
+                is_correct: false,
+              },
+              {
+                text: "e $\\varphi: [a, b] \\to X$ continua con $\\varphi(a) = x$, $\\varphi(b) = y$, $\\varphi([a, b]) = A$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Pongo $\\psi: [a, b] \\to Y$, $\\psi(t) = f(\\varphi(t))$ con $t \\in [a, b]$",
+                is_correct: true,
+              },
+              {
+                text: "Pongo $\\psi: [a, b] \\to Y$, $\\psi(t) = \\varphi(f(t))$ con $t \\in [a, b]$",
+                is_correct: false,
+              },
+              {
+                text: "Pongo $\\psi: [a, b] \\to X$, $\\psi(t) = f(\\varphi(t))$ con $t \\in [a, b]$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "so che $\\psi$ continua (composizione di funzioni continue),",
+                is_correct: true,
+              },
+              {
+                text: "so che $\\psi$ non è continua,",
+                is_correct: false,
+              },
+              {
+                text: "so che $\\psi$ è limitata,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\psi(t) \\in f(A)$ $\\forall \\, t \\in [a, b]$",
+                is_correct: true,
+              },
+              {
+                text: "$\\psi(t) \\notin f(A)$ $\\forall \\, t \\in [a, b]$",
+                is_correct: false,
+              },
+              {
+                text: "$\\psi(t) \\in f(A)$ $\\exists \\, t \\in [a, b]$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "infine $\\psi(a) = f(\\varphi(a)) = f(x) = v$ e $\\psi(b) = \\omega$",
+                is_correct: true,
+              },
+              {
+                text: "infine $\\psi(a) = f(\\varphi(b)) = f(y) = v$ e $\\psi(b) = \\omega$",
+                is_correct: false,
+              },
+              {
+                text: "infine $\\psi(a) = f(\\varphi(a)) = f(x) = \\omega$ e $\\psi(b) = v$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Dimostrazione $(II)$: segue da $(I)$, poiché in $\\mathbb{R}$ $f(A)$ è connesso per archi $\\Rightarrow f(A)$ convesso",
+                is_correct: true,
+              },
+              {
+                text: "Dimostrazione $(II)$: segue da $(I)$, poiché in $\\mathbb{R}$ $f(A)$ è aperto $\\Rightarrow f(A)$ convesso",
+                is_correct: false,
+              },
+              {
+                text: "Dimostrazione $(II)$: segue da $(I)$, poiché in $\\mathbb{R}$ $f(A)$ è chiuso $\\Rightarrow f(A)$ convesso",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
   ],
 };
