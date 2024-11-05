@@ -3216,7 +3216,6 @@ const jsonData = {
         ],
       ],
     },
-
     {
       id: 23,
       question:
@@ -3385,6 +3384,215 @@ const jsonData = {
               },
               {
                 text: "è compatto",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 24,
+      question:
+        "Dimostrare che un sottoinsieme chiuso di uno spazio metrico completo è completo.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Sia $(X, d)$ uno spazio metrico completo ed $A \\subseteq X$ chiuso $\\Rightarrow A$ è completo",
+                is_correct: true,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio metrico completo ed $A \\subseteq X$ aperto $\\Rightarrow A$ è completo",
+                is_correct: false,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio normato completo ed $A \\subseteq X$ chiuso $\\Rightarrow A$ è completo",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Consideriamo una successione di Cauchy $\\{x_n\\} \\in A$,",
+                is_correct: true,
+              },
+              {
+                text: "Consideriamo una successione di Cauchy $\\{x_n\\} \\in X$,",
+                is_correct: false,
+              },
+              {
+                text: "Consideriamo una successione $\\{x_n\\} \\in A$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "poiché $A$ è dotato della metrica indotta da $X$,",
+                is_correct: true,
+              },
+              {
+                text: "poiché $A$ è dotato della metrica indotta da $A$,",
+                is_correct: false,
+              },
+              {
+                text: "poiché $X$ è dotato della metrica indotta da $A$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "la successione $\\{x_n\\}$ è anch'essa una successione di Cauchy in $(X, d)$,",
+                is_correct: true,
+              },
+              {
+                text: "la successione $\\{x_n\\}$ è anch'essa convergente in $(X, d)$,",
+                is_correct: false,
+              },
+              {
+                text: "la successione $\\{x_n\\}$ è anch'essa limitata in $(X, d)$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "ossia $\\forall \\, \\epsilon > 0 \\, \\exists \\, \\delta \\in \\mathbb{N}$ $\\mid d(x_n, x_m) < \\epsilon$ $\\forall \\, n, m \\geq \\delta$",
+                is_correct: true,
+              },
+              {
+                text: "ossia $\\forall \\, \\epsilon > 0 \\, \\exists \\, \\delta \\in \\mathbb{R}$ $\\mid d(x_n, x_m) < \\epsilon$ $\\forall \\, n, m \\geq \\delta$",
+                is_correct: false,
+              },
+              {
+                text: "ossia $\\exists \\, \\epsilon > 0 \\, \\forall \\, \\delta \\in \\mathbb{N}$ $\\mid d(x_n, x_m) < \\epsilon$ $\\forall \\, n, m \\geq \\delta$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Poiché $X$ completo $\\exists \\, x \\in X \\mid \\{x_n\\} \\to x$ in $X$,",
+                is_correct: true,
+              },
+              {
+                text: "Poiché $X$ completo $\\exists \\, x \\in A \\mid \\{x_n\\} \\to x$ in $X$,",
+                is_correct: false,
+              },
+              {
+                text: "Poiché $A$ completo $\\exists \\, x \\in X \\mid \\{x_n\\} \\to x$ in $X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "ovvero $\\lim_{n \\to +\\infty} d(x_n, x) = 0$",
+                is_correct: true,
+              },
+              {
+                text: "ovvero $\\lim_{n \\to +\\infty} d(x_n, x) > 0$",
+                is_correct: false,
+              },
+              {
+                text: "ovvero $\\lim_{n \\to +\\infty} d(x_n, x) = \\epsilon$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Poiché $A$ chiuso e $\\{x_n\\} \\in A$ $\\forall \\, n$, ed $\\{x_n\\} \\to x$,",
+                is_correct: true,
+              },
+              {
+                text: "Poiché $A$ aperto e $\\{x_n\\} \\in A$ $\\forall \\, n$, ed $\\{x_n\\} \\to x$,",
+                is_correct: false,
+              },
+              {
+                text: "Poiché $A$ chiuso e $\\{x_n\\} \\in A$ $\\exists \\, n$, ed $\\{x_n\\} \\to x$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "segue che $x \\in A$ (A contiene tutti i suoi punti di accumulazione)",
+                is_correct: true,
+              },
+              {
+                text: "segue che $x \\notin A$",
+                is_correct: false,
+              },
+              {
+                text: "segue che $x \\in X$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\Rightarrow \\{x_n\\}$ converge ad $x \\in A$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow \\{x_n\\}$ converge ad $x \\in X$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow \\{x_n\\}$ è una successione limitata in $A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow$ ogni successione di Cauchy in $A$ converge ad un punto di $A$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow$ ogni successione di Cauchy in $A$ converge ad un punto di $X$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow$ ogni successione in $A$ converge ad un punto di $A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "pertanto $A$ è completo",
+                is_correct: true,
+              },
+              {
+                text: "pertanto $A$ non è completo",
+                is_correct: false,
+              },
+              {
+                text: "pertanto $A$ è compatto",
                 is_correct: false,
               },
             ],
