@@ -57,15 +57,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$\\forall x, y \\in X$ e $\\forall \\lambda \\in K$:",
+                text: "$\\forall \\, x, y \\in X$ e $\\forall \\, \\lambda \\in K$:",
                 is_correct: true,
               },
               {
-                text: "$\\forall x, y \\in K$ e $\\forall \\lambda \\in X$:",
+                text: "$\\forall \\, x, y \\in K$ e $\\forall \\, \\lambda \\in X$:",
                 is_correct: false,
               },
               {
-                text: "$\\forall x \\in X$, $\\forall y, \\lambda \\in K$:",
+                text: "$\\forall \\, x \\in X$, $\\forall \\, y, \\lambda \\in K$:",
                 is_correct: false,
               },
             ],
@@ -79,7 +79,7 @@ const jsonData = {
                 is_correct: true,
               },
               {
-                text: "$\\| x \\| \\geq 0$ per ogni $x \\in X$",
+                text: "$\\| x \\| \\geq 0 \\forall \\, x \\in X$",
                 is_correct: false,
               },
               {
@@ -137,7 +137,7 @@ const jsonData = {
                 is_correct: false,
               },
               {
-                text: "Esempio: consideriamo $\\mathbb{R}^n$ con la norma nulla $\\| x \\| = 0$ per ogni $x \\in \\mathbb{R}^n$",
+                text: "Esempio: consideriamo $\\mathbb{R}^n$ con la norma nulla $\\| x \\| = 0 \\forall \\, x \\in \\mathbb{R}^n$",
                 is_correct: false,
               },
             ],
@@ -387,15 +387,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$(\\Rightarrow)$ $\\forall \\varepsilon > 0$, $\\exists \\, k(\\varepsilon) \\in \\mathbb{N} \\; | \\; \\forall \\, k > k(\\varepsilon)$ e $\\forall \\, a \\in A$, $|f_k(a) - f(a)| < \\varepsilon$",
+                text: "$(\\Rightarrow)$ $\\forall \\, \\varepsilon > 0$, $\\exists \\, k(\\varepsilon) \\in \\mathbb{N} \\; | \\; \\forall \\, k > k(\\varepsilon)$ e $\\forall \\, a \\in A$, $|f_k(a) - f(a)| < \\varepsilon$",
                 is_correct: true,
               },
               {
-                text: "$(\\Rightarrow)$ $\\exists \\varepsilon > 0$, $\\forall \\, k(\\varepsilon) \\in \\mathbb{N} \\; | \\; \\exists \\, k < k(\\varepsilon)$ e $\\forall \\, a \\in A$, $|f_k(a) - f(a)| \\geq \\varepsilon$",
+                text: "$(\\Rightarrow)$ $\\exists \\, \\varepsilon > 0$, $\\forall \\, k(\\varepsilon) \\in \\mathbb{N} \\; | \\; \\exists \\, k < k(\\varepsilon)$ e $\\forall \\, a \\in A$, $|f_k(a) - f(a)| \\geq \\varepsilon$",
                 is_correct: false,
               },
               {
-                text: "$(\\Rightarrow)$ $\\forall \\varepsilon > 0$, $\\exists \\, k(\\varepsilon) \\in \\mathbb{N} \\; | \\; \\forall \\, k > k(\\varepsilon)$ e $\\exists \\, a \\in A$ | $|f_k(a) - f(a)| > \\varepsilon$",
+                text: "$(\\Rightarrow)$ $\\forall \\, \\varepsilon > 0$, $\\exists \\, k(\\varepsilon) \\in \\mathbb{N} \\; | \\; \\forall \\, k > k(\\varepsilon)$ e $\\exists \\, a \\in A$ | $|f_k(a) - f(a)| > \\varepsilon$",
                 is_correct: false,
               },
             ],
@@ -441,15 +441,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = 0$, allora $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k > k(\\varepsilon)$, $\\|f_k - f\\|_{BC(A)} < \\varepsilon$",
+                text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = 0$, allora $\\forall \\, \\varepsilon > 0$ $\\exists \\, k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k > k(\\varepsilon)$, $\\|f_k - f\\|_{BC(A)} < \\varepsilon$",
                 is_correct: true,
               },
               {
-                text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = \\infty$, allora $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\|f_k - f\\|_{BC(A)} > \\varepsilon$",
+                text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = \\infty$, allora $\\forall \\, \\varepsilon > 0$ $\\exists \\, k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\|f_k - f\\|_{BC(A)} > \\varepsilon$",
                 is_correct: false,
               },
               {
-                text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = 0$, allora $\\forall \\varepsilon > 0$ $\\exists k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k < k(\\varepsilon)$, $\\|f_k - f\\|_{BC(A)} < \\varepsilon$",
+                text: "$(\\Leftarrow)$ Se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{BC(A)} = 0$, allora $\\forall \\, \\varepsilon > 0$ $\\exists \\, k(\\varepsilon) \\in \\mathbb{N}$ $|$ $\\forall k < k(\\varepsilon)$, $\\|f_k - f\\|_{BC(A)} < \\varepsilon$",
                 is_correct: false,
               },
             ],
@@ -477,15 +477,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$\\implies \\forall a \\in A, \\ |f_k(a) - f(a)| < \\varepsilon$",
+                text: "$\\implies \\forall \\, a \\in A, \\ |f_k(a) - f(a)| < \\varepsilon$",
                 is_correct: true,
               },
               {
-                text: "$\\implies \\exists a \\in A, \\ |f_k(a) - f(a)| < \\varepsilon$",
+                text: "$\\implies \\exists \\, a \\in A, \\ |f_k(a) - f(a)| < \\varepsilon$",
                 is_correct: false,
               },
               {
-                text: "$\\implies \\forall a \\in A, \\ |f_k(a) - f(a)| > \\varepsilon$",
+                text: "$\\implies \\forall \\, a \\in A, \\ |f_k(a) - f(a)| > \\varepsilon$",
                 is_correct: false,
               },
             ],
@@ -534,15 +534,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "con le seguenti proprietà $\\forall x, y, z \\in X$:",
+                text: "con le seguenti proprietà $\\forall \\, x, y, z \\in X$:",
                 is_correct: true,
               },
               {
-                text: "con le seguenti proprietà $\\forall x, y \\in X$:",
+                text: "con le seguenti proprietà $\\forall \\, x, y \\in X$:",
                 is_correct: false,
               },
               {
-                text: "con le seguenti proprietà $\\forall x, y, z \\in \\mathbb{R}$:",
+                text: "con le seguenti proprietà $\\forall \\, x, y, z \\in \\mathbb{R}$:",
                 is_correct: false,
               },
             ],
@@ -560,7 +560,7 @@ const jsonData = {
                 is_correct: false,
               },
               {
-                text: "$d(x, y) > 0$ per ogni $x, y \\in X$",
+                text: "$d(x, y) > 0 \\forall \\, x, y \\in X$",
                 is_correct: false,
               },
             ],
@@ -570,15 +570,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$d(x, y) = d(y, x)$ $\\forall x, y \\in X$",
+                text: "$d(x, y) = d(y, x)$ $\\forall \\, x, y \\in X$",
                 is_correct: true,
               },
               {
-                text: "$d(x, y) = -d(y, x)$ $\\forall x, y \\in X$",
+                text: "$d(x, y) = -d(y, x)$ $\\forall \\, x, y \\in X$",
                 is_correct: false,
               },
               {
-                text: "$d(x, y) \\neq d(y, x)$ per ogni $x, y \\in X$",
+                text: "$d(x, y) \\neq d(y, x) \\forall \\, x, y \\in X$",
                 is_correct: false,
               },
             ],
@@ -588,15 +588,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$d(x, y) \\leq d(x, z) + d(z, y)$ $\\forall x, y, z \\in X$",
+                text: "$d(x, y) \\leq d(x, z) + d(z, y)$ $\\forall \\, x, y, z \\in X$",
                 is_correct: true,
               },
               {
-                text: "$d(x, y) \\geq d(x, z) + d(z, y)$ $\\forall x, y, z \\in X$",
+                text: "$d(x, y) \\geq d(x, z) + d(z, y)$ $\\forall \\, x, y, z \\in X$",
                 is_correct: false,
               },
               {
-                text: "$d(x, y) = d(x, z) - d(z, y)$ per ogni $x, y, z \\in X$",
+                text: "$d(x, y) = d(x, z) - d(z, y) \\forall \\, x, y, z \\in X$",
                 is_correct: false,
               },
             ],
@@ -642,15 +642,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$d(x, y) = 0 \\Leftrightarrow x = y$ per ogni $x, y \\in \\mathbb{R}$",
+                text: "$d(x, y) = 0 \\Leftrightarrow x = y$ $\\forall \\, x, y \\in \\mathbb{R}$",
                 is_correct: true,
               },
               {
-                text: "$d(x, y) = 1 \\Leftrightarrow x = y$ per ogni $x, y \\in \\mathbb{R}$",
+                text: "$d(x, y) = 1 \\Leftrightarrow x = y$ $\\forall \\, x, y \\in \\mathbb{R}$",
                 is_correct: false,
               },
               {
-                text: "$d(x, y) = 0$ per ogni $x, y \\in \\mathbb{R}$",
+                text: "$d(x, y) = 0$ $\\forall \\, x, y \\in \\mathbb{R}$",
                 is_correct: false,
               },
             ],
@@ -660,15 +660,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$d(x, y) = d(y, x)$ $\\forall x, y \\in \\mathbb{R}$",
+                text: "$d(x, y) = d(y, x)$ $\\forall \\, x, y \\in \\mathbb{R}$",
                 is_correct: true,
               },
               {
-                text: "$d(x, y) \\neq d(y, x)$ per ogni $x, y \\in \\mathbb{R}$",
+                text: "$d(x, y) \\neq d(y, x) \\forall \\, x, y \\in \\mathbb{R}$",
                 is_correct: false,
               },
               {
-                text: "$d(x, y) = -d(y, x)$ per ogni $x, y \\in \\mathbb{R}$",
+                text: "$d(x, y) = -d(y, x) \\forall \\, x, y \\in \\mathbb{R}$",
                 is_correct: false,
               },
             ],
@@ -678,15 +678,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$d(x, y) \\leq d(x, z) + d(z, y)$ per ogni $x, y, z \\in \\mathbb{R}$",
+                text: "$d(x, y) \\leq d(x, z) + d(z, y) \\forall \\, x, y, z \\in \\mathbb{R}$",
                 is_correct: true,
               },
               {
-                text: "$d(x, y) \\geq d(x, z) + d(z, y)$ per ogni $x, y, z \\in \\mathbb{R}$",
+                text: "$d(x, y) \\geq d(x, z) + d(z, y) \\forall \\, x, y, z \\in \\mathbb{R}$",
                 is_correct: false,
               },
               {
-                text: "$d(x, y) = d(x, z) - d(z, y)$ per ogni $x, y, z \\in \\mathbb{R}$",
+                text: "$d(x, y) = d(x, z) - d(z, y) \\forall \\, x, y, z \\in \\mathbb{R}$",
                 is_correct: false,
               },
             ],
@@ -789,7 +789,7 @@ const jsonData = {
           {
             options: [
               {
-                text: "Se $x \\in C$, allora $\\exists r_1, r_2 > 0$ | $x \\in B(x, r_1) \\subseteq A$ e $x \\in B(x, r_2) \\subseteq B$.",
+                text: "Se $x \\in C$, allora $\\exists \\, r_1, r_2 > 0$ | $x \\in B(x, r_1) \\subseteq A$ e $x \\in B(x, r_2) \\subseteq B$.",
                 is_correct: true,
               },
               {
@@ -797,7 +797,7 @@ const jsonData = {
                 is_correct: false,
               },
               {
-                text: "Se $x \\in C$, allora $\\exists r_1, r_2 > 0$ | $B(x, r_1) \\subseteq X \\setminus A$ e $B(x, r_2) \\subseteq X \\setminus B$.",
+                text: "Se $x \\in C$, allora $\\exists \\, r_1, r_2 > 0$ | $B(x, r_1) \\subseteq X \\setminus A$ e $B(x, r_2) \\subseteq X \\setminus B$.",
                 is_correct: false,
               },
             ],
@@ -1027,15 +1027,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\subseteq A$",
+                text: "quindi $\\exists \\, r > 0 \\mid B(x, r) \\subseteq A$",
                 is_correct: true,
               },
               {
-                text: "quindi $\\forall\\, r > 0, B(x, r) \\subseteq A$",
+                text: "quindi $\\forall \\, r > 0, B(x, r) \\subseteq A$",
                 is_correct: false,
               },
               {
-                text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\supseteq A$",
+                text: "quindi $\\exists \\, r > 0 \\mid B(x, r) \\supseteq A$",
                 is_correct: false,
               },
             ],
@@ -1125,15 +1125,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\subseteq A$",
+                text: "quindi $\\exists \\, r > 0 \\mid B(x, r) \\subseteq A$",
                 is_correct: true,
               },
               {
-                text: "quindi $\\forall\\, r > 0, B(x, r) \\subseteq A$",
+                text: "quindi $\\forall \\, r > 0, B(x, r) \\subseteq A$",
                 is_correct: false,
               },
               {
-                text: "quindi $\\exists\\, r > 0 \\mid B(x, r) \\supseteq A$",
+                text: "quindi $\\exists \\, r > 0 \\mid B(x, r) \\supseteq A$",
                 is_correct: false,
               },
             ],
@@ -1365,7 +1365,7 @@ const jsonData = {
       ],
     },
     {
-      id: 9,
+      id: 8,
       question:
         "Dare la definizione di chiusura $\\overline{A}$ di $A$, con $A \\subseteq X$ spazio metrico. Dimostrare che $x_0 \\in \\overline{A}$ se esiste una successione a valori in $A$ convergente ad $x_0$.",
       answer_parts: [
@@ -1443,15 +1443,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Se $x_0 \\in A$ prendiamo $\\{a_n\\} = x_0$ per ogni $n \\in \\mathbb{N}$",
+                text: "Se $x_0 \\in A$ prendiamo $\\{a_n\\} = x_0 \\forall \\, n \\in \\mathbb{N}$",
                 is_correct: true,
               },
               {
-                text: "Se $x_0 \\in A$ prendiamo $\\{a_n\\} = x_0$ per ogni $n > 0$",
+                text: "Se $x_0 \\in A$ prendiamo $\\{a_n\\} = x_0 \\forall \\, n > 0$",
                 is_correct: false,
               },
               {
-                text: "Se $x_0 \\in \\text{fr}(A)$ prendiamo $\\{a_n\\} = x_0$ per ogni $n \\in \\mathbb{N}$",
+                text: "Se $x_0 \\in \\text{fr}(A)$ prendiamo $\\{a_n\\} = x_0 \\forall \\, n \\in \\mathbb{N}$",
                 is_correct: false,
               },
             ],
@@ -1461,15 +1461,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Se $x_0 \\in \\text{fr}(A)$ $\\exists \\{a_n\\} \\in A \\cap B(x_0, 1/n)$",
+                text: "Se $x_0 \\in \\text{fr}(A)$ $\\exists \\, \\{a_n\\} \\in A \\cap B(x_0, 1/n)$",
                 is_correct: true,
               },
               {
-                text: "Se $x_0 \\in \\text{fr}(A)$ $\\exists \\{a_n\\} \\in A \\cup B(x_0, 1/n)$",
+                text: "Se $x_0 \\in \\text{fr}(A)$ $\\exists \\, \\{a_n\\} \\in A \\cup B(x_0, 1/n)$",
                 is_correct: false,
               },
               {
-                text: "Se $x_0 \\in A$ $\\exists \\{a_n\\} \\in A \\cap B(x_0, 1/n)$",
+                text: "Se $x_0 \\in A$ $\\exists \\, \\{a_n\\} \\in A \\cap B(x_0, 1/n)$",
                 is_correct: false,
               },
             ],
@@ -1618,15 +1618,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "se $\\forall \\epsilon > 0 \\exists n(\\epsilon) \\in \\mathbb{N}$ tale che $\\forall n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                text: "se $\\forall \\, \\epsilon > 0$ $\\exists \\, n(\\epsilon) \\in \\mathbb{N}$ tale che $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
                 is_correct: true,
               },
               {
-                text: "se $\\exists \\epsilon > 0 \\forall n(\\epsilon) \\in \\mathbb{N}$ tale che $\\forall n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                text: "se $\\exists \\, \\epsilon > 0$ $\\forall \\, n(\\epsilon) \\in \\mathbb{N}$ tale che $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
                 is_correct: false,
               },
               {
-                text: "se $\\forall \\epsilon > 0 \\exists n(\\epsilon) \\in X$ tale che $\\forall n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                text: "se $\\forall \\, \\epsilon > 0$ $\\exists \\, n(\\epsilon) \\in X$ tale che $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
                 is_correct: false,
               },
             ],
@@ -1688,15 +1688,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$\\Rightarrow d(a, b) \\leq \\epsilon$ $\\forall \\epsilon > 0$",
+                text: "$\\Rightarrow d(a, b) \\leq \\epsilon$ $\\forall \\, \\epsilon > 0$",
                 is_correct: true,
               },
               {
-                text: "$\\Rightarrow d(a, b) \\geq \\epsilon$ $\\forall \\epsilon > 0$",
+                text: "$\\Rightarrow d(a, b) \\geq \\epsilon$ $\\forall \\, \\epsilon > 0$",
                 is_correct: false,
               },
               {
-                text: "$\\Rightarrow d(a, b) \\leq \\epsilon/2$ $\\forall \\epsilon > 0$",
+                text: "$\\Rightarrow d(a, b) \\leq \\epsilon/2$ $\\forall \\, \\epsilon > 0$",
                 is_correct: false,
               },
             ],
@@ -1745,15 +1745,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\forall r > 0$, $A \\cap B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
+                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\forall \\, r > 0$, $A \\cap B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
                 is_correct: true,
               },
               {
-                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\exists r > 0$ | $A \\cap B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
+                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\exists \\, r > 0$ | $A \\cap B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
                 is_correct: false,
               },
               {
-                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\forall r > 0$, $A \\cup B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
+                text: "diremo che $x_0$ è un <strong>punto di accumulazione</strong> e per $A$ se $\\forall \\, r > 0$, $A \\cup B(x_0, r)$ contiene almeno un elemento distinto da $x_0$",
                 is_correct: false,
               },
             ],
@@ -1890,15 +1890,359 @@ const jsonData = {
           {
             options: [
               {
-                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall i \\in \\{1, \\dots, n\\}$",
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
                 is_correct: true,
               },
               {
-                text: "$\\lim_{x \\to x_0} f(x) = l \\Rightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall i \\in \\{1, \\dots, n\\}$",
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Rightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
                 is_correct: false,
               },
               {
-                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l$ $\\forall i \\in \\{1, \\dots, n\\}$",
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 13,
+      question:
+        "Sia $f: A \\to \\mathbb{R}^n$, con $A \\subseteq X$ spazio metrico. Illustrare il legame tra il limite della funzione per $a \\to x_0$ e il limite delle componenti. Dove deve stare $x_0$?",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio topologico ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in D(A)$,",
+                is_correct: true,
+              },
+              {
+                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in A$,",
+                is_correct: false,
+              },
+              {
+                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f(x) = \\{f_1(x), \\dots, f_n(x)\\}$",
+                is_correct: true,
+              },
+              {
+                text: "$f(x) = \\{f(x_1), \\dots, f(x_n)\\}$",
+                is_correct: false,
+              },
+              {
+                text: "$f(x) = f_1(x) + \\dots + f_n(x)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "sia poi $l \\in \\mathbb{R}^n$ allora",
+                is_correct: true,
+              },
+              {
+                text: "sia poi $l \\in \\mathbb{R}$ allora",
+                is_correct: false,
+              },
+              {
+                text: "sia poi $l \\in A$ allora",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
+                is_correct: true,
+              },
+              {
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Rightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
+                is_correct: false,
+              },
+              {
+                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 14,
+      question: "Illustrare cosa si può dire sui limiti di restrizioni.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi metrici ed $A \\subseteq B \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi normati ed $A \\subseteq B \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi metrici ed $B \\subseteq A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f: B \\to Y$ ed $l \\in Y$, allora",
+                is_correct: true,
+              },
+              {
+                text: "$f: A \\to Y$ ed $l \\in X$, allora",
+                is_correct: false,
+              },
+              {
+                text: "$f: B \\to X$ ed $l \\in Y$, allora",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(I)$ se $x_0 \\in D(A)$ si ha anche $x_0 \\in D(B)$",
+                is_correct: true,
+              },
+              {
+                text: "$(I)$ se $x_0 \\in D(B)$ si ha anche $x_0 \\in D(A)$",
+                is_correct: false,
+              },
+              {
+                text: "$(I)$ se $x_0 \\in A$ si ha anche $x_0 \\in B$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(II)$ sotto l'ipotesi $(I)$, se $\\lim_{x \\to x_0} f(x) = l$ si ha $\\lim_{x \\to x_0} f_{|A}(x) = l$",
+                is_correct: true,
+              },
+              {
+                text: "$(II)$ sotto l'ipotesi $(I)$, se $\\lim_{x \\to x_0} f_{|A}(x) = l$ si ha $\\lim_{x \\to x_0} f(x) = l$",
+                is_correct: false,
+              },
+              {
+                text: "$(II)$ sotto l'ipotesi $(I)$, se $\\lim_{x \\to x_0} f(x) = l$ si ha $\\lim_{x \\to x_0} f_{|B}(x) = l$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(III)$ se $\\exists \\, r > 0$ per cui $(B_X(x_0, r) \\cap B) \\setminus \\{x_0\\} \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "$(III)$ se $\\forall \\, r > 0$ per cui $(B_X(x_0, r) \\cap B) \\setminus \\{x_0\\} \\subseteq A$",
+                is_correct: false,
+              },
+              {
+                text: "$(III)$ se $\\exists \\, r > 0$ per cui $(B_X(x_0, r) \\cup B) \\setminus \\{x_0\\} \\subseteq A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "e vale $\\lim_{x \\to x_0} f_{|A}(x) = l$, si ha $\\lim_{x \\to x_0} f(x) = l$",
+                is_correct: true,
+              },
+              {
+                text: "e vale $\\lim_{x \\to x_0} f(x) = l$, si ha $\\lim_{x \\to x_0} f_{|A}(x) = l$",
+                is_correct: false,
+              },
+              {
+                text: "e vale $\\lim_{x \\to x_0} f_{|B}(x) = l$, si ha $\\lim_{x \\to x_0} f(x) = l$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 15,
+      question:
+        "Dare la definizione di $f$ continua in $x_0$ con $f: A \\to Y$, $A \\subseteq X$ e $X, Y$ spazi metrici. Descrivere la connessione tra questa definizione e quella di limite.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi metrici ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi normati ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi topologici ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$x_0 \\in A$, $f: A \\to Y$,",
+                is_correct: true,
+              },
+              {
+                text: "$x_0 \\in X$, $f: A \\to Y$,",
+                is_correct: false,
+              },
+              {
+                text: "$x_0 \\in Y$, $f: A \\to X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $f$ è <strong>continua</strong> in $x_0$ se $\\forall \\, \\epsilon > 0 \\, \\exists \\, \\delta(\\epsilon) > 0$ tale che $\\forall \\, x \\in B_X(x_0, \\delta(\\epsilon)) \\cap A$",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $f$ è <strong>continua</strong> in $x_0$ se $\\exists \\, \\epsilon > 0 \\, \\forall \\, \\delta(\\epsilon) > 0$ tale che $\\forall \\, x \\in B_X(x_0, \\delta(\\epsilon)) \\cap A$",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $f$ è <strong>continua</strong> in $x_0$ se $\\forall \\, \\epsilon > 0 \\, \\exists \\, \\delta(\\epsilon) > 0$ tale che $\\forall \\, x \\in B_X(x_0, \\delta(\\epsilon)) \\cup A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$d_Y(f(x), f(x_0)) < \\epsilon$",
+                is_correct: true,
+              },
+              {
+                text: "$d_Y(f(x), f(x_0)) \\leq \\epsilon$",
+                is_correct: false,
+              },
+              {
+                text: "$d_X(f(x), f(x_0)) < \\epsilon$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi metrici ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi normati ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d_X)$ e $(Y, d_Y)$ due spazi topologici ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$x_0 \\in A$, $f: A \\to Y$ allora",
+                is_correct: true,
+              },
+              {
+                text: "$x_0 \\in X$, $f: A \\to Y$ allora",
+                is_correct: false,
+              },
+              {
+                text: "$x_0 \\in Y$, $f: A \\to X$ allora",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(I)$ se $x_0 \\in A \\setminus D(A)$, $f$ continua in $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "$(I)$ se $x_0 \\in D(A) \\setminus A$, $f$ continua in $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "$(I)$ se $x_0 \\in A \\cap D(A)$, $f$ continua in $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(II)$ se $x_0 \\in A \\cap D(A)$, $f$ continua in $x_0$ $\\Leftrightarrow \\exists \\, \\lim_{x \\to x_0} f(x)$ e coincide con $f(x_0)$",
+                is_correct: true,
+              },
+              {
+                text: "$(II)$ se $x_0 \\in A \\cap D(A)$, $f$ continua in $x_0$ $\\Rightarrow \\exists \\, \\lim_{x \\to x_0} f(x)$ e coincide con $f(x_0)$",
+                is_correct: false,
+              },
+              {
+                text: "$(II)$ se $x_0 \\in A \\setminus D(A)$, $f$ continua in $x_0$ $\\Leftrightarrow \\exists \\, \\lim_{x \\to x_0} f(x)$ e coincide con $f(x_0)$",
                 is_correct: false,
               },
             ],
