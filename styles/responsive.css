@@ -1,0 +1,112 @@
+/* responsive.css */
+
+/* Regole generali per schermi piccoli */
+@media screen and (max-width: 600px) {
+  /* Imposta la dimensione del font base */
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  /* Regola il margine e il padding del container */
+  .container {
+    margin: 60px 10px 0 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
+  }
+
+  /* Dimensioni dei font per titoli */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Posizionamento degli elementi assoluti */
+  #theme-toggle {
+    top: 10px;
+    left: 10px;
+  }
+
+  #download-button {
+    top: 10px;
+    right: 60px;
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+
+  #score-counter {
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+
+  /* Navigatore del teorema */
+  #theorem-navigator {
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  #theorem-navigator label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  #theorem-id {
+    width: calc(100% - 16px);
+    font-size: 1rem;
+  }
+
+  #go-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* Stile dei pulsanti */
+  .option-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  #next-button,
+  #toggle-answer-button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* Area della domanda */
+  #question-area .question-title {
+    font-size: 1rem;
+  }
+
+  /* Lista delle opzioni */
+  .options {
+    margin: 10px 0 0 0;
+  }
+
+  .options li {
+    margin-bottom: 8px;
+  }
+
+  /* Risposta corrente */
+  #current-answer {
+    font-size: 1rem;
+  }
+
+  .highlighted-answer {
+    padding: 8px;
+  }
+}
