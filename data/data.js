@@ -3166,33 +3166,31 @@ const jsonData = {
           {
             options: [
               {
-                text: "$\\psi(t) \\in f(A)$ $\\forall \\, t \\in [a, b]$",
+                text: "$\\psi(t) \\in f(A)$ $\\forall \\, t \\in [a, b]$.",
                 is_correct: true,
               },
               {
-                text: "$\\psi(t) \\notin f(A)$ $\\forall \\, t \\in [a, b]$",
+                text: "$\\psi(t) \\notin f(A)$ $\\forall \\, t \\in [a, b]$.",
                 is_correct: false,
               },
               {
-                text: "$\\psi(t) \\in f(A)$ $\\exists \\, t \\in [a, b]$",
+                text: "$\\psi(t) \\in f(A)$ $\\exists \\, t \\in [a, b]$.",
                 is_correct: false,
               },
             ],
           },
-        ],
-        [
           {
             options: [
               {
-                text: "infine $\\psi(a) = f(\\varphi(a)) = f(x) = v$ e $\\psi(b) = \\omega$",
+                text: "Infine $\\psi(a) = f(\\varphi(a)) = f(x) = v$ e $\\psi(b) = \\omega$",
                 is_correct: true,
               },
               {
-                text: "infine $\\psi(a) = f(\\varphi(b)) = f(y) = v$ e $\\psi(b) = \\omega$",
+                text: "Infine $\\psi(a) = f(\\varphi(b)) = f(y) = v$ e $\\psi(b) = \\omega$",
                 is_correct: false,
               },
               {
-                text: "infine $\\psi(a) = f(\\varphi(a)) = f(x) = \\omega$ e $\\psi(b) = v$",
+                text: "Infine $\\psi(a) = f(\\varphi(a)) = f(x) = \\omega$ e $\\psi(b) = v$",
                 is_correct: false,
               },
             ],
@@ -3211,6 +3209,182 @@ const jsonData = {
               },
               {
                 text: "Dimostrazione $(II)$: segue da $(I)$, poiché in $\\mathbb{R}$ $f(A)$ è chiuso $\\Rightarrow f(A)$ convesso",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+
+    {
+      id: 23,
+      question:
+        "Dare la definizione di successione di Cauchy in uno spazio metrico e di spazio metrico completo. Presentare un esempio di spazio metrico completo ed un esempio di spazio metrico che non lo è.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $\\{a_k\\}$ una successione a valori in $X$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato ed $\\{a_k\\}$ una successione a valori in $X$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio topologico ed $\\{a_k\\}$ una successione a valori in $X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $\\{a_k\\}$ è <strong>di Cauchy</strong> se $\\forall \\, \\epsilon > 0 \\, \\exists \\, k(\\epsilon) \\in \\mathbb{N}$ $\\mid$ se $i, j \\in \\mathbb{N}$, allora $\\min\\{i, j\\} > k(\\epsilon)$ e $d(a_i, a_j) < \\epsilon$",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $\\{a_k\\}$ è <strong>di Cauchy</strong> se $\\exists \\, \\epsilon > 0 \\, \\forall \\, \\delta > 0$ $\\mid$ se $i, j \\in \\mathbb{N}$, allora $\\min\\{i, j\\} > \\delta$ e $d(a_i, a_j) < \\epsilon$",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $\\{a_k\\}$ è <strong>di Cauchy</strong> se $\\forall \\, \\epsilon > 0 \\, \\exists \\, k(\\epsilon) \\in \\mathbb{N}$ $\\mid$ se $i, j \\in \\mathbb{N}$, allora $\\max\\{i, j\\} > k(\\epsilon)$ e $d(a_i, a_j) < \\epsilon$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Sia $(X, d)$ uno spazio metrico,",
+                is_correct: true,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio normato,",
+                is_correct: false,
+              },
+              {
+                text: "Sia $(X, d)$ uno spazio topologico,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che è <strong>completo</strong> se ogni successione di Cauchy in esso è convergente",
+                is_correct: true,
+              },
+              {
+                text: "diremo che è <strong>completo</strong> se ogni successione in esso è convergente",
+                is_correct: false,
+              },
+              {
+                text: "diremo che è <strong>completo</strong> se ogni sottosuccessione di una successione di Cauchy è convergente",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Esempio: lo spazio metrico $B(A)$ delle funzioni $f: A \\to \\mathbb{R}$ limitate",
+                is_correct: true,
+              },
+              {
+                text: "Esempio: lo spazio metrico $B(A)$ delle funzioni $f: A \\to \\mathbb{R}$ illimitate",
+                is_correct: false,
+              },
+              {
+                text: "Esempio: lo spazio metrico $B(A)$ delle funzioni $f: A \\to \\mathbb{R}^2$ limitate",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "con metrica indotta dalla norma $||f||_{B(A)} = \\sup \\{|f(a)|, \\; a \\in A\\}$",
+                is_correct: true,
+              },
+              {
+                text: "con metrica indotta dalla norma $||f||_{B(A)} = \\inf \\{|f(a)|, \\; a \\in A\\}$",
+                is_correct: false,
+              },
+              {
+                text: "con metrica indotta dalla norma $||f||_{B(A)} = \\max \\{|f(a)|, \\; a \\in A\\}$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "è completo",
+                is_correct: true,
+              },
+              {
+                text: "non è completo",
+                is_correct: false,
+              },
+              {
+                text: "è compatto",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Esempio: lo spazio metrico $(0, 1)$",
+                is_correct: true,
+              },
+              {
+                text: "Esempio: lo spazio metrico $[0, 1]$",
+                is_correct: false,
+              },
+              {
+                text: "Esempio: lo spazio metrico $(0, +\\infty)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "con la metrica $d(x, y) = |x - y|$",
+                is_correct: true,
+              },
+              {
+                text: "con la metrica $d(x, y) = ||x - y||$",
+                is_correct: false,
+              },
+              {
+                text: "con la metrica $d(x, y) = \\sup |x - y|$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "non è completo",
+                is_correct: true,
+              },
+              {
+                text: "è completo",
+                is_correct: false,
+              },
+              {
+                text: "è compatto",
                 is_correct: false,
               },
             ],
