@@ -353,15 +353,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "allora $f_k$ <strong>converge uniformemente</strong> a $f$",
+                text: "allora $\\{f_k\\}$ <strong>converge uniformemente</strong> a $f$",
                 is_correct: true,
               },
               {
-                text: "allora $f_k$ <strong>converge puntualmente</strong> a $f$",
+                text: "allora $\\{f_k\\}$ <strong>converge puntualmente</strong> a $f$",
                 is_correct: false,
               },
               {
-                text: "allora $f_k$ <strong>converge debolmente</strong> a $f$",
+                text: "allora $\\{f_k\\}$ <strong>converge debolmente</strong> a $f$",
                 is_correct: false,
               },
             ],
@@ -369,15 +369,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "se e solo se $\\lim_{k \\rightarrow \\infty} f_k = f$ in $BC(A)$.",
+                text: "$\\Leftrightarrow \\lim_{k \\rightarrow \\infty} f_k = f$ in $BC(A)$.",
                 is_correct: true,
               },
               {
-                text: "se e solo se $\\lim_{k \\rightarrow \\infty} f_k = f$ puntualmente in $A$.",
+                text: "$\\Leftrightarrow \\lim_{k \\rightarrow \\infty} f_k = f$ puntualmente in $A$.",
                 is_correct: false,
               },
               {
-                text: "se e solo se $\\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{L^p(A)} = 0$.",
+                text: "$\\Leftrightarrow \\lim_{k \\rightarrow \\infty} \\|f_k - f\\|_{L^p(A)} = 0$.",
                 is_correct: false,
               },
             ],
@@ -570,15 +570,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$d(x, y) = d(y, x)$ $\\forall \\, x, y \\in X$",
+                text: "$d(x, y) = d(y, x)$",
                 is_correct: true,
               },
               {
-                text: "$d(x, y) = -d(y, x)$ $\\forall \\, x, y \\in X$",
+                text: "$d(x, y) = -d(y, x)$",
                 is_correct: false,
               },
               {
-                text: "$d(x, y) \\neq d(y, x) \\forall \\, x, y \\in X$",
+                text: "$d(x, y) \\neq d(y, x)$",
                 is_correct: false,
               },
             ],
@@ -588,15 +588,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$d(x, y) \\leq d(x, z) + d(z, y)$ $\\forall \\, x, y, z \\in X$",
+                text: "$d(x, y) \\leq d(x, z) + d(z, y)$",
                 is_correct: true,
               },
               {
-                text: "$d(x, y) \\geq d(x, z) + d(z, y)$ $\\forall \\, x, y, z \\in X$",
+                text: "$d(x, y) \\geq d(x, z) + d(z, y)$",
                 is_correct: false,
               },
               {
-                text: "$d(x, y) = d(x, z) - d(z, y) \\forall \\, x, y, z \\in X$",
+                text: "$d(x, y) = d(x, z) - d(z, y)$",
                 is_correct: false,
               },
             ],
@@ -807,15 +807,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Prendendo $r = \\min(r_1, r_2)$ $\\implies B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2)$.",
+                text: "Prendendo $r = \\min(r_1, r_2)$",
                 is_correct: true,
               },
               {
-                text: "Prendendo $r = r_1 + r_2$ $\\implies B(x, r) = B(x, r_1) \\cup B(x, r_2)$.",
+                text: "Prendendo $r = r_1 + r_2$",
                 is_correct: false,
               },
               {
-                text: "Prendendo $r = \\max(r_1, r_2)$ $\\implies B(x, r) \\subseteq B(x, r_1) \\setminus B(x, r_2)$.",
+                text: "Prendendo $r = \\max(r_1, r_2)$",
                 is_correct: false,
               },
             ],
@@ -825,15 +825,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Poiché $B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2) \\subseteq A \\cap B = C$, segue che $C$ è aperto.",
+                text: "$\\implies B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2) \\subseteq A \\cap B = C$, segue che $C$ è aperto.",
                 is_correct: true,
               },
               {
-                text: "Poiché $B(x, r) \\supseteq B(x, r_1) \\cup B(x, r_2) \\supseteq A \\cup B = C$, segue che $C$ è chiuso.",
+                text: "$\\implies B(x, r) \\supseteq B(x, r_1) \\cup B(x, r_2) \\supseteq A \\cup B = C$, segue che $C$ è chiuso.",
                 is_correct: false,
               },
               {
-                text: "Poiché $B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2) \\subseteq A \\cup B = C$, segue che $C$ è aperto.",
+                text: "$\\implies B(x, r) \\subseteq B(x, r_1) \\cap B(x, r_2) \\subseteq A \\cup B = C$, segue che $C$ è aperto.",
                 is_correct: false,
               },
             ],
@@ -882,15 +882,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "diremo allora che $x \\in \\text{fr}(A)$ se per ogni palla $B(x, r)$ con $r > 0$, contiene sia elementi appartenenti ad $A$ sia elementi non appartenenti ad $A$",
+                text: "diremo allora che $x \\in \\text{fr}(A)$ se $\\forall$ palla $B(x, r)$ con $r > 0$, contiene sia elementi appartenenti ad $A$ sia elementi non appartenenti ad $A$",
                 is_correct: true,
               },
               {
-                text: "diremo allora che $x \\in \\text{fr}(A)$ se esiste una palla $B(x, r)$ con $r > 0$, tale che $B(x, r) \\subseteq A$",
+                text: "diremo allora che $x \\in \\text{fr}(A)$ se $\\exists$ una palla $B(x, r)$ con $r > 0$, tale che $B(x, r) \\subseteq A$",
                 is_correct: false,
               },
               {
-                text: "diremo allora che $x \\in \\text{fr}(A)$ se per ogni palla $B(x, r)$ con $r > 0$, $B(x, r)$ contiene solo elementi di $A$",
+                text: "diremo allora che $x \\in \\text{fr}(A)$ se $\\forall$ palla $B(x, r)$ con $r > 0$, $B(x, r)$ contiene solo elementi di $A$",
                 is_correct: false,
               },
             ],
@@ -1529,15 +1529,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Scelgo $n \\in \\mathbb{N}$ $| d(a_n, x_0) < r$",
+                text: "Scelgo $n \\in \\mathbb{N}$ | $d(a_n, x_0) < r$",
                 is_correct: true,
               },
               {
-                text: "Scelgo $n \\in \\mathbb{N}$ $| d(a_n, x_0) > r$",
+                text: "Scelgo $n \\in \\mathbb{N}$ | $d(a_n, x_0) > r$",
                 is_correct: false,
               },
               {
-                text: "Scelgo $n \\in \\mathbb{R}$ $| d(a_n, x_0) < r$",
+                text: "Scelgo $n \\in \\mathbb{R}$ | $d(a_n, x_0) < r$",
                 is_correct: false,
               },
             ],

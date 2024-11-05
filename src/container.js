@@ -16,6 +16,7 @@ function startQuiz() {
   userSelections = [];
   lastPartIndexInAnswer = -1;
   document.getElementById("current-answer").innerHTML = ""; // Reset della risposta composta
+  toggleOptionsVisibility();
   showCurrentBlock();
 }
 
@@ -88,6 +89,7 @@ function showCurrentBlock() {
   nextButton.style.display = "none";
 
   MathJax.typesetPromise();
+  toggleOptionsVisibility();
 }
 
 function selectOption(button, isCorrect, block) {
