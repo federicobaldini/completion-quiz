@@ -35,14 +35,14 @@
 
   #download-button {
     top: 10px;
-    right: 60px;
+    right: 10px;
     padding: 6px 8px;
     font-size: 0.9rem;
   }
 
   #score-counter {
     top: 10px;
-    right: 10px;
+    right: 50px;
     font-size: 1rem;
     padding: 8px 10px;
   }
