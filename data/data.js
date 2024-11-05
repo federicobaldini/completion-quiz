@@ -1365,7 +1365,7 @@ const jsonData = {
       ],
     },
     {
-      id: 8,
+      id: 9,
       question:
         "Dare la definizione di chiusura $\\overline{A}$ di $A$, con $A \\subseteq X$ spazio metrico. Dimostrare che $x_0 \\in \\overline{A}$ se esiste una successione a valori in $A$ convergente ad $x_0$.",
       answer_parts: [
@@ -1578,7 +1578,7 @@ const jsonData = {
       ],
     },
     {
-      id: 9,
+      id: 10,
       question:
         "Dare la definizione di limite di una successione in uno spazio metrico. Dimostrare che se il limite esiste allora è unico.",
       answer_parts: [
@@ -1721,7 +1721,7 @@ const jsonData = {
       ],
     },
     {
-      id: 10,
+      id: 11,
       question:
         "Sia $A \\subseteq X$ uno spazio metrico. Dare la definizione di punto di accumulazione di $A$. Dare un esempio di punto di accumulazione appartenente ad $A$ ed uno di punto non appartenente ad $A$.",
       answer_parts: [
@@ -1808,97 +1808,6 @@ const jsonData = {
               },
               {
                 text: "Esempio: se $A$ chiuso, $x_0 \\in \\text{fr}(A)$, $x_0 \\notin D(A)$, $x_0 \\in A$",
-                is_correct: false,
-              },
-            ],
-          },
-        ],
-      ],
-    },
-    {
-      id: 12,
-      question:
-        "Sia $f: A \\to \\mathbb{R}^n$, con $A \\subseteq X$ spazio metrico. Illustrare il legame tra il limite della funzione per $a \\to x_0$ e il limite delle componenti. Dove deve stare $x_0$?",
-      answer_parts: [
-        [
-          {
-            options: [
-              {
-                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$,",
-                is_correct: true,
-              },
-              {
-                text: "Siano $(X, d)$ uno spazio normato ed $A \\subseteq X$,",
-                is_correct: false,
-              },
-              {
-                text: "Siano $(X, d)$ uno spazio topologico ed $A \\subseteq X$,",
-                is_correct: false,
-              },
-            ],
-          },
-          {
-            options: [
-              {
-                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in D(A)$,",
-                is_correct: true,
-              },
-              {
-                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in A$,",
-                is_correct: false,
-              },
-              {
-                text: "$f: A \\to \\mathbb{R}^n$, $x_0 \\in X$,",
-                is_correct: false,
-              },
-            ],
-          },
-          {
-            options: [
-              {
-                text: "$f(x) = \\{f_1(x), \\dots, f_n(x)\\}$",
-                is_correct: true,
-              },
-              {
-                text: "$f(x) = \\{f(x_1), \\dots, f(x_n)\\}$",
-                is_correct: false,
-              },
-              {
-                text: "$f(x) = f_1(x) + \\dots + f_n(x)$",
-                is_correct: false,
-              },
-            ],
-          },
-          {
-            options: [
-              {
-                text: "sia poi $l \\in \\mathbb{R}^n$ allora",
-                is_correct: true,
-              },
-              {
-                text: "sia poi $l \\in \\mathbb{R}$ allora",
-                is_correct: false,
-              },
-              {
-                text: "sia poi $l \\in A$ allora",
-                is_correct: false,
-              },
-            ],
-          },
-        ],
-        [
-          {
-            options: [
-              {
-                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
-                is_correct: true,
-              },
-              {
-                text: "$\\lim_{x \\to x_0} f(x) = l \\Rightarrow \\lim_{x \\to x_0} f_i(x) = l_i$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
-                is_correct: false,
-              },
-              {
-                text: "$\\lim_{x \\to x_0} f(x) = l \\Leftrightarrow \\lim_{x \\to x_0} f_i(x) = l$ $\\forall \\, i \\in \\{1, \\dots, n\\}$",
                 is_correct: false,
               },
             ],
@@ -2243,6 +2152,516 @@ const jsonData = {
               },
               {
                 text: "$(II)$ se $x_0 \\in A \\setminus D(A)$, $f$ continua in $x_0$ $\\Leftrightarrow \\exists \\, \\lim_{x \\to x_0} f(x)$ e coincide con $f(x_0)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 16,
+      question:
+        "Enunciare ed eventualmente dimostrare un teorema di continuità per composizioni di funzioni continue.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d_X)$, $(Y, d_Y)$ e $(Z, d_Z)$ tre spazi metrici ed $A \\subseteq X$, $B \\subseteq Y$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d_X)$, $(Y, d_Y)$ e $(Z, d_Z)$ tre spazi normati ed $A \\subseteq X$, $B \\subseteq Y$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d_X)$, $(Y, d_Y)$ e $(Z, d_Z)$ tre spazi topologici ed $A \\subseteq X$, $B \\subseteq Y$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f: A \\to Y$ con $f(A) \\subseteq B$",
+                is_correct: true,
+              },
+              {
+                text: "$f: A \\to Y$ con $f(A) \\supseteq B$",
+                is_correct: false,
+              },
+              {
+                text: "$f: B \\to Y$ con $f(A) \\subseteq B$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$g: B \\to Z$ allora",
+                is_correct: true,
+              },
+              {
+                text: "$g: A \\to Z$ allora",
+                is_correct: false,
+              },
+              {
+                text: "$g: B \\to Y$ allora",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(I)$ sia $x_0 \\in A$ tale che $f$ è continua in $x_0$ e $g$ è continua in $f(x_0)$",
+                is_correct: true,
+              },
+              {
+                text: "$(I)$ sia $x_0 \\in A$ tale che $f$ è continua in $x_0$ e $g$ è continua in $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "$(I)$ sia $x_0 \\in B$ tale che $f$ è continua in $x_0$ e $g$ è continua in $f(x_0)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow g \\circ f$ è continua in $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow g \\circ f$ è continua in $f(x_0)$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow f \\circ g$ è continua in $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(II)$ $f$ e $g$ continue $\\Rightarrow g \\circ f$ continua",
+                is_correct: true,
+              },
+              {
+                text: "$(II)$ $f$ e $g$ continue $\\Rightarrow f \\circ g$ continua",
+                is_correct: false,
+              },
+              {
+                text: "$(II)$ $f$ continua $\\Rightarrow g \\circ f$ continua",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Sia $\\epsilon > 0$, poiché $g$ è continua in $f(x_0)$",
+                is_correct: true,
+              },
+              {
+                text: "Sia $\\epsilon > 0$, poiché $g$ è continua in $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "Sia $\\epsilon > 0$, poiché $f$ è continua in $f(x_0)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "allora $\\exists \\, \\delta_1(\\epsilon) > 0 \\mid$ se $y \\in B \\cap B_Y(f(x_0), \\delta_1(\\epsilon))$ si ha $d_Z(g(y), g(f(x_0))) < \\epsilon$",
+                is_correct: true,
+              },
+              {
+                text: "allora $\\exists \\, \\delta_1(\\epsilon) > 0 \\mid$ se $y \\in B \\cap B_X(f(x_0), \\delta_1(\\epsilon))$ si ha $d_Z(g(y), g(f(x_0))) < \\epsilon$",
+                is_correct: false,
+              },
+              {
+                text: "allora $\\exists \\, \\delta_1(\\epsilon) > 0 \\mid$ se $y \\in A \\cap B_Y(f(x_0), \\delta_1(\\epsilon))$ si ha $d_Y(g(y), g(f(x_0))) < \\epsilon$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Poiché $f$ è continua in $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "Poiché $f$ è continua in $f(x_0)$",
+                is_correct: false,
+              },
+              {
+                text: "Poiché $g$ è continua in $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\exists \\, \\delta(\\epsilon) > 0 \\mid$ se $x \\in A \\cap B_X(x_0, \\delta(\\epsilon))$",
+                is_correct: true,
+              },
+              {
+                text: "$\\exists \\, \\delta(\\epsilon) > 0 \\mid$ se $x \\in B \\cap B_X(x_0, \\delta(\\epsilon))$",
+                is_correct: false,
+              },
+              {
+                text: "$\\exists \\, \\delta(\\epsilon) > 0 \\mid$ se $x \\in A \\cup B_X(x_0, \\delta(\\epsilon))$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "vale $f(x) \\in B_Y(f(x_0), \\delta_1(\\epsilon))$",
+                is_correct: true,
+              },
+              {
+                text: "vale $f(x) \\in B_X(f(x_0), \\delta_1(\\epsilon))$",
+                is_correct: false,
+              },
+              {
+                text: "vale $f(x) \\in B_Y(x_0, \\delta_1(\\epsilon))$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Ciò implica $f(x) \\in B \\cap B_Y(f(x_0), \\delta_1(\\epsilon))$",
+                is_correct: true,
+              },
+              {
+                text: "Ciò implica $f(x) \\in A \\cap B_Y(f(x_0), \\delta_1(\\epsilon))$",
+                is_correct: false,
+              },
+              {
+                text: "Ciò implica $f(x) \\in B \\cup B_Y(f(x_0), \\delta_1(\\epsilon))$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "quindi $d_Z(g(f(x)), g(f(x_0))) < \\epsilon$",
+                is_correct: true,
+              },
+              {
+                text: "quindi $d_Y(g(f(x)), g(f(x_0))) < \\epsilon$",
+                is_correct: false,
+              },
+              {
+                text: "quindi $d_Z(f(g(x)), f(g(x_0))) < \\epsilon$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 17,
+      question:
+        "Dare la definizione di sottoinsieme limitato in uno spazio metrico. Caratterizzare i sottoinsiemi limitati negli spazi normati.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Sia $(X, d_X)$ uno spazio metrico ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Sia $(X, d_X)$ uno spazio normato ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Sia $(X, d_X)$ uno spazio topologico ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "con $A \\neq \\emptyset$, chiamiamo $\\delta_X(A)$ <strong>diametro</strong> di $A$",
+                is_correct: true,
+              },
+              {
+                text: "con $A = \\emptyset$, chiamiamo $\\delta_X(A)$ <strong>diametro</strong> di $A$",
+                is_correct: false,
+              },
+              {
+                text: "con $A \\neq \\emptyset$, chiamiamo $\\delta_X(A)$ <strong>raggio</strong> di $A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\delta_X(A) = \\sup \\{ d_X(a_0, a_1) \\mid a_0, a_1 \\in A \\}$",
+                is_correct: true,
+              },
+              {
+                text: "$\\delta_X(A) = \\inf \\{ d_X(a_0, a_1) \\mid a_0, a_1 \\in A \\}$",
+                is_correct: false,
+              },
+              {
+                text: "$\\delta_X(A) = \\sup \\{ d_X(a_0, a_1) \\mid a_0 \\in A \\}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) < +\\infty$",
+                is_correct: true,
+              },
+              {
+                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) = +\\infty$",
+                is_correct: false,
+              },
+              {
+                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) \\geq +\\infty$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Sia $(X, || \\cdot ||)$ uno spazio normato ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Sia $(X, || \\cdot ||)$ uno spazio metrico ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Sia $(X, || \\cdot ||)$ uno spazio topologico ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "allora $A$ è <strong>limitato</strong> $\\Leftrightarrow \\exists \\, M > 0 \\mid ||a|| \\leq M \\ \\forall a \\in A$",
+                is_correct: true,
+              },
+              {
+                text: "allora $A$ è <strong>limitato</strong> $\\Leftrightarrow \\forall \\, M > 0 \\mid ||a|| \\leq M \\ \\forall a \\in A$",
+                is_correct: false,
+              },
+              {
+                text: "allora $A$ è <strong>limitato</strong> $\\Leftrightarrow \\exists \\, M > 0 \\mid ||a|| < M \\ \\forall a \\in A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 18,
+      question:
+        'Dare la definizione di sottoinsieme compatto di uno spazio metrico. Illustrare la connessione tra "compattezza" e "chiusura e limitatezza".',
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio topologico ed $A \\subseteq X$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $A$ è <strong>compatto</strong> se ogni successione a valori in $A$ possiede una sottosuccessione convergente a qualche elemento di $A$",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $A$ è <strong>compatto</strong> se ogni successione a valori in $A$ è convergente",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $A$ è <strong>compatto</strong> se ogni sottosuccessione di una successione in $A$ è convergente",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$ compatto $\\Rightarrow A$ è chiuso e limitato",
+                is_correct: true,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio normato ed $A \\subseteq X$ compatto $\\Rightarrow A$ è chiuso e limitato",
+                is_correct: false,
+              },
+              {
+                text: "Siano $(X, d)$ uno spazio metrico ed $A \\subseteq X$ compatto $\\Rightarrow A$ è chiuso",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$A$ può essere chiuso e limitato senza essere compatto",
+                is_correct: true,
+              },
+              {
+                text: "$A$ può essere compatto senza essere chiuso e limitato",
+                is_correct: false,
+              },
+              {
+                text: "$A$ non può essere chiuso e limitato senza essere compatto",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Se $A \\subseteq \\mathbb{R}^n$ allora $A$ compatto $\\Leftrightarrow A$ chiuso e limitato",
+                is_correct: true,
+              },
+              {
+                text: "Se $A \\subseteq \\mathbb{R}^n$ allora $A$ compatto $\\Rightarrow A$ chiuso e limitato",
+                is_correct: false,
+              },
+              {
+                text: "Se $A \\subseteq \\mathbb{R}^n$ allora $A$ compatto $\\Leftarrow A$ chiuso e limitato",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 19,
+      question:
+        "Enunciare ed, eventualmente, dimostrare (anche parzialmente) qualche versione del teorema di Weierstrass negli spazi metrici.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Sia $A \\subseteq \\mathbb{R}^n$ chiuso e limitato,",
+                is_correct: true,
+              },
+              {
+                text: "Sia $A \\subseteq \\mathbb{R}^n$ aperto e limitato,",
+                is_correct: false,
+              },
+              {
+                text: "Sia $A \\subseteq \\mathbb{R}^n$ chiuso e illimitato,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f : A \\to \\mathbb{R}^m$ continua, con $n, m \\in \\mathbb{N}$, allora",
+                is_correct: true,
+              },
+              {
+                text: "$f : A \\to \\mathbb{R}^m$ limitata, con $n, m \\in \\mathbb{N}$, allora",
+                is_correct: false,
+              },
+              {
+                text: "$f : A \\to \\mathbb{R}^m$ aperta, con $n, m \\in \\mathbb{N}$, allora",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(I)$ $f(A)$ è un sottoinsieme chiuso e limitato in $\\mathbb{R}^m$",
+                is_correct: true,
+              },
+              {
+                text: "$(I)$ $f(A)$ è un sottoinsieme aperto e limitato in $\\mathbb{R}^m$",
+                is_correct: false,
+              },
+              {
+                text: "$(I)$ $f(A)$ è un sottoinsieme chiuso e illimitato in $\\mathbb{R}^m$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$(II)$ se $m = 1$, $f$ ammette massimo e minimo",
+                is_correct: true,
+              },
+              {
+                text: "$(II)$ se $m = 1$, $f$ non ammette massimo e minimo",
+                is_correct: false,
+              },
+              {
+                text: "$(II)$ se $m = 1$, $f$ ammette massimo ma non minimo",
                 is_correct: false,
               },
             ],
