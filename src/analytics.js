@@ -1,3 +1,7 @@
+const downloadButton = document.getElementById("download-button");
+
+downloadButton.addEventListener("click", downloadAnswersAsJSON);
+
 function downloadAnswersAsJSON() {
   const dataStr = JSON.stringify(answerLog, null, 2);
   const blob = new Blob([dataStr], { type: "application/json" });

@@ -50,10 +50,10 @@ function showCurrentBlock() {
   const questionArea = document.getElementById("question-area");
   questionArea.innerHTML = "";
 
-  // Titolo della domanda
+  // Mostra l'ID e il testo della domanda
   const questionTitle = document.createElement("div");
   questionTitle.className = "question-title";
-  questionTitle.innerHTML = `<strong>${theorem.question}</strong>`;
+  questionTitle.innerHTML = `<strong>${theorem.id}: ${theorem.question}</strong>`;
   questionArea.appendChild(questionTitle);
 
   // Contenitore per il blocco corrente
@@ -83,6 +83,7 @@ function showCurrentBlock() {
   blockDiv.appendChild(optionsList);
   questionArea.appendChild(blockDiv);
 
+  // Nasconde temporaneamente il pulsante "Avanti"
   const nextButton = document.getElementById("next-button");
   nextButton.style.display = "none";
 
