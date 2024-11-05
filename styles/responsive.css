@@ -9,6 +9,10 @@
 
   body {
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   /* Regola il margine e il padding del container */
@@ -53,15 +57,15 @@
 
   /* Navigatore del teorema */
   #theorem-navigator {
+    position: relative;
     top: auto;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    width: auto;
+    left: auto;
+    width: calc(100% - 40px);
     flex-direction: column;
     align-items: stretch;
     gap: 5px;
     padding: 10px;
+    margin: 10px;
   }
 
   #theorem-navigator label {
@@ -83,6 +87,7 @@
   .option-button {
     font-size: 1rem;
     padding: 12px;
+    width: 100%;
   }
 
   #next-button,
