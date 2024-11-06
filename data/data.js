@@ -1529,15 +1529,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Scelgo $n \\in \\mathbb{N}$ | $d(a_n, x_0) < r$",
+                text: "Scelgo $n \\in \\mathbb{N}$ | $d(\\{a_n\\}, x_0) < r$",
                 is_correct: true,
               },
               {
-                text: "Scelgo $n \\in \\mathbb{N}$ | $d(a_n, x_0) > r$",
+                text: "Scelgo $n \\in \\mathbb{N}$ | $d(\\{a_n\\}, x_0) > r$",
                 is_correct: false,
               },
               {
-                text: "Scelgo $n \\in \\mathbb{R}$ | $d(a_n, x_0) < r$",
+                text: "Scelgo $n \\in \\mathbb{R}$ | $d(\\{a_n\\}, x_0) < r$",
                 is_correct: false,
               },
             ],
@@ -1545,15 +1545,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "con $a_n \\in A \\cap B(x_0, r)$",
+                text: "con $\\{a_n\\} \\in A \\cap B(x_0, r)$",
                 is_correct: true,
               },
               {
-                text: "con $a_n \\in A \\cup B(x_0, r)$",
+                text: "con $\\{a_n\\} \\in A \\cup B(x_0, r)$",
                 is_correct: false,
               },
               {
-                text: "con $a_n \\notin A \\cap B(x_0, r)$",
+                text: "con $\\{a_n\\} \\notin A \\cap B(x_0, r)$",
                 is_correct: false,
               },
             ],
@@ -1618,15 +1618,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "se $\\forall \\, \\epsilon > 0$ $\\exists \\, n(\\epsilon) \\in \\mathbb{N}$ tale che $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                text: "se $\\forall \\, \\epsilon > 0$ $\\exists \\, n(\\epsilon) \\in \\mathbb{N}$ | $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
                 is_correct: true,
               },
               {
-                text: "se $\\exists \\, \\epsilon > 0$ $\\forall \\, n(\\epsilon) \\in \\mathbb{N}$ tale che $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                text: "se $\\exists \\, \\epsilon > 0$ $\\forall \\, n(\\epsilon) \\in \\mathbb{N}$ | $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
                 is_correct: false,
               },
               {
-                text: "se $\\forall \\, \\epsilon > 0$ $\\exists \\, n(\\epsilon) \\in X$ tale che $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
+                text: "se $\\forall \\, \\epsilon > 0$ $\\exists \\, n(\\epsilon) \\in X$ | $\\forall \\, n \\in \\mathbb{N}$ con $n > n(\\epsilon)$",
                 is_correct: false,
               },
             ],
@@ -2073,15 +2073,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$d_Y(f(x), f(x_0)) < \\epsilon$",
+                text: "si ha $d_Y(f(x), f(x_0)) < \\epsilon$",
                 is_correct: true,
               },
               {
-                text: "$d_Y(f(x), f(x_0)) \\leq \\epsilon$",
+                text: "si ha $d_Y(f(x), f(x_0)) \\leq \\epsilon$",
                 is_correct: false,
               },
               {
-                text: "$d_X(f(x), f(x_0)) < \\epsilon$",
+                text: "si ha $d_X(f(x), f(x_0)) < \\epsilon$",
                 is_correct: false,
               },
             ],
@@ -2447,15 +2447,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) < +\\infty$",
+                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) < \\infty$",
                 is_correct: true,
               },
               {
-                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) = +\\infty$",
+                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) = \\infty$",
                 is_correct: false,
               },
               {
-                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) \\geq +\\infty$",
+                text: "Diremo che $A$ è <strong>limitato</strong> se $\\delta_X(A) \\geq \\infty$",
                 is_correct: false,
               },
             ],
