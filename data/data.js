@@ -1218,15 +1218,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\setminus A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti",
+                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\setminus A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti,",
                 is_correct: true,
               },
               {
-                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\cap A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti",
+                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\cap A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti,",
                 is_correct: false,
               },
               {
-                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\cup A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti",
+                text: "poiché $\\text{fr}(A) = \\text{fr}(X \\cup A)$ e gli insiemi $A$ e $(X \\setminus A)$ sono disgiunti,",
                 is_correct: false,
               },
             ],
@@ -1234,15 +1234,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$(X \\setminus A) \\cap \\text{fr}(X \\setminus A) = \\emptyset$",
+                text: "allora $(X \\setminus A) \\cap \\text{fr}(X \\setminus A) = \\emptyset$",
                 is_correct: true,
               },
               {
-                text: "$(X \\setminus A) \\cup \\text{fr}(X \\setminus A) = \\emptyset$",
+                text: "allora $(X \\setminus A) \\cup \\text{fr}(X \\setminus A) = \\emptyset$",
                 is_correct: false,
               },
               {
-                text: "$(X \\setminus A) \\cap \\text{fr}(A) = \\emptyset$",
+                text: "allora $(X \\setminus A) \\cap \\text{fr}(A) = \\emptyset$",
                 is_correct: false,
               },
             ],
@@ -1477,15 +1477,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "quindi $d(a_n, x_0) < 1/n \\rightarrow_{n \\rightarrow +\\infty} 0$",
+                text: "quindi $d(\\{a_n\\}, x_0) < 1/n \\rightarrow_{n \\rightarrow +\\infty} 0$",
                 is_correct: true,
               },
               {
-                text: "quindi $d(a_n, x_0) < 1/n \\rightarrow_{n \\rightarrow +\\infty} \\infty$",
+                text: "quindi $d(\\{a_n\\}, x_0) < 1/n \\rightarrow_{n \\rightarrow +\\infty} \\infty$",
                 is_correct: false,
               },
               {
-                text: "quindi $d(a_n, x_0) \\geq 1/n \\rightarrow_{n \\rightarrow +\\infty} 0$",
+                text: "quindi $d(\\{a_n\\}, x_0) \\geq 1/n \\rightarrow_{n \\rightarrow +\\infty} 0$",
                 is_correct: false,
               },
             ],
