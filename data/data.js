@@ -4064,15 +4064,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Siano $A \\subseteq \\mathbb{R}^n$, $x_0 \\in \\mathring{A}$, $x_0 = \\{x_{0,1}, \\ldots, x_{0,n}\\}$, $r > 0$,",
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $x_0 \\in \\mathring{A}$, $x_0 = \\{x_{1}^{0}, \\ldots, x_{n}^{0}\\}$, $r > 0$,",
                 is_correct: true,
               },
               {
-                text: "Siano $A \\subseteq \\mathbb{R}^m$, $x_0 \\in \\partial A$, $x_0 = \\{x_{0,1}, \\ldots, x_{0,m}\\}$, $r > 0$,",
+                text: "Siano $A \\subseteq \\mathbb{R}^m$, $x_0 \\in \\partial A$, $x_0 = \\{x_{1}^{0}, \\ldots, x_{m}^{0}\\}$, $r > 0$,",
                 is_correct: false,
               },
               {
-                text: "Siano $A \\subseteq \\mathbb{R}^n$, $x_0 \\in \\mathring{A}$, $x_0 = \\{x_{0,1}, \\ldots, x_{0,n}\\}$, $r < 0$,",
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $x_0 \\in \\mathring{A}$, $x_0 = \\{x_{1}^{0}, \\ldots, x_{n}^{0}\\}$, $r < 0$,",
                 is_correct: false,
               },
             ],
@@ -4465,6 +4465,404 @@ const jsonData = {
               },
               {
                 text: "porremo $D_{j_1 \\cdot \\ldots \\cdot j_k} f(x)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 31,
+      question:
+        "Enunciare il teorema di Schwartz. Illustrare le sue implicazioni per derivate di ordine superiore al primo.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $A$ un aperto in $\\mathbb{R}^n$ ($n \\in \\mathbb{N}$), $f: A \\to \\mathbb{R}$, $1 \\leq i, j \\leq n$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A$ un compatto in $\\mathbb{R}^n$ ($n \\in \\mathbb{N}$), $f: A \\to \\mathbb{R}$, $1 \\leq i, j \\leq n$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A$ un chiuso in $\\mathbb{R}^n$ ($n \\in \\mathbb{N}$), $f: A \\to \\mathbb{R}$, $1 \\leq i, j \\leq n$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "supponiamo che $\\forall \\, x \\in A$ siano definite a valori reali $D_i f(x)$, $D_j f(x)$, $D_{i, j} f(x)$,",
+                is_correct: true,
+              },
+              {
+                text: "supponiamo che $\\forall \\, x \\in A$ siano definite a valori complessi $D_i f(x)$, $D_j f(x)$, $D_{i, j} f(x)$,",
+                is_correct: false,
+              },
+              {
+                text: "supponiamo che $\\forall \\, x \\in A$ siano definite solo $D_i f(x)$ e $D_{i, j} f(x)$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "sia poi $x_0 \\in A$ $\\mid$ $D_{i, j} f$ continua in $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "sia poi $x_0 \\in A$ $\\mid$ $D_{i, j} f$ limitata in $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "sia poi $x_0 \\in A$ $\\mid$ $D_{i, j} f$ derivabile in $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow \\exists \\, D_{j, i}$ e $D_{i, j} f(x_0) = D_{j, i} f(x_0)$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow \\exists \\, D_{j, i}$ e $D_{i, j} f(x_0) \\neq D_{j, i} f(x_0)$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow D_{i, j} f(x_0)$ e $D_{j, i} f(x_0)$ non esistono",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Ciò implica che in una funzione a più variabili con le ipotesi di questo teorema, l'ordine di derivazione rispetto alle variabili è irrilevante",
+                is_correct: true,
+              },
+              {
+                text: "Ciò implica che l'ordine di derivazione è sempre irrilevante, anche senza le ipotesi del teorema",
+                is_correct: false,
+              },
+              {
+                text: "Ciò implica che l'ordine di derivazione è irrilevante solo per derivate parziali prime",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 32,
+      question: "Discutere la formula di Taylor per funzioni di più variabili.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $A$ un aperto in $\\mathbb{R}^n$, $k \\in \\mathbb{N}$, $f \\in C^k(A)$, $x_0 = \\{x_{1}^{0}, \\ldots, x_{n}^{0}\\} \\in A$",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A$ un compatto in $\\mathbb{R}^n$, $k \\in \\mathbb{N}$, $f \\in C^{k-1}(A)$, $x_0 = \\{x_{1}^{0}, \\ldots, x_{n}^{0}\\} \\in A$",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A$ un aperto in $\\mathbb{R}^n$, $k \\in \\mathbb{R}$, $f \\in C^k(A)$, $x_0 = \\{x_{1}^{0}, \\ldots, x_{n}^{0}\\} \\notin A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Introduciamo il polinomio $P(x_1, \\ldots, x_n)$",
+                is_correct: true,
+              },
+              {
+                text: "Introduciamo il polinomio $P(x_0, \\ldots, x_n)$",
+                is_correct: false,
+              },
+              {
+                text: "Introduciamo la funzione $P(x_1, \\ldots, x_0)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$= f(x_0) + \\sum_{j = 1}^n D_j f(x_0) (x_j - x_{0,j}) + \\ldots$",
+                is_correct: true,
+              },
+              {
+                text: "$= f(x_0) + \\sum_{j = 1}^n D_j f(x_0) (x_j + x_{0,j}) + \\ldots$",
+                is_correct: false,
+              },
+              {
+                text: "$= f(x_0) + \\prod_{j = 1}^n D_j f(x_0) (x_j - x_{0,j}) + \\ldots$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$+ \\frac{1}{k!} \\sum_{j_1 = 1}^n \\ldots \\sum_{j_k = 1}^n D_{j_1 \\ldots j_k} f(x_0) (x_{j_1} - x_{0,j_1}) \\ldots (x_{j_k} - x_{0,j_k})$",
+                is_correct: true,
+              },
+              {
+                text: "$+ \\frac{1}{k!} \\sum_{j_1 = 1}^n \\ldots \\sum_{j_k = 1}^n D_{j_1 \\ldots j_k} f(x_0) (x_{j_1} + x_{0,j_1}) \\ldots (x_{j_k} + x_{0,j_k})$",
+                is_correct: false,
+              },
+              {
+                text: "$+ \\frac{1}{k!} \\sum_{j_1 = 1}^n \\ldots \\sum_{j_k = 1}^n D_{j_1 \\ldots j_k} f(x_0) (x_{j_1} - x_{0,j_1})^2 \\ldots (x_{j_k} - x_{0,j_k})^2$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Chiamiamo $P$ polinomio di Taylor di grado non superiore a $k$ con punto iniziale $x_0$ per $f$",
+                is_correct: true,
+              },
+              {
+                text: "Chiamiamo $P$ polinomio di Taylor di grado superiore a $k$ con punto iniziale $x_0$ per $f$",
+                is_correct: false,
+              },
+              {
+                text: "Chiamiamo $P$ polinomio di Lagrange con punto iniziale $x_0$ per $f$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Allora $f - P = o(||x - x_0||^k)$ per $x \\to x_0$, ossia",
+                is_correct: true,
+              },
+              {
+                text: "Allora $f - P = O(||x - x_0||^k)$ per $x \\to x_0$, ossia",
+                is_correct: false,
+              },
+              {
+                text: "Allora $f - P = o(||x - x_0||^{k-1})$ per $x \\to x_0$, ossia",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\lim_{x \\to x_0} \\frac{f(x) - P(x)}{||x - x_0||^k} = 0$",
+                is_correct: true,
+              },
+              {
+                text: "$\\lim_{x \\to x_0} \\frac{f(x) - P(x)}{||x - x_0||^{k-1}} = 0$",
+                is_correct: false,
+              },
+              {
+                text: "$\\lim_{x \\to x_0} \\frac{f(x) - P(x)}{||x - x_0||^k} = \\infty$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 33,
+      question:
+        "Dare la definizione di estremante relativo e di punto critico per funzioni di più variabili. Spiegare come sono connesse queste due nozioni. Enunciare qualche risultato utile per studiare la natura di un punto critico.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$), $f: A \\to \\mathbb{R}$, $x_0 \\in A$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$), $f: A \\to \\mathbb{R}^m$, $x_0 \\in A$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}$, $f: A \\to \\mathbb{R}$, $x_0 \\in A$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo che $x_0$ è un <strong>punto di minimo (o di massimo)</strong> relativo per $f$ se $\\exists \\, \\delta > 0 \\mid f(x_0) \\leq f(x)$ (o $f(x_0) \\geq f(x)$) $\\forall \\, x \\in A \\cap B(x_0, \\delta)$",
+                is_correct: true,
+              },
+              {
+                text: "diremo che $x_0$ è un <strong>punto di minimo (o di massimo)</strong> relativo per $f$ se $\\forall \\, \\delta > 0 \\mid f(x_0) \\leq f(x)$ $\\forall \\, x \\in A \\cap B(x_0, \\delta)$",
+                is_correct: false,
+              },
+              {
+                text: "diremo che $x_0$ è un <strong>punto di minimo (o di massimo)</strong> relativo per $f$ se $\\exists \\, \\delta > 0 \\mid f(x_0) = f(x)$ $\\forall \\, x \\in A \\cap B(x_0, \\delta)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Chiameremo <strong>estremanti relativi</strong> di $f$ i suoi punti di massimo o minimo relativo",
+                is_correct: true,
+              },
+              {
+                text: "Chiameremo <strong>punti critici</strong> di $f$ i suoi punti di massimo o minimo relativo",
+                is_correct: false,
+              },
+              {
+                text: "Chiameremo <strong>zeri della funzione</strong> di $f$ i suoi punti di massimo o minimo relativo",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Siano $n \\in \\mathbb{N}$, $A \\subseteq \\mathbb{R}^n$, $x_0 \\in \\mathring{A}$, $f$ differenziabile in $x_0$.",
+                is_correct: true,
+              },
+              {
+                text: "Siano $n \\in \\mathbb{N}$, $A \\subseteq \\mathbb{R}^n$, $x_0 \\in A$, $f$ continua in $x_0$.",
+                is_correct: false,
+              },
+              {
+                text: "Siano $n \\in \\mathbb{N}$, $A \\subseteq \\mathbb{R}^n$, $x_0 \\in \\mathring{A}$, $f$ derivabile in $x_0$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Supponiamo che $x_0$ sia un estremante relativo di $f$ $\\Rightarrow x_0$ è un <strong>punto critico</strong> di $f$",
+                is_correct: true,
+              },
+              {
+                text: "Supponiamo che $x_0$ sia un punto critico di $f$ $\\Rightarrow x_0$ è un <strong>estremante relativo</strong> di $f$",
+                is_correct: false,
+              },
+              {
+                text: "Supponiamo che $x_0$ sia un estremante assoluto di $f$ $\\Rightarrow x_0$ è un <strong>punto critico</strong> di $f$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$) con $A$ aperto",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$) con $A$ chiuso",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$) con $A$ limitato",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f \\in C^2(A)$, $x_0 \\in A$, $Q: \\mathbb{R}^n \\to \\mathbb{R}$ con",
+                is_correct: true,
+              },
+              {
+                text: "$f \\in C^1(A)$, $x_0 \\in A$, $Q: \\mathbb{R}^n \\to \\mathbb{R}$ con",
+                is_correct: false,
+              },
+              {
+                text: "$f \\in C^3(A)$, $x_0 \\in A$, $Q: \\mathbb{R}^n \\to \\mathbb{R}$ con",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$Q(h) = \\frac{1}{2} \\sum_{i=1}^n \\sum_{j=1}^n D_{i,j} f(x_0) \\cdot h_i \\cdot h_j$",
+                is_correct: true,
+              },
+              {
+                text: "$Q(h) = \\frac{1}{2} \\sum_{i=1}^n \\sum_{j=1}^n D_{i,j} f(x_0) + h_i \\cdot h_j$",
+                is_correct: false,
+              },
+              {
+                text: "$Q(h) = \\sum_{i=1}^n \\sum_{j=1}^n D_{i,j} f(x_0) \\cdot h_i \\cdot h_j$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{I}$) Se $x_0$ è un punto di minimo relativo per $f$, $Q$ è semidefinita positiva",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{I}$) Se $x_0$ è un punto di minimo relativo per $f$, $Q$ è semidefinita negativa",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{I}$) Se $x_0$ è un punto di massimo relativo per $f$, $Q$ è semidefinita positiva",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{II}$) Se $x_0$ è un punto di massimo relativo per $f$, $Q$ è semidefinita negativa",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{II}$) Se $x_0$ è un punto di massimo relativo per $f$, $Q$ è definita positiva",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{II}$) Se $x_0$ è un punto di minimo relativo per $f$, $Q$ è definita negativa",
                 is_correct: false,
               },
             ],
