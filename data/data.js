@@ -3691,5 +3691,786 @@ const jsonData = {
         ],
       ],
     },
+    {
+      id: 26,
+      question:
+        "Dare la definizione di derivata rispetto ad un elemento $v \\in \\mathbb{R}^n$ nel caso di $f$ a valori in $\\mathbb{R}^m$. Dare la definizione di derivata parziale. Specificare bene le ipotesi. Discutere la continuità di una funzione dotata di derivata/e.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$), $x \\in A$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^m$ ($m \\in \\mathbb{N}$), $x \\in A$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$), $x_0 \\in A$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "poniamo $A_{x_0, v} = \\{t \\in \\mathbb{R} \\mid x_0 + tv \\in A\\}$,",
+                is_correct: true,
+              },
+              {
+                text: "poniamo $A_{x_0, v} = \\{t \\in \\mathbb{R} \\mid x_0 - tv \\in A\\}$,",
+                is_correct: false,
+              },
+              {
+                text: "poniamo $A_{x_0, v} = \\{t \\in \\mathbb{R} \\mid x_0 + v \\in A\\}$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "sia $f: A \\to \\mathbb{R}$,",
+                is_correct: true,
+              },
+              {
+                text: "sia $f: A \\to \\mathbb{R}^n$,",
+                is_correct: false,
+              },
+              {
+                text: "sia $f: A \\to \\mathbb{C}$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "per $t \\in A_{x_0, v} \\setminus \\{0\\}$ poniamo",
+                is_correct: true,
+              },
+              {
+                text: "per $t \\in A_{x_0, v}$ poniamo",
+                is_correct: false,
+              },
+              {
+                text: "per $t \\notin A_{x_0, v}$ poniamo",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$r_{x_0, v} = \\frac{f(x_0 + tv) - f(x_0)}{t}$ e supponiamo $0 \\in D(A_{x_0, v})$",
+                is_correct: true,
+              },
+              {
+                text: "$r_{x_0, v} = \\frac{f(x_0 + tv)}{t}$ e supponiamo $0 \\in D(A_{x_0, v})$",
+                is_correct: false,
+              },
+              {
+                text: "$r_{x_0, v} = \\frac{f(x_0 + tv) - f(x_0)}{t^2}$ e supponiamo $0 \\in D(A_{x_0, v})$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Se esiste $\\lim_{t \\to 0} r_{x_0, v} (t)$ lo chiameremo <strong>derivata</strong> di $f$ rispetto al vettore $v$ in $x_0$ ($\\frac{df}{dv} (x_0)$)",
+                is_correct: true,
+              },
+              {
+                text: "Se esiste $\\lim_{t \\to \\infty} r_{x_0, v} (t)$ lo chiameremo <strong>derivata</strong> di $f$ rispetto al vettore $v$ in $x_0$ ($\\frac{df}{dv} (x_0)$)",
+                is_correct: false,
+              },
+              {
+                text: "Se esiste $\\lim_{t \\to 0} r_{x_0, v} (t)$ lo chiameremo <strong>derivata parziale</strong> di $f$ rispetto al vettore $v$ in $x_0$ ($\\frac{df}{dv} (x_0)$)",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$),",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^m$ ($m \\in \\mathbb{N}$),",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}$ ($n \\in \\mathbb{N}$),",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$1 \\leq j \\leq n$, $x_0 \\in A$ $\\mid$ $0 \\in D(A_{x_0, e_j})$,",
+                is_correct: true,
+              },
+              {
+                text: "$1 \\leq j \\leq n$, $x_0 \\in A$ $\\mid$ $0 \\notin D(A_{x_0, e_j})$,",
+                is_correct: false,
+              },
+              {
+                text: "$1 \\leq j \\leq n$, $x_0 \\in A$ $\\mid$ $0 \\in A_{x_0, e_j}$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "chiamiamo <strong>derivata parziale prima</strong> rispetto alla variabile $x_j$ nel punto $x_0$ la derivata $\\frac{df}{dx_j} (x_0)$",
+                is_correct: true,
+              },
+              {
+                text: "chiamiamo <strong>derivata parziale prima</strong> rispetto alla variabile $x_j$ nel punto $x_0$ la derivata $\\frac{d^2 f}{dx_j^2} (x_0)$",
+                is_correct: false,
+              },
+              {
+                text: "chiamiamo <strong>derivata parziale prima</strong> rispetto alla variabile $x_j$ nel punto $x_0$ la derivata $\\frac{df}{dx} (x_0)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Per funzioni di più variabili,",
+                is_correct: true,
+              },
+              {
+                text: "Per funzioni di una sola variabile,",
+                is_correct: false,
+              },
+              {
+                text: "Per funzioni continue,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "l'esistenza di tutte le derivate parziali prime finite in un punto",
+                is_correct: true,
+              },
+              {
+                text: "l'esistenza di tutte le derivate parziali seconde finite in un punto",
+                is_correct: false,
+              },
+              {
+                text: "l'esistenza di tutte le derivate parziali prime infinite in un punto",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "non implica la continuità della funzione in quel punto",
+                is_correct: true,
+              },
+              {
+                text: "implica la continuità della funzione in quel punto",
+                is_correct: false,
+              },
+              {
+                text: "implica la differenziabilità della funzione in quel punto",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 27,
+      question:
+        "Dare la definizione di funzione differenziabile in un punto nel caso di $f$ a valori in $\\mathbb{R}^n$, in tal caso discutere la continuità della funzione e l'esistenza delle derivate parziali.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $f: A \\to \\mathbb{R}$, $x_0 \\in \\mathring{A}$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^m$, $f: A \\to \\mathbb{R}$, $x_0 \\in \\partial A$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $f: A \\to \\mathbb{R}^m$, $x_0 \\in A$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "diremo allora che $f$ è <strong>differenziabile</strong> in $x_0$ se $\\exists \\, \\omega \\in \\mathbb{R}^n$ $\\mid$ $f(x_0 + h) - f(x_0) - \\omega \\cdot h = o(||h||)$ per $h \\to 0$,",
+                is_correct: true,
+              },
+              {
+                text: "diremo allora che $f$ è <strong>differenziabile</strong> in $x_0$ se $\\exists \\, \\omega \\in \\mathbb{R}^m$ $\\mid$ $f(x_0 + h) - f(x_0) - \\omega \\cdot h = O(||h||)$ per $h \\to 0$,",
+                is_correct: false,
+              },
+              {
+                text: "diremo allora che $f$ è <strong>differenziabile</strong> in $x_0$ se $\\forall \\, \\omega \\in \\mathbb{R}^n$ $\\mid$ $f(x_0 + h) - f(x_0) - \\omega \\cdot h = o(||h||)$ per $h \\to 0$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "cioè $\\lim_{||h|| \\to 0} \\frac{f(x_0 + h) - f(x_0) - \\omega \\cdot h}{||h||} = 0$",
+                is_correct: true,
+              },
+              {
+                text: "cioè $\\lim_{||h|| \\to 0} \\frac{f(x_0 + h) - f(x_0)}{||h||} = \\omega$",
+                is_correct: false,
+              },
+              {
+                text: "cioè $\\lim_{||h|| \\to 0} \\frac{f(x_0 + h) - \\omega \\cdot h}{||h||} = f(x_0)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $f: A \\to \\mathbb{R}$, $x_0 \\in \\mathring{A}$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $f: A \\to \\mathbb{R}$, $x_0 \\in A$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $f: A \\to \\mathbb{R}$, $x_0 \\in \\partial A$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "supponiamo $f$ differenziabile in $x_0$, allora:",
+                is_correct: true,
+              },
+              {
+                text: "supponiamo $f$ continua in $x_0$, allora:",
+                is_correct: false,
+              },
+              {
+                text: "supponiamo $f$ derivabile in $x_0$, allora:",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{I}$) $f$ è continua in $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{I}$) $f$ è limitata in $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{I}$) $f$ è derivabile in $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{II}$) $\\forall \\, v \\in \\mathbb{R}^n$, $\\exists \\, \\frac{df}{dv}(x_0) = \\omega \\cdot v$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{II}$) $\\forall \\, v \\in \\mathbb{R}^n$, $\\exists \\, \\frac{d^2 f}{dv^2}(x_0) = \\omega \\cdot v$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{II}$) $\\forall \\, v \\in \\mathbb{R}^n$, $\\exists \\, \\frac{df}{dv}(x_0) = f(x_0) \\cdot v$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{III}$) $\\omega$ è univocamente determinato e $\\omega = (D_1 f(x_0), \\ldots, D_n f(x_0))$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{III}$) $\\omega$ è univocamente determinato e $\\omega = (D_1 f(x_0), D_2 f(x_0), \\ldots, D_{n-1} f(x_0))$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{III}$) $\\omega$ non è univocamente determinato e $\\omega = (D_1 f(x_0), \\ldots, D_n f(x_0))$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 28,
+      question:
+        "Dare la definizione di funzione differenziabile in un punto nel caso di $f$ a valori in $\\mathbb{R}^n$ e dare una condizione sufficiente per la differenziabilità di una funzione in un punto.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Definizione di differenziabile nella domanda con ID: 27",
+                is_correct: true,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $x_0 \\in \\mathring{A}$, $x_0 = \\{x_{0,1}, \\ldots, x_{0,n}\\}$, $r > 0$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^m$, $x_0 \\in \\partial A$, $x_0 = \\{x_{0,1}, \\ldots, x_{0,m}\\}$, $r > 0$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$, $x_0 \\in \\mathring{A}$, $x_0 = \\{x_{0,1}, \\ldots, x_{0,n}\\}$, $r < 0$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "tale che $B(x_0, r) \\subseteq A$.",
+                is_correct: true,
+              },
+              {
+                text: "tale che $B(x_0, r) \\subseteq \\partial A$.",
+                is_correct: false,
+              },
+              {
+                text: "tale che $B(x_0, r) \\cap A = \\emptyset$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Supponiamo che $\\forall x \\in B(x_0, r)$ e $\\forall j \\in \\{1, \\ldots, n\\}$",
+                is_correct: true,
+              },
+              {
+                text: "Supponiamo che $\\forall x \\in A$ e $\\forall j \\in \\{1, \\ldots, m\\}$",
+                is_correct: false,
+              },
+              {
+                text: "Supponiamo che $\\forall x \\in B(x_0, r)$ e $\\forall j \\in \\{1, \\ldots, n+1\\}$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "sia definita a valori reali $D_j f(x)$",
+                is_correct: true,
+              },
+              {
+                text: "sia definita a valori complessi $D_j f(x)$",
+                is_correct: false,
+              },
+              {
+                text: "sia indefinita a valori reali $D_j f(x)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "e che le funzioni $D_1 f, \\ldots, D_n f$ siano continue in $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "e che le funzioni $D_1 f, \\ldots, D_n f$ siano limitate in $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "e che le funzioni $D_1 f, \\ldots, D_n f$ siano derivabili in $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow f$ differenziabile in $x_0$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow f$ continua in $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow f$ derivabile in $x_0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 29,
+      question:
+        "Enunciare una versione pluridimensionale del teorema del valor medio ed eventualmente dimostrarlo.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$),",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^m$ ($m \\in \\mathbb{N}$),",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}$ ($n \\in \\mathbb{N}$),",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$x, y \\in A \\mid [x, y] \\subseteq \\mathring{A}$,",
+                is_correct: true,
+              },
+              {
+                text: "$x, y \\in \\mathring{A} \\mid [x, y] \\subseteq A$,",
+                is_correct: false,
+              },
+              {
+                text: "$x, y \\in A \\mid [x, y] \\cap \\mathring{A} \\neq \\emptyset$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$f$ differenziabile in ogni punto di $[x, y]$",
+                is_correct: true,
+              },
+              {
+                text: "$f$ continua in ogni punto di $[x, y]$",
+                is_correct: false,
+              },
+              {
+                text: "$f$ derivabile in $A$ ma non necessariamente in $[x, y]$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow \\exists \\, z \\in [x, y] \\mid f(y) - f(x) = \\nabla f(z) \\cdot (y - x)$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow \\exists \\, z \\in A \\mid f(y) - f(x) = \\nabla f(z) \\cdot (y - x)$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow \\exists \\, z \\in [x, y] \\mid f(y) - f(x) = f'(z) \\cdot (y - x)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Poniamo $f: [0, 1] \\to \\mathbb{R}$, con $F(t) = f(x + t(y - x))$,",
+                is_correct: true,
+              },
+              {
+                text: "Poniamo $f: [0, 1] \\to \\mathbb{R}^n$, con $F(t) = f(x + t(y - x))$,",
+                is_correct: false,
+              },
+              {
+                text: "Poniamo $f: [0, 1] \\to \\mathbb{R}$, con $F(t) = f(t(x + y))$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$F$ derivabile in $[0, 1]$ e $\\forall \\, t \\in [0, 1]$ si ha che $F'(t) = \\nabla f(x + t(y - x)) \\cdot (y - x)$",
+                is_correct: true,
+              },
+              {
+                text: "$F$ continua in $[0, 1]$ e $\\forall \\, t \\in [0, 1]$ si ha che $F'(t) = \\nabla f(x + t(y - x)) \\cdot (y + x)$",
+                is_correct: false,
+              },
+              {
+                text: "$F$ derivabile in $[0, 1]$ e $\\forall \\, t \\in [0, 1]$ si ha che $F'(t) = f'(x + t(y - x)) \\cdot (y - x)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Applicando il teorema di Lagrange $\\exists \\, c \\in [0, 1]$",
+                is_correct: true,
+              },
+              {
+                text: "Applicando il teorema di Bolzano $\\exists \\, c \\in [0, 1]$",
+                is_correct: false,
+              },
+              {
+                text: "Applicando il teorema di Cauchy $\\exists \\, c \\in [0, 1]$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "tale che $f(y) - f(x) = F(1) - F(0)$",
+                is_correct: true,
+              },
+              {
+                text: "tale che $f(y) - f(x) = F(1)$",
+                is_correct: false,
+              },
+              {
+                text: "tale che $f(y) - f(x) = F(0)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$= F'(c)(1 - 0) = \\nabla f(x + c(y - x)) \\cdot (y - x)$",
+                is_correct: true,
+              },
+              {
+                text: "$= F'(c) = \\nabla f(x + c(y - x)) \\cdot (y - x)$",
+                is_correct: false,
+              },
+              {
+                text: "$= F'(c)(1 - c) = \\nabla f(x + c(y - x)) \\cdot (y - x)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "pongo $z = x + c \\cdot (y - x)$",
+                is_correct: true,
+              },
+              {
+                text: "pongo $z = c \\cdot (x + y)$",
+                is_correct: false,
+              },
+              {
+                text: "pongo $z = x + (1 - c)(y - x)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 30,
+      question:
+        "Definire le derivate di ordine superiore al primo. Come sono legate le derivate della funzione e quelle delle componenti.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^n$ ($n \\in \\mathbb{N}$), $f: A \\to \\mathbb{R}$, $1 \\leq j \\leq n$,",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}^m$ ($m \\in \\mathbb{N}$), $f: A \\to \\mathbb{R}^m$, $1 \\leq j \\leq n$,",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A \\subseteq \\mathbb{R}$, $f: A \\to \\mathbb{R}$, $1 \\leq j \\leq n$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "poniamo $A_j = \\{x \\in A \\mid \\exists \\, D_j f(x) \\in \\mathbb{R}\\}$.",
+                is_correct: true,
+              },
+              {
+                text: "poniamo $A_j = \\{x \\in A \\mid \\forall \\, D_j f(x) \\in \\mathbb{R}\\}$.",
+                is_correct: false,
+              },
+              {
+                text: "poniamo $A_j = \\{x \\in A \\mid D_j f(x) \\in \\mathbb{C}\\}$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Se $x \\in A_j$ e $1 \\leq i \\leq n$,",
+                is_correct: true,
+              },
+              {
+                text: "Se $x \\in A$ e $1 \\leq i \\leq j$,",
+                is_correct: false,
+              },
+              {
+                text: "Se $x \\notin A_j$ e $1 \\leq i \\leq n$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "può esistere la derivata $D_i(D_j f)(x)$ di $D_j f$ in $x$.",
+                is_correct: true,
+              },
+              {
+                text: "può esistere la derivata $D_i f(x)$ di $D_j f$ in $x$.",
+                is_correct: false,
+              },
+              {
+                text: "esiste sempre la derivata $D_i(D_j f)(x)$ di $f$ in $x$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Essa viene chiamata <strong>derivata seconda</strong> di $f$ in $x$ rispetto alle variabili $x_i$, $x_j$ (nell'ordine) e si indica $D_{i,j} f(x)$",
+                is_correct: true,
+              },
+              {
+                text: "Essa viene chiamata <strong>derivata parziale</strong> di $f$ in $x$ rispetto alle variabili $x_i$, $x_j$ (nell'ordine) e si indica $D_{i,j} f(x)$",
+                is_correct: false,
+              },
+              {
+                text: "Essa viene chiamata <strong>derivata seconda</strong> di $f$ in $x$ e si indica $D_{i,j} f(x)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Iterando si possono definire le derivate terze, quarte ecc...",
+                is_correct: true,
+              },
+              {
+                text: "Iterando si possono definire solo le derivate seconde.",
+                is_correct: false,
+              },
+              {
+                text: "Iterando si possono definire le derivate di ordine dispari.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Dato $k \\in \\mathbb{N}$ e $\\{j_1, \\ldots, j_k\\} \\in \\{1, \\ldots, n\\}$ non necessariamente a due a due distinti,",
+                is_correct: true,
+              },
+              {
+                text: "Dato $k \\in \\mathbb{N}$ e $\\{j_1, \\ldots, j_k\\} \\in \\{1, \\ldots, n\\}$ distinti a due a due,",
+                is_correct: false,
+              },
+              {
+                text: "Dato $k \\in \\mathbb{N}$ e $\\{j_1, \\ldots, j_k\\} \\in \\{1, \\ldots, n\\}$ tutti uguali,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "porremo $D_{j_1 \\ldots j_k} f(x)$",
+                is_correct: true,
+              },
+              {
+                text: "porremo $D_{j_1 + \\ldots + j_k} f(x)$",
+                is_correct: false,
+              },
+              {
+                text: "porremo $D_{j_1 \\cdot \\ldots \\cdot j_k} f(x)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
   ],
 };
