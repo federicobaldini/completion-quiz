@@ -4986,11 +4986,11 @@ const jsonData = {
                 is_correct: true,
               },
               {
-                text: "Siano $A$ un chiuso di $\\mathbb{R}^n$, $f \\in C^0 (A, \\mathbb{R}^n)$, $x_0 \\in A$.",
+                text: "Siano $A$ un compatto di $\\mathbb{R}^n$, $f \\in C^1 (A, \\mathbb{R}^n)$, $x_0 \\notin A$.",
                 is_correct: false,
               },
               {
-                text: "Siano $A$ un compatto di $\\mathbb{R}^n$, $f \\in C^2 (A, \\mathbb{R}^n)$, $x_0 \\in A$.",
+                text: "Siano $A$ un chiuso di $\\mathbb{R}^n$, $f \\in C^1 (A, \\mathbb{R}^m)$, $x_0 \\in A$.",
                 is_correct: false,
               },
             ],
@@ -5006,7 +5006,7 @@ const jsonData = {
                 is_correct: false,
               },
               {
-                text: "Supponiamo che la matrice jacobiana $Jf(x_0)$ abbia traccia non nulla",
+                text: "Supponiamo che $Jf(x_0)$ sia definita, ma $\\det$ non esista",
                 is_correct: false,
               },
             ],
@@ -5014,15 +5014,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "$\\Rightarrow \\exists \\, A_1, A_2$ aperti in $\\mathbb{R}^n$ tali che",
+                text: "$\\Rightarrow \\exists \\, A_1, A_2$ aperti in $\\mathbb{R}^n$ tale che",
                 is_correct: true,
               },
               {
-                text: "$\\Rightarrow \\exists \\, A_1, A_2$ chiusi in $\\mathbb{R}^n$ tali che",
+                text: "$\\Rightarrow \\exists \\, A_1, A_2$ chiusi in $\\mathbb{R}^n$ tale che",
                 is_correct: false,
               },
               {
-                text: "$\\Rightarrow \\forall \\, A_1, A_2$ aperti in $\\mathbb{R}^n$",
+                text: "$\\Rightarrow \\exists \\, A_1, A_2$ compatti in $\\mathbb{R}^n$ tale che",
                 is_correct: false,
               },
             ],
@@ -5036,11 +5036,11 @@ const jsonData = {
                 is_correct: true,
               },
               {
-                text: "($\\text{I}$) $A_1 \\subseteq A$, $x_0 \\notin A_1$, $f(x_0) \\notin A_2$",
+                text: "($\\text{I}$) $A_1 \\supseteq A$, $x_0 \\notin A_1$, $f(x_0) \\notin A_2$",
                 is_correct: false,
               },
               {
-                text: "($\\text{I}$) $A_1 \\cap A = \\emptyset$, $x_0 \\in A_1$, $f(x_0) \\in A_2$",
+                text: "($\\text{I}$) $A_1 \\subseteq A$, $x_0 \\notin A_1$, $f(x_0) \\in A_2$",
                 is_correct: false,
               },
             ],
@@ -5054,11 +5054,11 @@ const jsonData = {
                 is_correct: true,
               },
               {
-                text: "($\\text{II}$) Se $g = f_{|A_1}$, $g$ è una suriezione tra $A_1$ ed $A_2$",
+                text: "($\\text{II}$) Se $g = f_{|A_1}$, $g$ non è una biezione tra $A_1$ ed $A_2$",
                 is_correct: false,
               },
               {
-                text: "($\\text{II}$) Se $g = f_{|A_1}$, $g$ è una iniezione tra $A_1$ ed $A_2$",
+                text: "($\\text{II}$) Se $g = f_{|A_1}$, $g$ è una suriezione ma non iniettiva",
                 is_correct: false,
               },
             ],
@@ -5072,11 +5072,11 @@ const jsonData = {
                 is_correct: true,
               },
               {
-                text: "($\\text{III}$) $g^{-1} : A_2 \\to A_1$ è di classe $C^0$",
+                text: "($\\text{III}$) $g^{-1} : A_2 \\to A_1$ è continua ma non differenziabile",
                 is_correct: false,
               },
               {
-                text: "($\\text{III}$) $g^{-1} : A_2 \\to A_1$ è continua ma non differenziabile",
+                text: "($\\text{III}$) $g^{-1} : A_2 \\to A_1$ è di classe $C^0$ e non $C^1$",
                 is_correct: false,
               },
             ],
@@ -5086,15 +5086,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Esempio: sistema di equazioni $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ con $f(x_1, x_2) = (x_1 \\cos(x_2), x_1 \\sin(x_2))$",
+                text: "Esempio: $\\begin{cases} f: \\mathbb{R}^2 \\to \\mathbb{R}^2 \\\\ f(x_1, x_2) = (x_1 \\cos(x_2), x_1 \\sin(x_2)) \\end{cases}$",
                 is_correct: true,
               },
               {
-                text: "Esempio: sistema di equazioni $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ con $f(x_1, x_2, x_3) = (x_1 x_2, x_1^2, x_3)$",
+                text: "Esempio: $\\begin{cases} f: \\mathbb{R} \\to \\mathbb{R} \\\\ f(x) = x^2 \\end{cases}$",
                 is_correct: false,
               },
               {
-                text: "Esempio: sistema di equazioni $f: \\mathbb{R} \\to \\mathbb{R}^2$ con $f(x) = (x, x^2)$",
+                text: "Esempio: $\\begin{cases} f: \\mathbb{R}^2 \\to \\mathbb{R} \\\\ f(x_1, x_2) = x_1 + x_2 \\end{cases}$",
                 is_correct: false,
               },
             ],
@@ -5106,29 +5106,11 @@ const jsonData = {
                 is_correct: true,
               },
               {
-                text: "$\\Rightarrow Jf(x_1, x_2) = \\begin{bmatrix} x_1 & x_2 \\\\ x_2 & x_1 \\end{bmatrix}$",
+                text: "$\\Rightarrow Jf(x_1, x_2) = \\begin{bmatrix} \\sin(x_2) & x_1 \\cos(x_2) \\\\ \\cos(x_2) & -x_1 \\sin(x_2) \\end{bmatrix}$",
                 is_correct: false,
               },
               {
-                text: "$\\Rightarrow Jf(x_1, x_2) = \\begin{bmatrix} \\sin(x_2) & \\cos(x_2) \\\\ \\cos(x_2) & \\sin(x_2) \\end{bmatrix}$",
-                is_correct: false,
-              },
-            ],
-          },
-        ],
-        [
-          {
-            options: [
-              {
-                text: "$\\det Jf(x_1, x_2) = x_1 \\Rightarrow \\det Jf(x_1, x_2) \\neq 0$ se $x_1 \\neq 0$",
-                is_correct: true,
-              },
-              {
-                text: "$\\det Jf(x_1, x_2) = x_1^2 \\Rightarrow \\det Jf(x_1, x_2) \\neq 0$ se $x_1 \\neq 1$",
-                is_correct: false,
-              },
-              {
-                text: "$\\det Jf(x_1, x_2) = 1 \\Rightarrow \\det Jf(x_1, x_2) \\neq 0$ sempre",
+                text: "$\\Rightarrow Jf(x_1, x_2) = \\begin{bmatrix} \\cos(x_2) & x_1 \\sin(x_2) \\\\ \\sin(x_2) & -x_1 \\cos(x_2) \\end{bmatrix}$",
                 is_correct: false,
               },
             ],
@@ -5138,15 +5120,31 @@ const jsonData = {
           {
             options: [
               {
-                text: "Prendo $x_0 = (1, \\frac{\\pi}{2})$, $f(x_0) = (0, 1)$",
+                text: "$\\det Jf(x_1, x_2) = x_1$",
                 is_correct: true,
               },
               {
-                text: "Prendo $x_0 = (0, \\pi)$, $f(x_0) = (1, 0)$",
+                text: "$\\det Jf(x_1, x_2) = x_2$",
                 is_correct: false,
               },
               {
-                text: "Prendo $x_0 = (1, 0)$, $f(x_0) = (1, 1)$",
+                text: "$\\det Jf(x_1, x_2) = x_1 \\cdot x_2$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow \\det Jf(x_1, x_2) \\neq 0$ se $x_1 \\neq 0$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow \\det Jf(x_1, x_2) \\neq 0$ se $x_2 \\neq 0$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow \\det Jf(x_1, x_2) = 0$ sempre",
                 is_correct: false,
               },
             ],
@@ -5156,15 +5154,15 @@ const jsonData = {
           {
             options: [
               {
-                text: "Poniamo $A_1 = (\\frac{1}{2}, 2) \\times (0, \\pi)$, $A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid \\frac{1}{4} < x_1^2 + x_2^2 < 4, x_2 > 0\\}$",
+                text: "Prendo $x_0 = (1, \\pi/2)$, $f(x_0) = (0, 1)$",
                 is_correct: true,
               },
               {
-                text: "Poniamo $A_1 = (0, 1) \\times (\\pi, 2\\pi)$, $A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid x_1^2 + x_2^2 > 1\\}$",
+                text: "Prendo $x_0 = (0, \\pi/4)$, $f(x_0) = (1, 0)$",
                 is_correct: false,
               },
               {
-                text: "Poniamo $A_1 = (-1, 1) \\times (-\\pi, \\pi)$, $A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid x_1^2 + x_2^2 < 1\\}$",
+                text: "Prendo $x_0 = (1, 0)$, $f(x_0) = (\\cos(0), \\sin(0))$",
                 is_correct: false,
               },
             ],
@@ -5174,15 +5172,33 @@ const jsonData = {
           {
             options: [
               {
-                text: "Noto che $g = f_{|A_1}$ è biezione da $A_1$ ad $A_2$",
+                text: "$\\begin{cases} A_1 = (\\frac{1}{2}, 2) \\times (0, \\pi) \\\\ A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid \\frac{1}{4} < x_1^2 + x_2^2 < 4, x_2 > 0\\} \\end{cases}$",
                 is_correct: true,
               },
               {
-                text: "Noto che $g = f_{|A_1}$ è iniezione da $A_1$ ad $A_2$",
+                text: "$\\begin{cases} A_1 = (0, 1) \\times (\\pi/4, \\pi/2) \\\\ A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid x_1^2 + x_2^2 > 1, x_2 > 0\\} \\end{cases}$",
                 is_correct: false,
               },
               {
-                text: "Noto che $g = f_{|A_1}$ è suriezione da $A_1$ ad $A_2$",
+                text: "$\\begin{cases} A_1 = (1, 2) \\times (0, \\pi/2) \\\\ A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid \\frac{1}{4} < x_1^2 + x_2^2 < 1, x_2 < 0\\} \\end{cases}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Noto che $g = f_{|A_1}$ è biezione da $A_1$ ad $A_2$,",
+                is_correct: true,
+              },
+              {
+                text: "Noto che $g = f_{|A_1}$ è iniettiva ma non suriettiva,",
+                is_correct: false,
+              },
+              {
+                text: "Noto che $g = f_{|A_1}$ non è una funzione biettiva,",
                 is_correct: false,
               },
             ],
@@ -5190,15 +5206,296 @@ const jsonData = {
           {
             options: [
               {
-                text: "$A_1 \\subseteq \\mathbb{R}^2$, $f(x_0) \\in A_2$, $g^{-1} : A_2 \\to A_1 \\in C^k (\\mathbb{R}^2)$",
+                text: "$g^{-1} : A_2 \\to A_1 \\in C^k (\\mathbb{R}^2)$",
                 is_correct: true,
               },
               {
-                text: "$A_1 \\subseteq \\mathbb{R}^2$, $f(x_0) \\notin A_2$, $g^{-1} : A_2 \\to A_1 \\in C^1$",
+                text: "$g^{-1} : A_2 \\to A_1 \\in C^{k-1} (\\mathbb{R}^2)$",
                 is_correct: false,
               },
               {
-                text: "$A_1 \\subseteq \\mathbb{R}^2$, $f(x_0) \\in A_2$, $g^{-1} : A_2 \\to A_1 \\in C^0$",
+                text: "$g^{-1} : A_2 \\to A_1 \\in C^0 (\\mathbb{R}^2)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 36,
+      question:
+        "Enunciare il teorema delle funzioni implicite. Presentare un esempio.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $m, n \\in \\mathbb{N}$, con $m < n$",
+                is_correct: true,
+              },
+              {
+                text: "Siano $m, n \\in \\mathbb{N}$, con $m > n$",
+                is_correct: false,
+              },
+              {
+                text: "Siano $m, n \\in \\mathbb{R}$, con $m < n$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$A$ aperto in $\\mathbb{R}^n$, $f \\in C^1 (A, \\mathbb{R}^m)$,",
+                is_correct: true,
+              },
+              {
+                text: "$A$ chiuso in $\\mathbb{R}^n$, $f \\in C^1 (A, \\mathbb{R}^m)$,",
+                is_correct: false,
+              },
+              {
+                text: "$A$ compatto in $\\mathbb{R}^n$, $f \\in C^1 (A, \\mathbb{R}^m)$,",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "sia poi $x_0 = (x_1^0, ..., x_{n-m}^0, x_{n - m + 1}^0, ..., x_n^0) \\in A \\mid f(x_0) = 0$.",
+                is_correct: true,
+              },
+              {
+                text: "sia poi $x_0 = (x_1^0, ..., x_n^0) \\in A \\mid f(x_0) \\neq 0$.",
+                is_correct: false,
+              },
+              {
+                text: "sia poi $x_0 = (x_1^0, ..., x_{n-m}^0, x_{n - m + 1}^0) \\in A \\mid f(x_0) = 1$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Supponiamo che la matrice jacobiana $Jf(x_0)$ abbia rango massimo $(=m)$",
+                is_correct: true,
+              },
+              {
+                text: "Supponiamo che la matrice jacobiana $Jf(x_0)$ abbia rango nullo",
+                is_correct: false,
+              },
+              {
+                text: "Supponiamo che $Jf(x_0)$ sia diagonale",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "e il minore costituito dalle sue ultime $m$ righe e colonne abbia $\\det \\neq 0$",
+                is_correct: true,
+              },
+              {
+                text: "e il minore costituito dalle sue prime $m$ righe e colonne abbia $\\det = 0$",
+                is_correct: false,
+              },
+              {
+                text: "e il minore costituito dalle sue ultime $m$ righe e colonne sia nullo",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow \\exists \\, A_1 \\subseteq \\mathbb{R}^{n-m}$ ed $A_2 \\subseteq \\mathbb{R}^m$ aperti, tale che",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow \\exists \\, A_1 \\subseteq \\mathbb{R}^{n+m}$ ed $A_2 \\subseteq \\mathbb{R}^m$ chiusi, tale che",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow \\exists \\, A_1 \\subseteq \\mathbb{R}^{n-m}$ ed $A_2 \\subseteq \\mathbb{R}^m$ compatti, tale che",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{I}$) $(x_1^0, ..., x_{n - m}^0) \\in A_1, (x_{n-m+1}^0, ..., x_n^0) \\in A_2$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{I}$) $(x_1^0, ..., x_{n - m}^0) \\notin A_1, (x_{n-m+1}^0, ..., x_n^0) \\notin A_2$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{I}$) $(x_1^0, ..., x_{n - m}^0) \\in A_2, (x_{n-m+1}^0, ..., x_n^0) \\in A_1$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{II}$) $A_1 \\times A_2 \\subseteq A$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{II}$) $A_1 \\cup A_2 \\subseteq A$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{II}$) $A_1 \\setminus A_2 \\subseteq A$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{III}$) $\\forall \\, (x_1, ..., x_{n - m}) \\in A_1$ $\\exists ! \\, \\varphi(x_1, ..., x_{n - m}) \\in A_2$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{III}$) $\\forall \\, (x_1, ..., x_{n - m}) \\in A_2$ $\\exists ! \\, \\varphi(x_1, ..., x_{n - m}) \\in A_1$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{III}$) $\\forall \\, (x_1, ..., x_{n - m}) \\in A_1$ $\\exists ! \\, \\varphi(x_1, ..., x_{n - m}) \\in A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "tale che $f(x_1, ..., x_{n - m}, \\varphi(x_1, ..., x_{n - m})) = 0$",
+                is_correct: true,
+              },
+              {
+                text: "tale che $f(x_1, ..., x_{n - m}, \\varphi(x_1, ..., x_{n - m})) = 1$",
+                is_correct: false,
+              },
+              {
+                text: "tale che $f(x_1, ..., x_{n - m}, \\varphi(x_1, ..., x_{n - m})) \\neq 0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{IV}$) la funzione $\\varphi$ è di classe $C^1$ e, se $f \\in C^k (A, \\mathbb{R}^m)$ con $k \\in \\mathbb{N}$,",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{IV}$) la funzione $\\varphi$ è di classe $C^0$ e, se $f \\in C^k (A, \\mathbb{R}^m)$ con $k \\in \\mathbb{N}$,",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{IV}$) la funzione $\\varphi$ è di classe $C^k$ sempre, indipendentemente da $f$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "allora $\\varphi \\in C^k (A_1, \\mathbb{R}^m)$",
+                is_correct: true,
+              },
+              {
+                text: "allora $\\varphi \\in C^{k-1} (A_1, \\mathbb{R}^m)$",
+                is_correct: false,
+              },
+              {
+                text: "allora $\\varphi \\in C^{k+1} (A_1, \\mathbb{R}^m)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Esempio: $\\begin{cases} f: \\mathbb{R}^3 \\to \\mathbb{R} \\\\ f(x_1, x_2, x_3) = x_1^2 + x_2^2 + x_3^2 - 1 \\end{cases}$",
+                is_correct: true,
+              },
+              {
+                text: "Esempio: $\\begin{cases} f: \\mathbb{R}^2 \\to \\mathbb{R} \\\\ f(x_1, x_2) = x_1^2 + x_2 - 1 \\end{cases}$",
+                is_correct: false,
+              },
+              {
+                text: "Esempio: $\\begin{cases} f: \\mathbb{R}^3 \\to \\mathbb{R} \\\\ f(x_1, x_2, x_3) = x_1 + x_2^2 + x_3^2 - 1 \\end{cases}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Pongo $x_0 = (0, 0, 1)$, $Jf(x_0) = (0, 0, 2)$, $f(x_0) = 0$",
+                is_correct: true,
+              },
+              {
+                text: "Pongo $x_0 = (1, 0, 0)$, $Jf(x_0) = (2, 0, 0)$, $f(x_0) = 1$",
+                is_correct: false,
+              },
+              {
+                text: "Pongo $x_0 = (0, 1, 0)$, $Jf(x_0) = (0, 2, 0)$, $f(x_0) = 1$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Pongo anche $A_1 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid x_1^2 + x_2^2 < 1\\}$ ed $A_2 = \\mathbb{R}^+$",
+                is_correct: true,
+              },
+              {
+                text: "Pongo anche $A_1 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid x_1^2 + x_2^2 > 1\\}$ ed $A_2 = \\mathbb{R}$",
+                is_correct: false,
+              },
+              {
+                text: "Pongo anche $A_1 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid x_1^2 + x_2^2 = 1\\}$ ed $A_2 = \\mathbb{R}^-$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\begin{cases} \\varphi: A_1 \\to \\mathbb{R} \\\\ \\varphi(x_1, x_2) = \\sqrt{1 - x_1^2 - x_2^2} \\end{cases}$",
+                is_correct: true,
+              },
+              {
+                text: "$\\begin{cases} \\varphi: A_1 \\to \\mathbb{R} \\\\ \\varphi(x_1, x_2) = 1 - x_1^2 - x_2^2 \\end{cases}$",
+                is_correct: false,
+              },
+              {
+                text: "$\\begin{cases} \\varphi: A_1 \\to \\mathbb{R} \\\\ \\varphi(x_1, x_2) = -\\sqrt{1 - x_1^2 - x_2^2} \\end{cases}$",
                 is_correct: false,
               },
             ],
