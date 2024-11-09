@@ -4870,5 +4870,341 @@ const jsonData = {
         ],
       ],
     },
+    {
+      id: 34,
+      question:
+        "Enunciare ed eventualmente dimostrare, il teorema di differenziabilità di funzioni composte. Ricavare da questo una formula di derivazione.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $n, m, l \\in \\mathbb{N}$, $A \\subseteq \\mathbb{R}^n$, $B \\subseteq \\mathbb{R}^m$, $f: A \\to \\mathbb{R}^m$, $g: B \\to \\mathbb{R}^l$ con $f(A) \\subseteq B$",
+                is_correct: true,
+              },
+              {
+                text: "Siano $n, m, l \\in \\mathbb{N}$, $A \\subseteq \\mathbb{R}^m$, $B \\subseteq \\mathbb{R}^n$, $f: A \\to \\mathbb{R}^l$, $g: B \\to \\mathbb{R}^m$ con $f(A) \\subseteq B$",
+                is_correct: false,
+              },
+              {
+                text: "Siano $n, m, l \\in \\mathbb{N}$, $A \\subseteq \\mathbb{R}^n$, $B \\subseteq \\mathbb{R}^m$, $f: A \\to \\mathbb{R}^n$, $g: B \\to \\mathbb{R}^l$ con $g(B) \\subseteq A$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Sia $x_0 \\in \\mathring{A}$ con $f(x_0) \\in \\mathring{B}$.",
+                is_correct: true,
+              },
+              {
+                text: "Sia $x_0 \\in A$ con $f(x_0) \\notin B$.",
+                is_correct: false,
+              },
+              {
+                text: "Sia $x_0 \\in \\mathring{B}$ con $f(x_0) \\in \\mathring{A}$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Supponiamo $f$ differenziabile in $x_0$ e $g$ differenziabile in $f(x_0)$",
+                is_correct: true,
+              },
+              {
+                text: "Supponiamo $f$ e $g$ continue in $x_0$",
+                is_correct: false,
+              },
+              {
+                text: "Supponiamo $f$ derivabile in $x_0$ e $g$ non differenziabile",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\Rightarrow g \\circ f$ differenziabile in $x_0$ e $D(g \\circ f)(x_0) = Dg(f(x_0)) \\circ Df(x_0)$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow g \\circ f$ continua in $x_0$ e $D(g \\circ f)(x_0) = Dg(f(x_0)) + Df(x_0)$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow g \\circ f$ differenziabile in $x_0$ e $D(g \\circ f)(x_0) = Dg(x_0) \\cdot Df(x_0)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Dimostrazione difficile",
+                is_correct: true,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "[Chain Rule]: $D_i (g \\circ f)(x_0) = \\nabla g(f(x_0)) \\cdot D_i f(x_0) = \\sum_{j = 1}^{n} D_j g(f(x_0)) \\frac{\\partial f_j}{\\partial x_j} (x_0)$",
+                is_correct: true,
+              },
+              {
+                text: "[Chain Rule]: $D_i (g \\circ f)(x_0) = \\nabla g(x_0) \\cdot D_i f(x_0)$",
+                is_correct: false,
+              },
+              {
+                text: "[Chain Rule]: $D_i (g \\circ f)(x_0) = \\sum_{j = 1}^{m} D_j g(f(x_0)) \\frac{\\partial f_j}{\\partial x_i} (x_0)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      id: 35,
+      question:
+        "Enunciare il teorema di invertibilità locale. Presentare un esempio.",
+      answer_parts: [
+        [
+          {
+            options: [
+              {
+                text: "Siano $A$ un aperto di $\\mathbb{R}^n$, $f \\in C^1 (A, \\mathbb{R}^n)$, $x_0 \\in A$.",
+                is_correct: true,
+              },
+              {
+                text: "Siano $A$ un chiuso di $\\mathbb{R}^n$, $f \\in C^0 (A, \\mathbb{R}^n)$, $x_0 \\in A$.",
+                is_correct: false,
+              },
+              {
+                text: "Siano $A$ un compatto di $\\mathbb{R}^n$, $f \\in C^2 (A, \\mathbb{R}^n)$, $x_0 \\in A$.",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "Supponiamo che la matrice jacobiana $Jf(x_0)$ abbia $\\det \\neq 0$",
+                is_correct: true,
+              },
+              {
+                text: "Supponiamo che la matrice jacobiana $Jf(x_0)$ abbia $\\det = 0$",
+                is_correct: false,
+              },
+              {
+                text: "Supponiamo che la matrice jacobiana $Jf(x_0)$ abbia traccia non nulla",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow \\exists \\, A_1, A_2$ aperti in $\\mathbb{R}^n$ tali che",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow \\exists \\, A_1, A_2$ chiusi in $\\mathbb{R}^n$ tali che",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow \\forall \\, A_1, A_2$ aperti in $\\mathbb{R}^n$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{I}$) $A_1 \\subseteq A$, $x_0 \\in A_1$, $f(x_0) \\in A_2$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{I}$) $A_1 \\subseteq A$, $x_0 \\notin A_1$, $f(x_0) \\notin A_2$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{I}$) $A_1 \\cap A = \\emptyset$, $x_0 \\in A_1$, $f(x_0) \\in A_2$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{II}$) Se $g = f_{|A_1}$, $g$ è una biezione tra $A_1$ ed $A_2$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{II}$) Se $g = f_{|A_1}$, $g$ è una suriezione tra $A_1$ ed $A_2$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{II}$) Se $g = f_{|A_1}$, $g$ è una iniezione tra $A_1$ ed $A_2$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "($\\text{III}$) $g^{-1} : A_2 \\to A_1$ è di classe $C^1$ e, se $f \\in C^k (A, \\mathbb{R}^n)$ con $k \\geq 1$, allora anche $g^{-1}$ è di classe $C^k$",
+                is_correct: true,
+              },
+              {
+                text: "($\\text{III}$) $g^{-1} : A_2 \\to A_1$ è di classe $C^0$",
+                is_correct: false,
+              },
+              {
+                text: "($\\text{III}$) $g^{-1} : A_2 \\to A_1$ è continua ma non differenziabile",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Esempio: sistema di equazioni $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ con $f(x_1, x_2) = (x_1 \\cos(x_2), x_1 \\sin(x_2))$",
+                is_correct: true,
+              },
+              {
+                text: "Esempio: sistema di equazioni $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ con $f(x_1, x_2, x_3) = (x_1 x_2, x_1^2, x_3)$",
+                is_correct: false,
+              },
+              {
+                text: "Esempio: sistema di equazioni $f: \\mathbb{R} \\to \\mathbb{R}^2$ con $f(x) = (x, x^2)$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$\\Rightarrow Jf(x_1, x_2) = \\begin{bmatrix} \\cos(x_2) & -x_1 \\sin(x_2) \\\\ \\sin(x_2) & x_1 \\cos(x_2) \\end{bmatrix}$",
+                is_correct: true,
+              },
+              {
+                text: "$\\Rightarrow Jf(x_1, x_2) = \\begin{bmatrix} x_1 & x_2 \\\\ x_2 & x_1 \\end{bmatrix}$",
+                is_correct: false,
+              },
+              {
+                text: "$\\Rightarrow Jf(x_1, x_2) = \\begin{bmatrix} \\sin(x_2) & \\cos(x_2) \\\\ \\cos(x_2) & \\sin(x_2) \\end{bmatrix}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "$\\det Jf(x_1, x_2) = x_1 \\Rightarrow \\det Jf(x_1, x_2) \\neq 0$ se $x_1 \\neq 0$",
+                is_correct: true,
+              },
+              {
+                text: "$\\det Jf(x_1, x_2) = x_1^2 \\Rightarrow \\det Jf(x_1, x_2) \\neq 0$ se $x_1 \\neq 1$",
+                is_correct: false,
+              },
+              {
+                text: "$\\det Jf(x_1, x_2) = 1 \\Rightarrow \\det Jf(x_1, x_2) \\neq 0$ sempre",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Prendo $x_0 = (1, \\frac{\\pi}{2})$, $f(x_0) = (0, 1)$",
+                is_correct: true,
+              },
+              {
+                text: "Prendo $x_0 = (0, \\pi)$, $f(x_0) = (1, 0)$",
+                is_correct: false,
+              },
+              {
+                text: "Prendo $x_0 = (1, 0)$, $f(x_0) = (1, 1)$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Poniamo $A_1 = (\\frac{1}{2}, 2) \\times (0, \\pi)$, $A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid \\frac{1}{4} < x_1^2 + x_2^2 < 4, x_2 > 0\\}$",
+                is_correct: true,
+              },
+              {
+                text: "Poniamo $A_1 = (0, 1) \\times (\\pi, 2\\pi)$, $A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid x_1^2 + x_2^2 > 1\\}$",
+                is_correct: false,
+              },
+              {
+                text: "Poniamo $A_1 = (-1, 1) \\times (-\\pi, \\pi)$, $A_2 = \\{(x_1, x_2) \\in \\mathbb{R}^2 \\mid x_1^2 + x_2^2 < 1\\}$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+        [
+          {
+            options: [
+              {
+                text: "Noto che $g = f_{|A_1}$ è biezione da $A_1$ ad $A_2$",
+                is_correct: true,
+              },
+              {
+                text: "Noto che $g = f_{|A_1}$ è iniezione da $A_1$ ad $A_2$",
+                is_correct: false,
+              },
+              {
+                text: "Noto che $g = f_{|A_1}$ è suriezione da $A_1$ ad $A_2$",
+                is_correct: false,
+              },
+            ],
+          },
+          {
+            options: [
+              {
+                text: "$A_1 \\subseteq \\mathbb{R}^2$, $f(x_0) \\in A_2$, $g^{-1} : A_2 \\to A_1 \\in C^k (\\mathbb{R}^2)$",
+                is_correct: true,
+              },
+              {
+                text: "$A_1 \\subseteq \\mathbb{R}^2$, $f(x_0) \\notin A_2$, $g^{-1} : A_2 \\to A_1 \\in C^1$",
+                is_correct: false,
+              },
+              {
+                text: "$A_1 \\subseteq \\mathbb{R}^2$, $f(x_0) \\in A_2$, $g^{-1} : A_2 \\to A_1 \\in C^0$",
+                is_correct: false,
+              },
+            ],
+          },
+        ],
+      ],
+    },
   ],
 };
